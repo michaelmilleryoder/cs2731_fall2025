@@ -1,0 +1,17 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-64
+# created-by: conda 24.9.1
+_libgcc_mutex=0.1=main
+_openmp_mutex=5.1=1_gnu
+ca-certificates=2025.2.25=h06a4308_0
+dart-sass=1.59.1=ha770c72_0
+deno=1.46.3=hcab8b69_0
+deno-dom=0.1.41=h4768de7_0
+esbuild=0.25.4=h06a4308_0
+libgcc=15.1.0=h767d61c_4
+libgomp=15.1.0=h767d61c_4
+openssl=3.5.2=h26f9b46_0
+pandoc=3.6.3=ha770c72_0
+quarto=1.7.32=ha770c72_0
+typst=0.13.0=h53e704d_0
