@@ -1,13 +1,16 @@
 project:
   type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "!conda_env/"
 
 website:
-  title: "cs2731_fall2025"
+  title: "CS 2731 Introduction to Natural Language Processing"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
 
 format:
   html:
