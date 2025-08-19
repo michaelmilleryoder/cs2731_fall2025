@@ -1,7 +1,410 @@
 ---
-title: "cs2731_fall2025"
+title: "CS 2731 Introduction to Natural Language Processing"
 ---
 
-This is a Quarto website.
+::: {style="text-align: center"}
+School of Computing and Information, University of Pittsburgh  
+Fall 2025  
+:::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+![Peter Miller, *Communication*, 1940s](img/peter_miller_communication_cropped.png)
+<!--![<a href="https://commons.wikimedia.org/wiki/File:Wthout_Title_2_(199178691).jpeg">Photo</a> by Frits de Jong, art by Tjesje](img/frits_de_jong_without_title_2_768px_cropped.jpg)-->
+
+|||
+|-|---|
+|Time|MW 2:30-3:45pm|
+|Location|Sennott Square 5129|
+|Instructor|[Michael Miller Yoder](https://michaelmilleryoder.github.io), PhD. *Please call me "Michael"*|
+|Instructor contact|[mmyoder@pitt.edu](mailto:mmyoder@pitt.edu) or through Canvas messages|
+|Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
+|TA|Zhaoyi (Joey) Hou|
+|TA contact|[joey.hou@pitt.edu](mailto:joey.hou@pitt.edu)|
+|TA office hours|By appointment|
+|Textbook (free online)|[[J+M] Jurafsky and Martin, *Speech and Language Processing*, 3e draft, 2025-01-12](https://web.stanford.edu/~jurafsky/slp3)|
+
+<!--|Class notebooks |[CRCD JupyterHub nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs1671_jupyterhub&urlpath=lab%2Ftree%2Fcs1671_jupyterhub%2F&branch=main) (Pitt login required, public link to source [here](https://github.com/michaelmilleryoder/cs1671_jupyterhub)).|-->
+
+
+
+# Schedule
+*Subject to change. Last revised 2025-08-19. All due dates are at 11:59pm ET except when indicated.*
+
+<table class="schedule">
+    <thead>
+        <tr>
+            <th>Session</th>
+            <th style="width:85px">Date</th>
+            <th>Topic</th>
+            <th>Readings</th>
+            <th>Assignments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 1: Introduction and text processing</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>08-25 M</td>
+            <!--<td><a href="slides/session1_cs1671_spring2025.pdf">Course, NLP intro</a></td>-->
+            <td>Course, NLP intro</td>
+            <td></td>
+            <td><a href="hw1">HW1</a> out 01-09</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>08-27 W</td>
+            <td><a href="slides/session2_cs1671_spring2025.pdf">Text normalization</a></td>
+            <td>J+M 2-2.3, 2.5-2.7</td>
+            <td></td>
+        </tr>
+        <tr style="background-color:#cccccc">
+            <td></td>
+            <td>09-01 M</td>
+            <td style="font-style:italic">Labor Day. No class.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>09-03 W</td>
+            <td>Machine learning intro, NLP tasks and applications</td>
+            <td></td>
+            <td><a href="hw0">HW0</a> out 01-17</td>
+        </tr>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>09-08 M</td>
+            <!--<td><a href="slides/session5_cs1671_spring2025.pdf">Bag-of-words and n-grams</a></td>-->
+            <td>Sparse word representations (n-grams)</td>
+            <td></td>
+            <td><a href="hw0">HW0</a> due 01-22;<br/><strong><a href="hw1">HW1</a> due 01-23</strong>,<br/><a href="https://forms.office.com/r/eZ1djDScD0">Project idea submission form</a> out 01-25</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>09-10 W</td>
+            <td>N-gram language models</td>
+            <td>J+M 6.3-6.4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>09-15 M</td>
+            <td>Text classification, tf-idf, PPMI</td>
+            <td>J+M 4 (intro), 4.7-4.8, 4.10</td>
+            <td><strong>Quiz due 01-30</strong>,<br/><strong><a href="https://forms.office.com/r/eZ1djDScD0">Project idea submission form</a> due 01-30</strong>,<br/><a href="hw2">HW2</a> out 02-01</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>09-17 W</td>
+            <td>Project match day</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>09-22 M</td>
+            <td>Logistic regression part 1</td>
+            <td>J+M 5-5.3</td>
+            <td><strong>Quiz due 02-06</strong></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>09-24 W</td>
+            <td>Logistic regression part 2</td>
+            <td>J+M 5.4-5.6, 5.9, 5.11</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>09-29 M</td>
+            <td>Neural networks part 1</td>
+            <td>J+M 7-7.1, 7.3</td>
+            <td><strong>Quiz due 02-13</strong></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>10-01 W</td>
+            <td>Neural networks part 2</td>
+            <td>J+M 7.4-7.5, 7.8, 8-8.2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>10-06 M</td>
+            <td>Vector semantics, word2vec</td>
+            <td>J+M 6-6.2, 6.8-6.11, 6.13</td>
+            <td><strong><a href="hw2">HW2</a> due 02-20</strong></td>
+        </tr>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Transformers and LLMs</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>10-08 W</td>
+            <td>Transformers part 1</td>
+            <td>J+M 9-9.2</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>10-13 M</td>
+            <td>Transformers part 2, introduction to LLMs</td>
+            <td>J+M 9.4-9.6, 10-10.3, 10.6-10.7</td>
+            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-28</strong></td>
+        <tr>
+            <td>15</td>
+            <td>10-15 W</td>
+            <td>Project peer group feedback</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>10-20 M</td>
+            <td><strong>Project proposal presentations</strong></td>
+            <td></td>
+            <td><strong>Quiz due 03-13</strong></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>10-22 W</td>
+            <td>BERT</td>
+            <td>J+M 11-11.2, 11.4-11.6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>10-27 M</td>
+            <td>Prompting and post-training LLMs</td>
+            <td>J+M 12-12.5, 12.8</td>
+            <td><strong>Quiz due 03-20</strong></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>10-29 W</td>
+            <td>Guest lecture</td>
+            <td></td>
+            <td><a href="hw3">HW3</a> out</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>11-03 M</td>
+            <td>Reasoning in LLMs</td>
+            <td></td>
+            <td><strong>Project progress report due 03-27</strong></td>
+        </tr>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Sequence labeling and parsing</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>11-05 W</td>
+            <td>Sequence labeling</td>
+            <td>J+M 17-17.4.4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>11-10 M</td>
+            <td>Dependency parsing</td>
+            <td></td>
+            <td>Reading quiz due; <br/><b><a href="hw3">HW3</a> due</b></td>
+        </tr>
+        <tr>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: NLP applications and ethics</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>11-12 W</td>
+            <td>Machine translation</td>
+            <!--<td>J+M 17.4.5-17.4.6, 8.3.1, 11.5</td>-->
+            <td>J+M 13-13.3, 13.6-13.8</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>11-17 M</td>
+            <td>Dialogue systems, chatbots</td>
+            <td></td>
+            <!--<td>J+M 19-19.2, 19.4-19.5</td>-->
+            <td></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>11-19 W</td>
+            <td>Information retrieval, RAG</td>
+            <td>J+M 14-14.3.1, 14.5</td>
+            <td>J+M 15</td>
+        </tr>
+        </tr>
+        <tr style="background-color:#cccccc">
+            <td colspan=5 style="text-align:center; font-style:italic">Thanksgiving Break 11-24 to 11-27</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>12-01 M</td>
+            <td>Social factors, bias and ethics in NLP</td>
+            <td><a href="https://aclanthology.org/P16-2096.pdf">Hovy and Spruit 2016</a>, <a href="https://aclanthology.org/2020.acl-main.485.pdf">Blodgett et al. 2020</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>12-03 W</td>
+            <td>Project work time (in class)</td>
+            <td></td>
+            <td><strong><a href="hw3">HW3</a> due</strong></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>12-08 M</td>
+            <td><strong>Project presentations</strong></td>
+            <td></td>
+            <td><strong>Project report due 12-09</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+
+# Assessments
+
+Description | Points | Percentage of final grade
+---|---:|---:
+**Homework assignments total** | **300** | **30**
+&ensp;Each homework of 3 total | 100 | 10
+**Project total** | **250** | **25**
+&ensp;[Project idea submission form](https://forms.office.com/r/eZ1djDScD0) | 5 | 0.5
+&ensp;[Project proposal](project.html#project-proposal) | 50 | 5
+&ensp;Project progress report | 55 | 5.5
+&ensp;Project report | 140 | 14
+**Quizzes total** | **150** | **15**
+&ensp;Each quiz of 5 total | 30 | 3
+**Exam** | **200** | **20**
+**Participation total** | **100** | **10**
+&ensp;Attendance | 60 | 6
+&ensp;Engagement | 40 | 4
+**Grand total** | **1000** | **100**
+
+## Participation grade
+In-class, collaborative activities are better learning experiences when students come to class and participate. 
+To encourage participation, there is a participation grade worth 10% of the total course grade.
+The majority of that grade comes from attendance, which will be taken via Top Hat on randomly selected class sessions.
+The rest of the grade will be assigned based on whether a student asked questions in class or otherwise (such as during office hours), or partipated in in-class activites. If you did any of this basic engagement, full credit will be awarded.
+
+
+# Course description
+Computer programs that automatically process human language, such as chatbots, translation systems, and speech recognition systems, have become a part of everyday life. This course provides an introduction to the subfield of artificial intelligence that brought about these systems: natural language processing (NLP). Students will become familiar with foundational tasks in NLP such as language modeling, text classification, and sequence modeling. The course will cover both classic and contemporary approaches to these tasks, as well as how they are applied in language technologies. Topics of ethics, fairness, and bias in AI are incorporated throughout the course.
+
+# Learning objectives
+The overarching learning objective of this course is for students to be able to design, implement, and evaluate natural language processing (NLP) systems to get desired output from language data. This skill will prepare students for NLP projects in future jobs or research problems. Being able to develop NLP systems requires many constituent skills. At the end of the course, students will be able to: 
+
+* Preprocess text data into a machine-readable numeric format 
+* Extract features from text that are required for running machine learning models, such as with n-gram or dense vector representations 
+* Explain what is needed for machine learning-based NLP systems, including supervised training data, algorithms to learn patterns in that data (with possibly pretrained models), and unseen test data for evaluation 
+* Choose relevant machine learning algorithms to try on different types of NLP task 
+* Explain the basics of language structure that are relevant to NLP. These include syntax and semantics from linguistics 
+* Identify potential ethical pitfalls (such as imbalanced training data, model amplification of biases) in an NLP system and ways to address them 
+* Communicate motivation, key components, and implications of an approach to NLP tasks in writing 
+
+# Prerequisites
+* CS 1501: Algorithms and Data Structures 2 (grade C or better)
+* Some basic Python knowledge will be assumed. If you are not familiar with Python, see the learning resources below.
+
+# Learning resources
+**Textbook**: Dan Jurafsky and James H. Martin, *Speech and Language Processing*, 3rd edition draft, 2025-01-12. Available completely free online: [https://web.stanford.edu/~jurafsky/slp3/](https://web.stanford.edu/~jurafsky/slp3/)
+
+**Software and programming languages**: Python and associated data science libraries (pandas, numpy, scipy) are the preferred software for completing coding portions of homework assignments. Some basic knowledge of Python is a prerequisite of the course, as some of the homework assignments require Python. The project may be completed with any programming language or tools.
+
+**Tutorials on Python and data science**:
+
+* [Official Python tutorial](https://docs.python.org/3/tutorial/index.html)
+* [Sebastian Raschka’s notebook on intro to scientific computing](https://github.com/rasbt/stat451-machine-learning-fs20/blob/master/L04/04_scipython__code.ipynb)
+* [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
+* [David Bamman’s computational social science training program materials](https://github.com/dlab-berkeley/Computational-Social-Science-Training-Program)
+
+
+# Course infrastructure and communication
+The most recent syllabus, including a schedule, is posted here on the course website. This syllabus will contain links to homework and final project descriptions. Homework assignments and the project should be submitted through Canvas. Quizzes will be on Canvas. The midterm exam will be conducted in-person in class. Course announcements will be given on Canvas, and questions should be submitted through Canvas (or over email to the instructor or TA).
+
+Feel free to email or send a Canvas message to the instructor or TA about any concerns or questions at any time. 
+Teaching staff will respond during hours that work best for them; please feel no obligation to respond to them outside of your regular working hours.
+
+# Policies
+
+## Grading scale
+
+Range | Letter grade
+----|----
+92.5 – 100% | A
+90.0 – <92.5% | A-
+87.5 – <90.0% |B+
+82.5 – <87.5% |B
+80.0 – <82.5% |B-
+77.5 – <80.0% |C+
+72.5 – <77.5% |C
+70.0 – <72.5% |C-
+67.5 – <70.0% |D+
+62.5 – <67.5% |D
+60.0 – <62.5% |D-
+< 60% | F
+
+Feel free to contact the instructor or schedule an office hours appointment to talk about any issues you might have with your grade.
+
+## Late work policy
+Students are granted 5 total late days across all homework assignments and quizzes without penalty. After those five late days, you will be penalized 10% for each day that your submission is late except in extreme unforeseen circumstances.
+Group project work will be penalized 10% for each day late. No late work will be accepted for the project report.
+
+## Assignment resubmission policy
+If you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. 
+Resubmissions are handled case by case, but are generally accepted in cases where parts of the assignment are missing (sections of the rubric are 0).
+Updated or added text in resubmitted reports must be highlighted in yellow.
+Resubmissions are subject to an automatic 10% deduction.
+Only 1 resubmission per homework assignment will be accepted.
+
+## Academic integrity policy
+Students in this course will be expected to comply with the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). Any student suspected of violating this obligation for any reason during the semester will be required to participate in the procedural process, initiated at the instructor level, as outlined in the University Guidelines on Academic Integrity. To learn more about Academic Integrity, visit the [Academic Integrity Guide](http://pitt.libguides.com/academicintegrity/) for an overview of the topic. For hands-on practice, complete the [Academic Integrity Modules](http://pitt.libguides.com/academicintegrity/plagiarism).
+
+### Generative AI policy
+You are allowed to use generative AI programs (ChatGPT, etc.) as a student in this course in limited circumstances. Since much of this course is about developing such tools in NLP, using currently available tools can expose you to the current capabilities and limitations of such systems.
+
+However, your ethical responsibilities as a student remain the same. You must follow the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). 
+Here are some principles to keep in mind that can help you determine whether or not a specific use of generative AI is acceptable in this course (for all forms of generation: writing, code, images or other forms). Please ask the instructor if you are not sure about a specific use. You will not be blamed or retaliated against for asking.
+
+* **Use as an aid, not for a finished product.** LLMs could be used in this course to generate ideas, draft bibliographies, study guides, or for revising their existing writing. Use for drafting entire homework or project reports is not acceptable, even if students revise this draft, since being able to communicate NLP procedures and research is a learning objective. Also keep in mind that language models have no notion of reality and will hallucinate facts and citations.
+
+* **Cite its use.** The University of Pittsburgh's academic integrity policy applies to all uncited or improperly cited use of content, whether that work is created by human beings alone or in collaboration with a generative AI. If you use a generative AI tool to develop content for an assignment, you are required to cite the tool’s contribution to your work. In practice, cutting and pasting content from any source without citation is plagiarism. Likewise, paraphrasing content from a generative AI without citation is plagiarism. Similarly, using any generative AI tool without appropriate acknowledgement will be treated as plagiarism. See the [APA guidelines on how to cite ChatGPT](https://apastyle.apa.org/blog/how-to-cite-chatgpt). Publicly available LLMs are relatively new, and so best practices in education are still being worked out. Citing your use of LLMs will also inform the instructor on how such tools are being used in education for developing better future policies.
+
+* **You are responsible for the work you turn in.** As we will discuss in this course, LLMs and other generative AI systems can and do generate biased, socially problematic language and assert unfounded claims. Ultimately the text you submit will be treated as reflecting your own work, and you are responsible for it.
+
+*Adapted from faculty in the Carnegie Mellon University Heinz College of Information Systems and Public Policy, with guidance from the Carnegie Mellon University Eberly Center for Teaching Excellence.*
+
+## Disability rights
+The teaching staff of this course view disabilities as deficits not in disabled people but in the institutions and societies that are structured to disadvantage disabled people. If you have a disability (visible or invisible), please let us know as soon as possible. You don't need to tell us the nature of the disability. You are encouraged to work with Disability Resources and Services (DRS), 140 William Pitt Union, (412) 648-7890, drsrecep@pitt.edu, (412) 228-5347 for P3 ASL users, as early as possible in the term. DRS will work with you to determine reasonable accommodations for this course. This might include lecture materials that are usable by people with visual disabilities, sign language interpretation, captioning, flexible due dates, etc.
+
+*Adapted from policies by David Mortensen and Lori Levin at Carnegie Mellon University.*
+
+## Religious Observances
+The observance of religious holidays (activities observed by a religious group of which a student is a member) and cultural practices are an important reflection of diversity. As your instructor, I am committed to providing equivalent educational opportunities to students of all belief systems. At the beginning of the semester, you should review the course requirements to identify foreseeable conflicts with assignments, exams, or other required attendance. Please contact me as early as possible to allow time for us to discuss and make fair and reasonable adjustments to the schedule and/or tasks.
+
+## Statement on scholarly discourse
+In this course we will be discussing some complex issues on which all of us have strong feelings and, in many cases, unfounded attitudes. It is essential that we approach this endeavor with our minds open to evidence that may conflict with our presuppositions. Moreover, it is vital that we treat each other’s opinions and comments with courtesy even when they diverge and conflict with our own. We must avoid personal attacks and the use of ad hominem arguments to invalidate each other’s positions. Instead, we must develop a culture of civil argumentation, wherein all positions have the right to be defended and argued against in intellectually reasoned ways. It is this standard that everyone must accept in order to stay in this class; a standard that applies to all inquiry in the university, but whose observance is especially important in a course whose subject matter is so emotionally charged.
+
+*Adapted from a California State University course: Race, Racism and Critical Thinking.*
+
+## Student wellness
+College can be an exciting and challenging time for students. Taking time to maintain your well-being and seek appropriate support can help you achieve your goals and lead a fulfilling life. It can be helpful to remember that we all benefit from assistance and guidance at times, and there are many resources available to support your well-being while you are at Pitt. You are encouraged to visit [Thrive@Pitt](https://www.thrive.pitt.edu/) to learn more about well-being and the many campus resources available to help you thrive. 
+ 
+If you or anyone you know experiences overwhelming academic stress, persistent difficult feelings and/or challenging life events, you are strongly encouraged to seek support. In addition to reaching out to friends and loved ones, consider connecting with a faculty member you trust for assistance connecting to helpful resources. 
+ 
+The [University Counseling Center](http://www.counseling.pitt.edu/) is also here for you. You can call 412-648-7930 at any time to connect with a clinician. If you or someone you know is feeling suicidal, please call the University Counseling Center at any time at 412-648-7930. You can also contact Resolve Crisis Network at 888-796-8226.
+
+## Equity and inclusion
+The University of Pittsburgh does not tolerate any form of discrimination, harassment, or retaliation based on disability, race, color, religion, national origin, ancestry, genetic information, marital status, familial status, sex, age, sexual orientation, veteran status or gender identity or other factors as stated in the University’s Title IX policy. The University is committed to taking prompt action to end a hostile environment that interferes with the University’s mission. For more information about policies, procedures, and practices, visit the [Civil Rights & Title IX Compliance web page](https://www.diversity.pitt.edu/civil-rights-title-ix-compliance).
+
+I ask that everyone in the class strive to help ensure that other members of this class can learn in a supportive and respectful environment. If there are instances of the aforementioned issues, please contact the Title IX Coordinator, by calling 412-648-7860, or emailing titleixcoordinator@pitt.edu. Reports can also be filed online. You may also choose to report this to a faculty/staff member; they are required to communicate this to the University’s Office of Diversity and Inclusion. If you wish to maintain complete confidentiality, you may also contact the University Counseling Center (412-648-7930).
