@@ -307,13 +307,17 @@ Computer programs that automatically process human language, such as chatbots, t
 # Learning objectives
 The overarching learning objective of this course is for students to be able to design, implement, and evaluate natural language processing (NLP) systems to get desired output from language data. This skill will prepare students for NLP projects in future jobs or research problems. Being able to develop NLP systems requires many constituent skills. At the end of the course, students will be able to: 
 
-* Preprocess text data into a machine-readable numeric format 
-* Extract features from text that are required for running machine learning models, such as with n-gram or dense vector representations 
-* Explain what is needed for machine learning-based NLP systems, including supervised training data, algorithms to learn patterns in that data (with possibly pretrained models), and unseen test data for evaluation 
-* Choose relevant machine learning algorithms to try on different types of NLP task 
-* Explain the basics of language structure that are relevant to NLP. These include syntax and semantics from linguistics 
-* Identify potential ethical pitfalls (such as imbalanced training data, model amplification of biases) in an NLP system and ways to address them 
-* Communicate motivation, key components, and implications of an approach to NLP tasks in writing 
+* Relate a new problem to the most relevant existing NLP tasks, such as text classification, text generation, sequence modeling, language modeling, information retrieval, machine translation, dialogue systems, etc.
+* Choose relevant baseline machine learning approaches to try on a new task
+* Explain the basics of language structure that are relevant to NLP. These include syntax and semantics from linguistics
+* Preprocess text data into a machine-readable format
+* Define and scope an objective in terms of a machine learning or NLP system. This includes determining if human annotation is needed and if machine learning is needed
+* Extract features from text that are required for running machine learning models
+* Choose suitable ML algorithms for a new NLP task
+* Evaluate machine learning algorithms, choices of training data and other NLP system decisions
+* Identify potential ethical pitfalls (such as imbalanced training data, model amplification of biases) in an NLP system and ways to address them
+* Communicate motivation, key components, and implications of an approach to NLP tasks in writing
+
 
 # Prerequisites
 * CS 1501: Algorithms and Data Structures 2 (grade C or better)
@@ -333,10 +337,10 @@ The overarching learning objective of this course is for students to be able to 
 
 
 # Course infrastructure and communication
-The most recent syllabus, including a schedule, is posted here on the course website. This syllabus will contain links to homework and final project descriptions. Homework assignments and the project should be submitted through Canvas. Quizzes will be on Canvas. The midterm exam will be conducted in-person in class. Course announcements will be given on Canvas, and questions should be submitted through Canvas (or over email to the instructor or TA).
+The most recent syllabus, including a schedule, is posted here on the course website. This syllabus will contain links to homework and final project descriptions. Homework assignments and the project should be submitted through Canvas. Course announcements will be given on Canvas, and questions should be submitted through Canvas (or over email to teaching staff).
 
-Feel free to email or send a Canvas message to the instructor or TA about any concerns or questions at any time. 
-Teaching staff will respond during hours that work best for them; please feel no obligation to respond to them outside of your regular working hours.
+Feel free to email or send a Canvas message to teaching staff about any concerns or questions at any time. 
+Teaching staff will respond during hours that work best for them; please feel no obligation to respond outside of your regular working hours.
 
 # Policies
 
@@ -360,14 +364,14 @@ Range | Letter grade
 Feel free to contact the instructor or schedule an office hours appointment to talk about any issues you might have with your grade.
 
 ## Late work policy
-Students are granted 5 total late days across all homework assignments and quizzes without penalty. After those five late days, you will be penalized 10% for each day that your submission is late except in extreme unforeseen circumstances.
+Students are granted 5 total late days across all homework assignments and quizzes without penalty. After those five late days, you will be penalized 10% for each day that your submission is late (up to a maximum of 30%).
 Group project work will be penalized 10% for each day late. No late work will be accepted for the project report.
 
 ## Assignment resubmission policy
 If you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. 
 Resubmissions are handled case by case, but are generally accepted in cases where parts of the assignment are missing (sections of the rubric are 0).
 Updated or added text in resubmitted reports must be highlighted in yellow.
-Resubmissions are subject to an automatic 10% deduction.
+Resubmissions are subject to an automatic 10% deduction and must be submitted by 11:59pm on the last day of class.
 Only 1 resubmission per homework assignment will be accepted.
 
 ## Academic integrity policy
@@ -379,9 +383,9 @@ You are allowed to use generative AI programs (ChatGPT, etc.) as a student in th
 However, your ethical responsibilities as a student remain the same. You must follow the [University of Pittsburgh’s Policy on Academic Integrity](https://www.provost.pitt.edu/info/ai1.html). 
 Here are some principles to keep in mind that can help you determine whether or not a specific use of generative AI is acceptable in this course (for all forms of generation: writing, code, images or other forms). Please ask the instructor if you are not sure about a specific use. You will not be blamed or retaliated against for asking.
 
-* **Use as an aid, not for a finished product.** LLMs could be used in this course to generate ideas, draft bibliographies, study guides, or for revising their existing writing. Use for drafting entire homework or project reports is not acceptable, even if students revise this draft, since being able to communicate NLP procedures and research is a learning objective. Also keep in mind that language models have no notion of reality and will hallucinate facts and citations.
+* **Use as an aid, not for a finished product.** LLMs could be used in this course to generate ideas, draft bibliographies, study guides, or for revising existing writing. Use for drafting entire homework or project reports is not acceptable, even if students revise this draft, since being able to communicate NLP procedures and research is a learning objective. Also keep in mind that language models have no notion of reality and will hallucinate facts and citations.
 
-* **Cite its use.** The University of Pittsburgh's academic integrity policy applies to all uncited or improperly cited use of content, whether that work is created by human beings alone or in collaboration with a generative AI. If you use a generative AI tool to develop content for an assignment, you are required to cite the tool’s contribution to your work. In practice, cutting and pasting content from any source without citation is plagiarism. Likewise, paraphrasing content from a generative AI without citation is plagiarism. Similarly, using any generative AI tool without appropriate acknowledgement will be treated as plagiarism. See the [APA guidelines on how to cite ChatGPT](https://apastyle.apa.org/blog/how-to-cite-chatgpt). Publicly available LLMs are relatively new, and so best practices in education are still being worked out. Citing your use of LLMs will also inform the instructor on how such tools are being used in education for developing better future policies.
+* **Cite its use.** The University of Pittsburgh's academic integrity policy applies to all uncited or improperly cited use of content, whether that work is created by human beings alone or in collaboration with a generative AI. If you use a generative AI tool to develop content for an assignment, you are required to cite the tool’s contribution to your work. In practice, cutting and pasting content from any source without citation is plagiarism. Likewise, paraphrasing content from a generative AI without citation is plagiarism. Similarly, using any generative AI tool without appropriate acknowledgement will be treated as plagiarism. See the [APA guidelines on how to cite ChatGPT](https://apastyle.apa.org/blog/how-to-cite-chatgpt). Citing your use of LLMs will also inform teaching staff on how such tools are being used in education for developing better future policies.
 
 * **You are responsible for the work you turn in.** As we will discuss in this course, LLMs and other generative AI systems can and do generate biased, socially problematic language and assert unfounded claims. Ultimately the text you submit will be treated as reflecting your own work, and you are responsible for it.
 
@@ -393,10 +397,10 @@ The teaching staff of this course view disabilities as deficits not in disabled 
 *Adapted from policies by David Mortensen and Lori Levin at Carnegie Mellon University.*
 
 ## Religious Observances
-The observance of religious holidays (activities observed by a religious group of which a student is a member) and cultural practices are an important reflection of diversity. As your instructor, I am committed to providing equivalent educational opportunities to students of all belief systems. At the beginning of the semester, you should review the course requirements to identify foreseeable conflicts with assignments, exams, or other required attendance. Please contact me as early as possible to allow time for us to discuss and make fair and reasonable adjustments to the schedule and/or tasks.
+The observance of religious holidays (activities observed by a religious group of which a student is a member) and cultural practices are an important reflection of diversity. As your instructor, I am committed to providing equivalent educational opportunities to students of all belief systems. At the beginning of the semester, you should review the course requirements to identify foreseeable conflicts with assignments or other required attendance. Please contact me as early as possible to allow time for us to discuss and make fair and reasonable adjustments to the schedule and/or tasks.
 
 ## Statement on scholarly discourse
-In this course we will be discussing some complex issues on which all of us have strong feelings and, in many cases, unfounded attitudes. It is essential that we approach this endeavor with our minds open to evidence that may conflict with our presuppositions. Moreover, it is vital that we treat each other’s opinions and comments with courtesy even when they diverge and conflict with our own. We must avoid personal attacks and the use of ad hominem arguments to invalidate each other’s positions. Instead, we must develop a culture of civil argumentation, wherein all positions have the right to be defended and argued against in intellectually reasoned ways. It is this standard that everyone must accept in order to stay in this class; a standard that applies to all inquiry in the university, but whose observance is especially important in a course whose subject matter is so emotionally charged.
+In this course we will be discussing some complex issues on which all of us have strong feelings and, in many cases, unfounded attitudes. It is essential that we approach this endeavor with our minds open to evidence that may conflict with our presuppositions. Moreover, it is vital that we treat each other’s opinions and comments with courtesy even when they diverge and conflict with our own. We must avoid personal attacks and the use of ad hominem arguments to invalidate each other’s positions. Instead, we must develop a culture of civil argumentation, wherein all positions have the right to be defended and argued against in intellectually reasoned ways.
 
 *Adapted from a California State University course: Race, Racism and Critical Thinking.*
 
