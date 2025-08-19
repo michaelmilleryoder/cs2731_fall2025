@@ -1,5 +1,9 @@
 /* css styles */
 
+strong a {
+	font-weight: bolder;
+}
+
 figcaption {
 	text-align: right;
 }
