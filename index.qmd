@@ -49,14 +49,15 @@ Fall 2025
             <!--<td><a href="slides/session1_cs1671_spring2025.pdf">Course, NLP intro</a></td>-->
             <td>Course, NLP intro</td>
             <td></td>
-            <td><a href="hw1">HW1</a> out 01-09</td>
+            <!--<td><a href="hw1">HW1</a> out 01-09</td>-->
+            <td>HW0 out</td>
         </tr>
         <tr>
             <td>2</td>
             <td>08-27 W</td>
             <td><a href="slides/session2_cs1671_spring2025.pdf">Text normalization</a></td>
             <td>J+M 2-2.3, 2.5-2.7</td>
-            <td></td>
+            <td><strong>HW0 due 08-28</strong></td>
         </tr>
         <tr style="background-color:#cccccc">
             <td></td>
@@ -70,7 +71,8 @@ Fall 2025
             <td>09-03 W</td>
             <td>Machine learning intro, NLP tasks and applications</td>
             <td></td>
-            <td><a href="hw0">HW0</a> out 01-17</td>
+            <!--<td><a href="https://forms.office.com/r/eZ1djDScD0">Project idea form</a> out</td>-->
+            <td>Project idea form out 09-04</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
@@ -79,44 +81,44 @@ Fall 2025
             <td>4</td>
             <td>09-08 M</td>
             <!--<td><a href="slides/session5_cs1671_spring2025.pdf">Bag-of-words and n-grams</a></td>-->
-            <td>Sparse word representations (n-grams)</td>
+            <td>Bag-of-words and n-grams</td>
+            <td>J+M 6.3-6.7</td>
             <td></td>
-            <td><a href="hw0">HW0</a> due 01-22;<br/><strong><a href="hw1">HW1</a> due 01-23</strong>,<br/><a href="https://forms.office.com/r/eZ1djDScD0">Project idea submission form</a> out 01-25</td>
         </tr>
         <tr>
             <td>5</td>
             <td>09-10 W</td>
             <td>N-gram language models</td>
-            <td>J+M 6.3-6.4</td>
-            <td></td>
+            <td>J+M 3-3.6, 3.8</td>
+            <td>HW1 out;<br/><strong>Project idea form due 09-11</strong></td>
         </tr>
         <tr>
             <td>6</td>
             <td>09-15 M</td>
-            <td>Text classification, tf-idf, PPMI</td>
-            <td>J+M 4 (intro), 4.7-4.8, 4.10</td>
-            <td><strong>Quiz due 01-30</strong>,<br/><strong><a href="https://forms.office.com/r/eZ1djDScD0">Project idea submission form</a> due 01-30</strong>,<br/><a href="hw2">HW2</a> out 02-01</td>
+            <td>Text classification</td>
+            <td>J+M 4 (intro), 4.7-4.10</td>
+            <td></td>
         </tr>
         <tr>
             <td>7</td>
             <td>09-17 W</td>
-            <td>Project match day</td>
+            <td>Project match day, CRCD tutorial</td>
             <td></td>
-            <td></td>
+            <td><strong>HW1 due 09-18</strong></td>
         </tr>
         <tr>
             <td>8</td>
             <td>09-22 M</td>
             <td>Logistic regression part 1</td>
             <td>J+M 5-5.3</td>
-            <td><strong>Quiz due 02-06</strong></td>
+            <td></td>
         </tr>
         <tr>
             <td>9</td>
             <td>09-24 W</td>
             <td>Logistic regression part 2</td>
             <td>J+M 5.4-5.6, 5.9, 5.11</td>
-            <td></td>
+            <td>HW2 out</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -124,124 +126,122 @@ Fall 2025
         <tr>
             <td>10</td>
             <td>09-29 M</td>
-            <td>Neural networks part 1</td>
-            <td>J+M 7-7.1, 7.3</td>
-            <td><strong>Quiz due 02-13</strong></td>
+            <td>Vector semantics, word2vec</td>
+            <td>J+M 6-6.2, 6.8-6.11, 6.13</td>
+            <td></td>
         </tr>
         <tr>
             <td>11</td>
             <td>10-01 W</td>
-            <td>Neural networks part 2</td>
-            <td>J+M 7.4-7.5, 7.8, 8-8.2</td>
+            <td>Neural networks part 1</td>
+            <td>J+M 7-7.1, 7.3</td>
             <td></td>
         </tr>
         <tr>
             <td>12</td>
             <td>10-06 M</td>
-            <td>Vector semantics, word2vec</td>
-            <td>J+M 6-6.2, 6.8-6.11, 6.13</td>
-            <td><strong><a href="hw2">HW2</a> due 02-20</strong></td>
+            <td>Neural networks part 2</td>
+            <td>J+M 7.4-7.5, 7.8, 8-8.2</td>
+            <td></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Transformers and LLMs</td>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: LLMs</td>
         </tr>
         <tr>
             <td>13</td>
             <td>10-08 W</td>
             <td>Transformers part 1</td>
             <td>J+M 9-9.2</td>
-            <td></td>
+            <td><strong>HW2 due 10-09</strong></td>
         </tr>
         <tr>
             <td>14</td>
             <td>10-13 M</td>
             <td>Transformers part 2, introduction to LLMs</td>
             <td>J+M 9.4-9.6, 10-10.3, 10.6-10.7</td>
-            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 02-28</strong></td>
+            <td></td>
         <tr>
             <td>15</td>
             <td>10-15 W</td>
             <td>Project peer group feedback</td>
             <td></td>
-            <td></td>
+            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 10-16</strong></td>
         </tr>
         <tr>
             <td>16</td>
             <td>10-20 M</td>
             <td><strong>Project proposal presentations</strong></td>
             <td></td>
-            <td><strong>Quiz due 03-13</strong></td>
+            <td></td>
         </tr>
         <tr>
             <td>17</td>
             <td>10-22 W</td>
             <td>BERT</td>
             <td>J+M 11-11.2, 11.4-11.6</td>
-            <td></td>
+            <td>HW3 out</td>
         </tr>
         <tr>
             <td>18</td>
             <td>10-27 M</td>
             <td>Prompting and post-training LLMs</td>
             <td>J+M 12-12.5, 12.8</td>
-            <td><strong>Quiz due 03-20</strong></td>
+            <td></td>
         </tr>
         <tr>
             <td>19</td>
             <td>10-29 W</td>
             <td>Guest lecture</td>
             <td></td>
-            <td><a href="hw3">HW3</a> out</td>
+            <td></td>
         </tr>
         <tr>
             <td>20</td>
             <td>11-03 M</td>
             <td>Reasoning in LLMs</td>
+            <td><a href="https://arxiv.org/pdf/2501.12948">DeepSeek-R1</a>,<br/><a href="https://wenting-zhao.github.io/complex-reasoning-tutorial/">ACL 2023 Tutorial: Complex Reasoning in Natural Language</a></td>
             <td></td>
-            <td><strong>Project progress report due 03-27</strong></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Sequence labeling and parsing</td>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: Sequence labeling and parsing</td>
         </tr>
         <tr>
             <td>21</td>
             <td>11-05 W</td>
             <td>Sequence labeling</td>
-            <td>J+M 17-17.4.4</td>
-            <td></td>
+            <td>J+M 17-17.3, 11.5</td>
+            <td><strong>HW3 due 11-06</strong>;<br/>HW4 out</td>
         </tr>
         <tr>
             <td>22</td>
             <td>11-10 M</td>
             <td>Dependency parsing</td>
+            <td>J+M 19-19.2, 19.4-19.5</td>
             <td></td>
-            <td>Reading quiz due; <br/><b><a href="hw3">HW3</a> due</b></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 5: NLP applications and ethics</td>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 6: NLP applications and ethics</td>
         </tr>
         <tr>
             <td>23</td>
             <td>11-12 W</td>
             <td>Machine translation</td>
-            <!--<td>J+M 17.4.5-17.4.6, 8.3.1, 11.5</td>-->
             <td>J+M 13-13.3, 13.6-13.8</td>
-            <td></td>
+            <td><strong>Project progress report due 11-13</strong></td>
         </tr>
         <tr>
             <td>24</td>
             <td>11-17 M</td>
-            <td>Dialogue systems, chatbots</td>
-            <td></td>
-            <!--<td>J+M 19-19.2, 19.4-19.5</td>-->
+            <td>Information retrieval, RAG</td>
+            <td>J+M 14-14.3.1, 14.5</td>
             <td></td>
         </tr>
         <tr>
             <td>25</td>
             <td>11-19 W</td>
-            <td>Information retrieval, RAG</td>
-            <td>J+M 14-14.3.1, 14.5</td>
+            <td>Dialogue systems, chatbots</td>
             <td>J+M 15</td>
+            <td><strong>HW4 due 11-20</strong></td>
         </tr>
         </tr>
         <tr style="background-color:#cccccc">
@@ -259,7 +259,7 @@ Fall 2025
             <td>12-03 W</td>
             <td>Project work time (in class)</td>
             <td></td>
-            <td><strong><a href="hw3">HW3</a> due</strong></td>
+            <td></td>
         </tr>
         <tr>
             <td>28</td>
@@ -276,16 +276,19 @@ Fall 2025
 
 Description | Points | Percentage of final grade
 ---|---:|---:
-**Homework assignments total** | **300** | **30**
-&ensp;Each homework of 3 total | 100 | 10
-**Project total** | **250** | **25**
-&ensp;[Project idea submission form](https://forms.office.com/r/eZ1djDScD0) | 5 | 0.5
-&ensp;[Project proposal](project.html#project-proposal) | 50 | 5
-&ensp;Project progress report | 55 | 5.5
-&ensp;Project report | 140 | 14
-**Quizzes total** | **150** | **15**
+**Homework assignments total** | **405** | **40.5**
+&ensp;Homework 0 | 5 | 0.5
+&ensp;Homework 1 | 100 | 100
+&ensp;Homework 2 | 100 | 100
+&ensp;Homework 3 | 100 | 100
+&ensp;Homework 4 | 100 | 100
+**Project total** | **395** | **39.5**
+&ensp;Project idea form | 5 | 0.5
+&ensp;[Project proposal](project.html#project-proposal) | 80 | 5
+&ensp;Project progress report | 80 | 5.5
+&ensp;Project report | 230 | 14
+**Quizzes total** | **100** | **10**
 &ensp;Each quiz of 5 total | 30 | 3
-**Exam** | **200** | **20**
 **Participation total** | **100** | **10**
 &ensp;Attendance | 60 | 6
 &ensp;Engagement | 40 | 4

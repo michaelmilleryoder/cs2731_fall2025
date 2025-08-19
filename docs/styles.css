@@ -1,1 +1,35 @@
 /* css styles */
+
+figcaption {
+	text-align: right;
+}
+
+table.schedule {
+	width: 900px;
+	/* table-layout: fixed; */
+}
+
+tr {
+	border: solid;
+	border-color: #aaaaaa;
+	border-width: 1px 0;
+}
+
+tr:first-child {
+  border-top: none;
+}
+tr:last-child {
+  border-bottom: none;
+}
+
+th, td {
+	padding: 8px;
+}
+
+.title {
+	text-align: center;
+}
+
+.navbar {
+	background-color: #e0e0e0;
+}
