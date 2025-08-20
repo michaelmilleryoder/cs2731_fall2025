@@ -8,10 +8,15 @@ figcaption {
 	text-align: right;
 }
 
+/* Attempt to make it 900px wide, but sidebar gets screwed up then
+main#quarto-document-content.content {
+	width: 900px;
+}
+
 table.schedule {
 	width: 900px;
-	/* table-layout: fixed; */
 }
+*/
 
 tr {
 	border: solid;

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project – CS 2731 Introduction to Natural Language Processing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8c791bc5d13144c9e62643e4213363db.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CS 2731 Introduction to Natural Language Processing</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-idea-form" id="toc-project-idea-form" class="nav-link active" data-scroll-target="#project-idea-form">Project idea form</a>
+  <ul class="collapse">
+  <li><a href="#example-projects" id="toc-example-projects" class="nav-link" data-scroll-target="#example-projects">Example projects</a></li>
+  </ul></li>
+  <li><a href="#project-group-match-day" id="toc-project-group-match-day" class="nav-link" data-scroll-target="#project-group-match-day">Project group match day</a></li>
+  <li><a href="#project-peer-group-feedback" id="toc-project-peer-group-feedback" class="nav-link" data-scroll-target="#project-peer-group-feedback">Project peer group feedback</a></li>
+  <li><a href="#project-proposal" id="toc-project-proposal" class="nav-link" data-scroll-target="#project-proposal">Project proposal</a></li>
+  <li><a href="#project-proposal-presentation" id="toc-project-proposal-presentation" class="nav-link" data-scroll-target="#project-proposal-presentation">Project proposal presentation</a></li>
+  <li><a href="#progress-report" id="toc-progress-report" class="nav-link" data-scroll-target="#progress-report">Progress report</a>
+  <ul class="collapse">
+  <li><a href="#part-1-data-basic-statistics-and-exploratory-analysis" id="toc-part-1-data-basic-statistics-and-exploratory-analysis" class="nav-link" data-scroll-target="#part-1-data-basic-statistics-and-exploratory-analysis">Part 1: Data basic statistics and exploratory analysis</a></li>
+  <li><a href="#part-2-some-kind-of-result" id="toc-part-2-some-kind-of-result" class="nav-link" data-scroll-target="#part-2-some-kind-of-result">Part 2: Some kind of result</a></li>
+  <li><a href="#part-3-open-questions-and-challenges" id="toc-part-3-open-questions-and-challenges" class="nav-link" data-scroll-target="#part-3-open-questions-and-challenges">Part 3: Open questions and challenges</a></li>
+  </ul></li>
+  <li><a href="#final-presentation" id="toc-final-presentation" class="nav-link" data-scroll-target="#final-presentation">Final presentation</a></li>
+  <li><a href="#final-report" id="toc-final-report" class="nav-link" data-scroll-target="#final-report">Final report</a></li>
+  <li><a href="#how-your-project-will-be-graded" id="toc-how-your-project-will-be-graded" class="nav-link" data-scroll-target="#how-your-project-will-be-graded">How your project will be graded</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Last revised 2025-08-20.</em></p>
+<p>A major component of this course is a hands-on final project guided by students’ own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.</p>
+<p>Projects will be done in groups of 2-4 students. Groups will be formed during an in-class project match day, largely based on interest in the same project ideas.</p>
+<section id="project-idea-form" class="level2">
+<h2 class="anchored" data-anchor-id="project-idea-form">Project idea form</h2>
+<p><em>Due 09-11</em>.</p>
+<p>Fill out project ideas you might be interested in working on in this form. You can fill out ideas from the example projects listed below or one of your own ideas. For your own ideas, consider what what research you’re interested in, what system you’d like to build that processes language in some form, interesting text datasets you’d like to work on, really anything! It is best if your idea has a dataset in mind, but this is not required.</p>
+<p>You can fill out as many ideas as you’d like with this form. Ideas do not have to be fully sketched out. Submitting an idea does mean you will necessarily work on it. These ideas will be presented to all students <strong>anonymously</strong>. Each student must submit at least one idea for credit on this assignment, even if it’s just chosen from the example projects.</p>
+<section id="example-projects" class="level3">
+<h3 class="anchored" data-anchor-id="example-projects">Example projects</h3>
+<p>Some of these projects are drawn from “shared tasks” where NLP researchers compete for the best performance on certain datasets. Others are based on ideas and projects from prior students and from the instructor.</p>
+<section id="text-classification" class="level4">
+<h4 class="anchored" data-anchor-id="text-classification">1. Text classification</h4>
+<ol type="1">
+<li>Classify adversarial prompts for LLMs based on attack type, using publicly available red-teaming datasets.</li>
+<li>Given a review of a restaurant, determine what type of restaurant it is from <a href="https://business.yelp.com/data/resources/open-dataset/">this Yelp dataset</a></li>
+<li>Given a short essay in response to a troubling news article, predict the level of empathy. See <a href="https://codalab.lisn.upsaclay.fr/competitions/18810">WASSA 2024 shared task Track 3</a>.</li>
+<li>Predict emotion labels from tweets across many languages. See <a href="https://codalab.lisn.upsaclay.fr/competitions/17730#learn_the_details">WASSA 2024 shared task</a></li>
+<li>Given a news article and a list of “entities” (people, organizations, etc), predict roles such as <em>protagonist</em>, <em>antagonist</em>, and <em>innocent</em>. See <a href="https://propaganda.math.unipd.it/semeval2025task10/">SemEval 2025 Task 10, Subtask 1 on entity framing</a></li>
+<li>Predict news genre or media “frames” such as <em>morality</em>, <em>economic</em>, or <em>crime and punishment</em> from news articles in multiple languages. See <a href="https://propaganda.math.unipd.it/semeval2023task3/">SemEval 2023 Task 3, Subtasks 1 or 2</a></li>
+<li>Predict whether text was written by humans or generated by AI. Tasks include predicting for data across languages and for academic essays. See <a href="https://genai-content-detection.gitlab.io/sharedtasks">GenAI Content Detection Workshop, Task 1 or 2</a></li>
+<li>Classify tweets as sexist or not, or predict the “intent” of sexist tweets as <em>direct</em>, <em>reported</em> or <em>judgemental</em>. See <a href="https://nlp.uned.es/exist2024/">EXIST 2024 Task 1 or Task 2</a></li>
+<li>Predict if similar words are redundant or not with the <a href="https://pleonasm.cs.pitt.edu/#">Semantic Pleonasm corpus</a> developed right here at Pitt.</li>
+<li>From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms.</li>
+</ol>
+<ul>
+<li>Predict “speech acts”, intentions behind utterances, based on emojis with a dataset assembled by former students in the class.</li>
+</ul>
+</section>
+<section id="machine-translation" class="level4">
+<h4 class="anchored" data-anchor-id="machine-translation">2. Machine translation</h4>
+<ol type="1">
+<li>Train translation models for literary text and evaluate on a dataset of Korean-English webnovels.</li>
+<li>Translate customer service chats in between languages. See the <a href="https://wmt-chat-task.github.io/2024/">WMT 2024 Chat Shared Task</a></li>
+<li>Translate code-mixed Hinglish to English. See the <a href="https://www.statmt.org/wmt22/code-mixed-translation-task.html">WMT 2022 Code-mixed Machine Translation Task</a></li>
+<li>Create a system to automatically correct (post-edit) machine translations. See the <a href="https://www.statmt.org/wmt22/ape-task.html">WMT 2022 Automatic Post-Editing Shared Task</a></li>
+</ol>
+</section>
+<section id="information-retrieval-and-extraction" class="level4">
+<h4 class="anchored" data-anchor-id="information-retrieval-and-extraction">3. Information retrieval and extraction</h4>
+<ol type="1">
+<li>Given a query, retrieve the most relevant passages from regulatory documents: <a href="https://www.codabench.org/competitions/3527/" class="uri">https://www.codabench.org/competitions/3527/</a></li>
+<li>Extract important entities from scientific articles with the <a href="https://github.com/allenai/SciREX?tab=readme-ov-file">SCIRex dataset</a></li>
+</ol>
+</section>
+<section id="question-answering" class="level4">
+<h4 class="anchored" data-anchor-id="question-answering">4. Question answering</h4>
+<ol type="1">
+<li>Train a system to predict abstract terms related to a passage and answer multiple choice questions. See <a href="https://competitions.codalab.org/competitions/26153">SemEval 2021 Task 4</a>.</li>
+</ol>
+</section>
+<section id="analysis-and-annotation-of-datasets" class="level4">
+<h4 class="anchored" data-anchor-id="analysis-and-annotation-of-datasets">5. Analysis and annotation of datasets</h4>
+<ol type="1">
+<li>Visualize similarities in US state legislature bill texts and predict bill passage using data from LegiScan (example repo <a href="https://github.com/MaanyaShanker/Omnibus-Dissection/tree/main/data">here</a>).</li>
+<li>Develop an annotation guide and start annotating a new dataset of online gaming voice chat for hate speech, abusive, and offensive language.</li>
+<li>Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.</li>
+<li>Fanfiction, online writing by fans of media works, is known for celebrating queer identity but still may center the experiences of white authors and characters. Use FanfictionNLP to compare representations of characters of color to white characters in fanfiction at scale.</li>
+<li>Quantitative analysis of hateful, white supremacist narratives usually centers on contemporary online discourse. Yet many white supremacist language and narratives has its roots before online discourse. Compare narratives, topics and themes presented in historic and contemporary white supremacist discourse with data provided by the instructor.</li>
+</ol>
+<ul>
+<li>Explore similarities and differences between language in podcasts and Reddit communities based on those podcasts using a <a href="https://github.com/FishOfPitt116/CS2731Project/tree/main">dataset</a> assembled by former students in the class.</li>
+<li>Computational analysis of Nakba narratives. See <a href="https://sina.birzeit.edu/nakba-nlp/">workshop</a> and <a href="https://t.ly/00Ul6">datasets</a>.</li>
+<li>Examine the framing of different entities in police Facebook posts from the <a href="https://www.plainviewproject.org/">Plain View Project</a>.</li>
+</ul>
+<ol type="1">
+<li>Analyze how different newspapers cover topics differently in English-language editorials from Sri Lankan newspapers. Data is provided by the instructor and a collaborator at Carnegie Mellon University.</li>
+</ol>
+</section>
+<section id="survey-papers" class="level4">
+<h4 class="anchored" data-anchor-id="survey-papers">6. Survey papers</h4>
+<ul>
+<li>Survey how NLP is used and applied in other fields before and after LLMs. What has been our most useful contributions to scholars in the social sciences, physical sciences, or humanities? This survey would assemble papers across disciplines for mentions of NLP and summarize what is most useful, what is lacking, and what approaches from NLP could be helpful to others.</li>
+<li>Computational social science using NLP generally relies on data from online communities. But this is missing non-online interactions and the practices of those who are not active online. Survey datasets and approaches that use quantitative and computational techniques on recordings of offline linguistic interaction.</li>
+<li>A growing area of research in computational social science aims to capture the framing and portrayal of entities across large text corpora (such as in news media). Survey existing approaches and challenges.</li>
+</ul>
+</section>
+<section id="other" class="level4">
+<h4 class="anchored" data-anchor-id="other">7. Other</h4>
+<ul>
+<li>Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof.&nbsp;Diane Litman.</li>
+<li>Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof.&nbsp;Diane Litman.</li>
+</ul>
+<ol type="1">
+<li>New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms.</li>
+</ol>
+<ul>
+<li>Build networks of characters and predict relations among characters in fiction using this <a href="https://github.com/dbamman/characterRelations">dataset</a>.</li>
+<li>Stancetaking, a concept from sociolinguistics, is when speakers take an evaluative position toward the concept (which are often nuanced, e.g.&nbsp;“No, I actually don’t like Taylor Swift’s music that much, but she’s great as a person”). Develop automated methods for identifying the “stance object”, who the speaker is evaluating, likely from Reddit data.</li>
+<li>Automatically summarize movies based on their subtitles from this <a href="https://github.com/VeerabadraLokesh/moviesubsummarize">dataset</a> developed by former students in the class.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="project-group-match-day" class="level2">
+<h2 class="anchored" data-anchor-id="project-group-match-day">Project group match day</h2>
+<p><em>In class 09-17</em>.<br>
+Students will form groups of 2-4 people around a list of potential projects submitted by the class in the project idea form. <!--Note that this list of project ideas is much greater than the final number of groups will be, so not all project ideas will have groups.
+
+**Project idea list**
+
+1. Predict whether text was written by humans or generated by AI. Tasks include predicting for data across languages and for academic essays. See [GenAI Content Detection Workshop, Task 1 or 2](https://genai-content-detection.gitlab.io/sharedtasks) and [dataset](https://github.com/mbzuai-nlp/COLING-2025-Workshop-on-MGT-Detection-Task1/tree/main?tab=readme-ov-file#dataset). *This project is the same as project 1.5 in the example projects list above.*
+1. Train a system to predict abstract terms related to a passage and answer multiple choice questions. See [SemEval 2021 Task 4](https://competitions.codalab.org/competitions/26153) and [dataset](https://github.com/boyuanzheng010/SemEval2021-Reading-Comprehension-of-Abstract-Meaning/tree/master). *This project is the same as project 4.1 in the example projects list above.*
+2. Classify adversarial prompts for LLMs based on attack type, using publicly available red-teaming datasets. 
+1. Build an information retrieval system that finds relevant legal precedents for new cases.
+1. Given a review of a restaurant, determine what type of restaurant it is from [this Yelp dataset](https://business.yelp.com/data/resources/open-dataset/)
+1. Determine if a YouTube comment is like-farming/baiting. Examples include, "Only people from TikTok are allowed to like this comment," "For every like this gets I'll do a pushup," "Like if you're a true fan" etc). This can be important since spam accounts tend to copy and paste legitimate messages with problematic usernames or profile pictures.
+1. Compare hate speech by groups outside of the US with hateful language used by US groups. This project would use NLP techniques to analyze narrative, topic and style differences.
+1. Analyze how women's commentary online on computer science topics (for instance on Stack Overflow or YouTube) are received by other users. This could involve sentiment analysis.
+1. Classify tweet replies as bots or not.
+1. Predict bullish/bearish sentiment toward companies from sites like r/WSB or Yahoo Finance.
+1. Develop language technologies for endangered languages and less-commonly spoken languages. This could involve building language models or machine translation systems for [Ligurian](https://github.com/ConseggioLigure/data), or automatically labeling syntax in Yupik or [other languages](https://universaldependencies.org/)
+1. Predict if a given text is a "dad joke" using [this dataset](https://www.kaggle.com/datasets/usamabuttar/dad-jokes).
+1. Compare sentiment toward bikes and bicyclists across biking-oriented and non-biking-oriented subreddits, with a focus on Pittsburgh.
+1. Build a system to automatically simplify complex articles or papers into simple, easily digestible versions.
+--></p>
+</section>
+<section id="project-peer-group-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="project-peer-group-feedback">Project peer group feedback</h2>
+<p><em>In class 10-15</em>.<br>
+In class before the proposal is due, you will be matched with another group who will review your proposal and provide guided feedback in class.</p>
+</section>
+<section id="project-proposal" class="level2">
+<h2 class="anchored" data-anchor-id="project-proposal">Project proposal</h2>
+<p><em>Due 10-16</em>.<br>
+Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will contain answers to a series of questions TBD. It will include a peer review where you will rate your own performance and the performance of other group members through the form <a href="https://forms.office.com/r/T81fQeLfay">here</a>.</p>
+<!--
+1. What is the problem or task you are focusing on?
+1. What is the format of the input and output of this task? For example, each input could be a sentence of text and the output could be a label from a discrete set of possible labels. Provide at least one example of input and output from your data.
+1. What data are you using? Please explain where these datasets are from and how they were constructed. Provide links to any URLs if the data is hosted online or links to papers if the dataset is published somewhere. If the data has labels or "gold" text that you are predicting or generating, where do those labels come from?
+1. What approach are you taking to building a NLP system to handle this task? What software packages are you planning to use to build this system? Except in some cases, the approach should draw on statistical approaches we've covered in class so far, such as n-gram representations of text. Talk to the instructor if you are not sure about this.
+1. How are you evaluating your approach? What performance metrics are you going to use?
+1. What kinds of ethical issues may be raised by your model or data?
+1. What are the proposed steps needed for completion of (your proposed part) of the project? This should be in some detail, for example, loading and potentially cleaning the data, training models, trying different parameters, evaluating models, etc.
+1. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.
+-->
+</section>
+<section id="project-proposal-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="project-proposal-presentation">Project proposal presentation</h2>
+<p><em>In class 10-20</em>.<br>
+Groups will make a brief presentation to the class outlining their proposed project, with Q&amp;A and opportunities for feedback from other students. Please plan for maximum <strong>5-minute</strong> presentations not including Q&amp;A, which will be held right afterward for each group. Slides will be added to a shared PowerPoint presentation. Presentations are not graded. Cover at least these key points:</p>
+<ol type="1">
+<li>Project motivation</li>
+<li>Briefly, what 1-2 other related papers have done</li>
+<li>What data you are planning to use</li>
+<li>What approach/methods you plan to take</li>
+<li>How you will evaluate your approach</li>
+</ol>
+</section>
+<section id="progress-report" class="level2">
+<h2 class="anchored" data-anchor-id="progress-report">Progress report</h2>
+<p><em>Due 11-13</em>.</p>
+<p>A brief progress report of a basic working system. This report should be in the ACL format that the final report will be in.</p>
+<section id="part-1-data-basic-statistics-and-exploratory-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-data-basic-statistics-and-exploratory-analysis">Part 1: Data basic statistics and exploratory analysis</h3>
+<p>In this part, please provide the following information about your dataset. It’s fine to be working with multiple datasets; just complete this for each one or for a final dataset you will be using if you are combining datasets.</p>
+<ol type="1">
+<li>The number of rows (datapoints) in the dataset and what each datapoint corresponds to. If you are splitting the dataset into a training, test, and possible dev sets, how many rows are in each?</li>
+<li>The number of columns in the dataset you will be using and what each corresponds to.</li>
+<li>If applicable, the distribution of the target labels you are predicting. So for a binary sentiment classification task, how many rows in each set (except the test set) are marked negative or positive sentiment? This can be in a table or graph format.</li>
+<li>Optionally, any other distribution or data visualization that you think is helpful for understanding your dataset or task.</li>
+</ol>
+</section>
+<section id="part-2-some-kind-of-result" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-some-kind-of-result">Part 2: Some kind of result</h3>
+<p>Please provide one (hopefully quantitative) result from your work so far. A good example would be a performance metric result from your baseline approach on a dev or test set, but it could also be some sort of other finding you have so far. But if you’re not that far yet, you can also provide an example of working input and output from your system or part of a system, some sort of plot or other output. You can be up front about challenges you are facing for which you might need help; to get a good grade, I’ll just be looking for some sort of output from a working system or part of a system. If you are confused what this means for your project, contact the instructor.</p>
+</section>
+<section id="part-3-open-questions-and-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-open-questions-and-challenges">Part 3: Open questions and challenges</h3>
+<p>Please describe any open questions or challenges your group has at this point. Will you need any resources other than the ones provided in class (OpenAI API access, CRCD access) or have any other questions? Also describe if the roles for each of your team members have changed since the proposal and if so, what the new roles are.</p>
+</section>
+</section>
+<section id="final-presentation" class="level2">
+<h2 class="anchored" data-anchor-id="final-presentation">Final presentation</h2>
+<p><em>In class 12-08</em>.<br>
+Groups will present their finished work to the group, with Q&amp;A and feedback opportunities from students. Please prepare a maximum 8-minute presentation. <!--Add your slides to this [shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EdWBs5h0nvRDrqPWUMMPCzgB4c3HkyySL47wUw1DY0y2bw?e=T0kmWQ).--> Cover at least these key points:</p>
+<ol type="1">
+<li>Project motivation (briefly)</li>
+<li>Task description, including example input and output</li>
+<li>Data</li>
+<li>Methods</li>
+<li>Results or findings</li>
+</ol>
+</section>
+<section id="final-report" class="level2">
+<h2 class="anchored" data-anchor-id="final-report">Final report</h2>
+<p><em>Due 12-09</em>.<br>
+At the end of the course, groups will provide a written report of their project. This project includes a quantitative comparison between at least two NLP systems on a clearly specified task or tasks. One of these is generally a more traditional NLP approach and the other involves LLMs, though your group’s project may vary if you have discussed this with the instructor.</p>
+<p>At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found <a href="https://github.com/acl-org/acl-style-files">here</a> (Overleaf template <a href="https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj">here</a>). The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices. Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. There is flexibility in section names, but please provide information about the following aspects of the project: 1. Project motivation 2. Literature review. Please provide full citations in a references sections for works cited throughout the paper (not just URLs). 3. Data 4. Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). 5. Results 6. Discussion 9. Future work. This is a good place to describe things you thought about but never had time to complete! 7. Limitations (doesn’t count toward page limit) 8. Ethical issues (doesn’t count toward page limit) 10. Group member task breakdown (doesn’t count toward page limit). This section details the high-level tasks that each group member completed. 11. References (doesn’t count toward page limit) 12. Appendices (optional, doesn’t count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading.</p>
+<!--
+Here is the rubric that will be used in grading:
+
+|Rubric category | Points|
+|-------------------|-:|
+|Clear motivation for the work is provided | 4|
+|Task definition and format of the input and output is clear | 9|
+|Applicable dataset/s are chosen and preprocessed | 10|
+|Baseline system is properly designed and implemented | 15|
+|LLM-based system is properly designed and implemented | 15|
+|Results from a comparison between systems are provided | 20|
+|Discussion is provided of the results and implications | 10|
+|Potential future work is discussed | 4|
+|Limitations of your approach or dataset are sufficiently discussed | 4|
+|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 4|
+|Group member task breakdown is provided | 4|
+|***Project content total*** | ***95***|
+|Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown | 7|
+|Writing is clear | 8|
+|***Writing total*** | ***15***|
+|Group member had a sufficient amount of workload in the project | 15|
+|Task and roles assigned to this group member were completed sufficiently | 15|
+|***Individual contribution total*** | ***30***|
+|***Grand total*** | ***140***|
+-->
+</section>
+<section id="how-your-project-will-be-graded" class="level2">
+<h2 class="anchored" data-anchor-id="how-your-project-will-be-graded">How your project will be graded</h2>
+<p>To get an A, your group’s project should make progress toward an achievable, concrete contribution specified in your project proposal. The project does not necessarily need to be successful in the sense that it outperforms baselines or contributes to our knowledge of a phenomenon. Sometimes ideas don’t work, and that’s okay. But you need to provide evidence of progress toward that contribution. If you are building a dataset, for example, the dataset needs to be built in some form, even if it is as not as large or as useful as you may have hoped. If you are evaluating a new method for a task, you must have an implementation that tests that method against other baselines, even if it doesn’t perform as well as you would have hoped or you didn’t get to evaluate it against all the baselines you wanted to. If you are doing a survey, you must distill a sufficient number of papers into themes that comprehensively describe a research area, even if you don’t end up finding groundbreaking gaps in knowledge that must be addressed. Feel free to take on more risky ideas, but only if you know you’ll have <em>something</em> to show for it at the end. Teaching staff will guide you toward scoping projects that should fulfill this goal in the planning phase through the proposal.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

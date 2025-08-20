@@ -27,7 +27,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-08-19. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-08-20. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -55,7 +55,7 @@ Fall 2025
         <tr>
             <td>2</td>
             <td>08-27 W</td>
-            <td><a href="slides/session2_cs1671_spring2025.pdf">Text normalization</a></td>
+            <td>Text normalization</td>
             <td>J+M 2-2.3, 2.5-2.7</td>
             <td><strong>HW0 due 08-28</strong></td>
         </tr>
@@ -90,7 +90,7 @@ Fall 2025
             <td>09-10 W</td>
             <td>N-gram language models</td>
             <td>J+M 3-3.6, 3.8</td>
-            <td>HW1 out;<br/><strong>Project idea form due 09-11</strong></td>
+            <td>In-class quiz;<br/>HW1 out;<br/><strong>Project idea form due 09-11</strong></td>
         </tr>
         <tr>
             <td>6</td>
@@ -118,7 +118,7 @@ Fall 2025
             <td>09-24 W</td>
             <td>Logistic regression part 2</td>
             <td>J+M 5.4-5.6, 5.9, 5.11</td>
-            <td>HW2 out</td>
+            <td>In-class quiz;<br/>HW2 out</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -135,7 +135,7 @@ Fall 2025
             <td>10-01 W</td>
             <td>Neural networks part 1</td>
             <td>J+M 7-7.1, 7.3</td>
-            <td></td>
+            <td>In-class quiz</td>
         </tr>
         <tr>
             <td>12</td>
@@ -152,7 +152,7 @@ Fall 2025
             <td>10-08 W</td>
             <td>Transformers part 1</td>
             <td>J+M 9-9.2</td>
-            <td><strong>HW2 due 10-09</strong></td>
+            <td>In-class quiz;<br/><strong>HW2 due 10-09</strong></td>
         </tr>
         <tr>
             <td>14</td>
@@ -179,7 +179,7 @@ Fall 2025
             <td>10-22 W</td>
             <td>BERT</td>
             <td>J+M 11-11.2, 11.4-11.6</td>
-            <td>HW3 out</td>
+            <td>In-class quiz;<br/>HW3 out</td>
         </tr>
         <tr>
             <td>18</td>
@@ -210,7 +210,7 @@ Fall 2025
             <td>11-05 W</td>
             <td>Sequence labeling</td>
             <td>J+M 17-17.3, 11.5</td>
-            <td><strong>HW3 due 11-06</strong>;<br/>HW4 out</td>
+            <td>In-class quiz;<br/><strong>HW3 due 11-06</strong>;<br/>HW4 out</td>
         </tr>
         <tr>
             <td>22</td>
@@ -276,19 +276,19 @@ Fall 2025
 
 Description | Points | Percentage of final grade
 ---|---:|---:
-**Homework assignments total** | **405** | **40.5**
-&ensp;Homework 0 | 5 | 0.5
-&ensp;Homework 1 | 100 | 100
-&ensp;Homework 2 | 100 | 100
-&ensp;Homework 3 | 100 | 100
-&ensp;Homework 4 | 100 | 100
-**Project total** | **395** | **39.5**
+**Homework assignments total** | **430** | **43**
+&ensp;Homework 0 | 6 | 0.6
+&ensp;Homework 1 | 105 | 10.5
+&ensp;Homework 2 | 105 | 10.5
+&ensp;Homework 3 | 105 | 10.5
+&ensp;Homework 4 | 105 | 10.5
+**Project total** | **410** | **41**
 &ensp;Project idea form | 5 | 0.5
-&ensp;[Project proposal](project.html#project-proposal) | 80 | 5
-&ensp;Project progress report | 80 | 5.5
-&ensp;Project report | 230 | 14
-**Quizzes total** | **100** | **10**
-&ensp;Each quiz of 5 total | 30 | 3
+&ensp;[Project proposal](project.html#project-proposal) | 85 | 8.5
+&ensp;Project progress report | 85 | 8.5
+&ensp;Project report | 235 | 23.5
+**Quizzes total** | **60** | **6**
+&ensp;Each quiz of 6 total | 10 | 1
 **Participation total** | **100** | **10**
 &ensp;Attendance | 60 | 6
 &ensp;Engagement | 40 | 4
