@@ -9,8 +9,8 @@ website:
   title: "CS 2731 Introduction to Natural Language Processing"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
+      - href: project.qmd
+        text: Project
 
 format:
   html:
