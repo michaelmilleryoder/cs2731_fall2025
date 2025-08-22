@@ -364,7 +364,7 @@ Range | Letter grade
 Feel free to contact the instructor or schedule an office hours appointment to talk about any issues you might have with your grade.
 
 ## Late work policy
-Students are granted 5 total late days across all homework assignments and quizzes without penalty. After those five late days, you will be penalized 10% for each day that your submission is late (up to a maximum of 30%).
+Students are granted 5 total late days across all homework assignments and quizzes without penalty. After those five late days, you will be penalized 10% for each day that your submission is late (up to a maximum of 40%).
 Group project work will be penalized 10% for each day late. No late work will be accepted for the project report.
 
 ## Assignment resubmission policy
