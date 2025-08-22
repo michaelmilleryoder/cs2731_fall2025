@@ -55,7 +55,7 @@ Fall 2025
         <tr>
             <td>2</td>
             <td>08-27 W</td>
-            <td>Text normalization</td>
+            <td>Text processing</td>
             <td>J+M 2-2.3, 2.5-2.7</td>
             <td><strong>HW0 due 08-28</strong></td>
         </tr>
@@ -288,7 +288,7 @@ Description | Points | Percentage of final grade
 &ensp;Project progress report | 85 | 8.5
 &ensp;Project report | 235 | 23.5
 **Quizzes total** | **60** | **6**
-&ensp;Each quiz of 6 total | 10 | 1
+&ensp;Each quiz of 6 total, lowest score dropped | 12 | 1.2
 **Participation total** | **100** | **10**
 &ensp;Attendance | 60 | 6
 &ensp;Engagement | 40 | 4
