@@ -46,6 +46,7 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 1. Train a system to predict abstract terms related to a passage and answer multiple choice questions. See [SemEval 2021 Task 4](https://competitions.codalab.org/competitions/26153).
 
 #### 5. Analysis and annotation of datasets
+1. Work on improving the [Archive of Pittsburgh Language and Speech (APLS)](https://apls.pitt.edu/) with collaborator Prof. Dan Villarreal in the Linguistics Department.
 1. Visualize similarities in US state legislature bill texts and predict bill passage using data from LegiScan (example repo [here](https://github.com/MaanyaShanker/Omnibus-Dissection/tree/main/data)).
 1. Develop an annotation guide and start annotating a new dataset of online gaming voice chat for hate speech, abusive, and offensive language.
 1. Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.
