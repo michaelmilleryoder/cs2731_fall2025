@@ -48,7 +48,7 @@ Fall 2025
         <tr>
             <td>2</td>
             <td>08-27 W</td>
-            <td>Words and tokens</td>
+            <td><a href="slides/session2_cs2731_fall2025.pdf">Words and tokens</a></td>
             <td>J+M 2-2.4, 2.6-2.7, 2.10</td>
             <td>HW0 out</td>
         </tr>
