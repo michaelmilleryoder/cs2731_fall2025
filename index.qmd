@@ -17,7 +17,7 @@ Fall 2025
 |Instructor contact|[mmyoder@pitt.edu](mailto:mmyoder@pitt.edu) or through Canvas messages|
 |Instructor office hours|By appointment in person at SENSQ 6309 or on Zoom<br/>[Book an appointment](https://outlook-sdf.office.com/bookwithme/user/2536c861ee3f49ab9a4a872751754279@pitt.edu?anonymous&ep=plink)|
 |Textbook (free online)|[[J+M] Jurafsky and Martin, *Speech and Language Processing*, 3e draft, 2025-08-24](https://web.stanford.edu/~jurafsky/slp3)|
-|Class notebooks |[CRCD JupyterHub nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&urlpath=tree%2Fcs2731_jupyterhub%2F&branch=master) (Pitt login required, public link to source [here](https://github.com/michaelmilleryoder/cs2731_jupyterhub)).|-->
+|Class notebooks |[CRCD JupyterHub nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&urlpath=lab%2Ftree%2Fcs2731_jupyterhub%2F&branch=main) (Pitt login required, public link to source [here](https://github.com/michaelmilleryoder/cs2731_jupyterhub)).|-->
 
 
 
