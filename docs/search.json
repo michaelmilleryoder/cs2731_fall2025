@@ -74,21 +74,14 @@
     "href": "hw0.html",
     "title": "Homework 0: CRCD JupyterHub setup",
     "section": "",
-    "text": "Due 2025-09-03, 11:59pm. Instructions last updated 2025-08-25.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities."
+    "text": "Due 2025-09-03, 11:59pm. Instructions last updated 2025-08-28.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities."
   },
   {
     "objectID": "hw0.html#instructions",
     "href": "hw0.html#instructions",
     "title": "Homework 0: CRCD JupyterHub setup",
     "section": "Instructions",
-    "text": "Instructions\n\nMake sure you can log in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. You can select the default Teach - 6 cores, 3 hours as your job profile. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here.\nClick the following nbgitpuller link. This should load the newest version of session2_text_normalization.ipynb, which should look like this if you’re curious.\nDouble-click session2_text_normalization.ipynb on the left-hand side panel to open the Jupyter notebook. It should not matter what kernel is selected. The default Python 3 (ipykernel) is fine.\nRun the first set of cells under the Setup section. Note that you will have to restart the kernel after using pip to install packages. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the output of those first cells, including import nltk, and submit it on Canvas. Ideally you are able to import nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
-  },
-  {
-    "objectID": "hw0.html#troubleshooting",
-    "href": "hw0.html#troubleshooting",
-    "title": "Homework 0: CRCD JupyterHub setup",
-    "section": "Troubleshooting",
-    "text": "Troubleshooting\n\nIf you are not able to load jupyterhub.crc.pitt.edu, try using the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. This is necessary if you are off-campus or not on the WIRELESS-PITTNET network.\nIf you can log in to jupyterhub.crc.pitt.edu but can’t spawn a server, make sure you have enough space in your CRCD home directory. This could especially be an issue if you have used the CRCD before. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota."
+    "text": "Instructions\n\nLog in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. Reach out to Michael if you are not able to log in.\nSelect the following JupyterHub Session Configuration options:\n\nSelect Partition: TEACH - 6 CPUs - 45GB\nSelect Virtual Environment: Provide custom path\nCustom Environment Path: /ix/cs2731_2025f/class_env. Note that this is different from what we did in class.\nAccount: you can leave this blank If you can’t spawn a server at this point, try setting Account to cs2731_2025f. Also make sure you have enough space in your CRCD home directory. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota.\n\nClick the following nbgitpuller link. This should load the latest version of session2_preprocessing.ipynb, which starts with a section header of Import necessary packages and should look like this. If it starts with Install nltk or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.\nDouble-click session2_preprocessing.ipynb on the left-hand side panel to open the Jupyter notebook.\nRun the cells under the Import necessary packages section. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import pandas and nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
   },
   {
     "objectID": "index.html",

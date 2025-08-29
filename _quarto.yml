@@ -11,6 +11,8 @@ website:
     left:
       - href: project.qmd
         text: Project
+          #- href: hw0.qmd
+          #text: HW0
 
 format:
   html:

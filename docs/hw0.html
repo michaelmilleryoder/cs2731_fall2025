@@ -110,7 +110,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
   </ul>
 </nav>
     </div>
@@ -136,24 +135,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Due 2025-09-03, 11:59pm</strong>. <em>Instructions last updated 2025-08-25.</em></p>
+<p><strong>Due 2025-09-03, 11:59pm</strong>. <em>Instructions last updated 2025-08-28.</em></p>
 <p>This assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities.</p>
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
 <ol type="1">
-<li>Make sure you can log in to the CRCD JupyterHub at <a href="https://jupyter.crc.pitt.edu">jupyter.crc.pitt.edu</a> with your Pitt credentials. You can select the default <strong>Teach - 6 cores, 3 hours</strong> as your job profile. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are <a href="https://services.pitt.edu/TDClient/33/Portal/KB/ArticleDet?ID=293">here</a>.</li>
-<li>Click the following <a href="https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&amp;urlpath=tree%2Fcs2731_jupyterhub%2F&amp;branch=master" target="_blank">nbgitpuller link</a>. This should load the newest version of <code>session2_text_normalization.ipynb</code>, which should look like <a href="https://github.com/michaelmilleryoder/cs2731_jupyterhub/blob/main/session2_text_normalization.ipynb" target="_blank">this</a> if you’re curious.</li>
-<li>Double-click <code>session2_text_normalization.ipynb</code> on the left-hand side panel to open the Jupyter notebook. It should not matter what kernel is selected. The default <strong>Python 3 (ipykernel)</strong> is fine.</li>
-<li>Run the first set of cells under the <strong>Setup</strong> section. Note that you will have to restart the kernel after using pip to install packages. That is all you have to do. You do not have to run the rest of the notebook.</li>
-<li>Take a screenshot of the output of those first cells, including <code>import nltk</code>, and submit it on Canvas. Ideally you are able to <code>import nltk</code>, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out.</li>
-</ol>
-</section>
-<section id="troubleshooting" class="level2">
-<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<li>Log in to the CRCD JupyterHub at <a href="https://jupyter.crc.pitt.edu">jupyter.crc.pitt.edu</a> with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are <a href="https://services.pitt.edu/TDClient/33/Portal/KB/ArticleDet?ID=293">here</a>. Reach out to Michael if you are not able to log in.</li>
+<li>Select the following JupyterHub Session Configuration options:
 <ul>
-<li>If you are not able to load <code>jupyterhub.crc.pitt.edu</code>, try using the Pitt VPN through the GlobalProtect app. Instructions for setting that up are <a href="https://services.pitt.edu/TDClient/33/Portal/KB/ArticleDet?ID=293">here</a>. This is necessary if you are off-campus or not on the WIRELESS-PITTNET network.</li>
-<li>If you can log in to <code>jupyterhub.crc.pitt.edu</code> but can’t spawn a server, make sure you have enough space in your CRCD home directory. This could especially be an issue if you have used the CRCD before. Check your usage by using <code>ssh</code> to log in to <code>h2p.crc.pitt.edu</code> and running <code>crc-quota</code>.</li>
-</ul>
+<li>Select Partition: <strong>TEACH - 6 CPUs - 45GB</strong></li>
+<li>Select Virtual Environment: Provide custom path</li>
+<li>Custom Environment Path: <strong>/ix/cs2731_2025f/class_env</strong>. Note that this is different from what we did in class.</li>
+<li>Account: you can leave this blank <br>If you can’t spawn a server at this point, try setting Account to <code>cs2731_2025f</code>. Also make sure you have enough space in your CRCD home directory. Check your usage by using <code>ssh</code> to log in to <code>h2p.crc.pitt.edu</code> and running <code>crc-quota</code>.</li>
+</ul></li>
+<li>Click the following <a href="https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&amp;urlpath=lab%2Ftree%2Fcs2731_jupyterhub%2F&amp;branch=main" target="_blank">nbgitpuller link</a>. This should load the latest version of <code>session2_preprocessing.ipynb</code>, which starts with a section header of <strong>Import necessary packages</strong> and should look like <a href="https://github.com/michaelmilleryoder/cs2731_jupyterhub/blob/main/session2_preprocessing.ipynb" target="_blank">this</a>. If it starts with <strong>Install <code>nltk</code></strong> or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.</li>
+<li>Double-click <code>session2_preprocessing.ipynb</code> on the left-hand side panel to open the Jupyter notebook.</li>
+<li>Run the cells under the <strong>Import necessary packages</strong> section. That is all you have to do. You do not have to run the rest of the notebook.</li>
+<li>Take a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import <code>pandas</code> and <code>nltk</code>, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out.</li>
+</ol>
 
 
 </section>
