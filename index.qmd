@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-08-28. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-08-30. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -65,7 +65,7 @@ Fall 2025
             <td>Machine learning intro, NLP tasks and applications</td>
             <td></td>
             <!--<td><a href="https://forms.office.com/r/eZ1djDScD0">Project idea form</a> out</td>-->
-            <td><strong><a href="hw0">HW0 due</strong>;<br/>Project idea form out 09-04</td>
+            <td><strong><a href="hw0">HW0 due</a></strong>;<br/>Project idea form out 09-04</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
@@ -170,8 +170,8 @@ Fall 2025
         <tr>
             <td>17</td>
             <td>10-22 W</td>
-            <td>BERT</td>
-            <td>J+M 11-11.2, 11.4-11.6</td>
+            <td>Reinforcement learning: guest lecture, Emma Jordan</td>
+            <td></td>
             <td>In-class quiz;<br/>HW3 out</td>
         </tr>
         <tr>
@@ -184,15 +184,15 @@ Fall 2025
         <tr>
             <td>19</td>
             <td>10-29 W</td>
-            <td>Guest lecture</td>
+            <td>Guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a></td>
             <td></td>
             <td></td>
         </tr>
         <tr>
             <td>20</td>
             <td>11-03 M</td>
-            <td>Reasoning in LLMs</td>
-            <td><a href="https://arxiv.org/pdf/2501.12948">DeepSeek-R1</a>,<br/><a href="https://wenting-zhao.github.io/complex-reasoning-tutorial/">ACL 2023 Tutorial: Complex Reasoning in Natural Language</a></td>
+            <td>BERT</td>
+            <td>J+M 11-11.2, 11.4-11.6</td>
             <td></td>
         </tr>
         <tr>
