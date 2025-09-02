@@ -2,9 +2,9 @@
 title: "Homework 0: CRCD JupyterHub setup"
 ---
 
-<!--**Due 2025-09-03, 11:59pm**.--> *Instructions last updated 2025-09-01.*
+**Due 2025-09-05, 11:59pm**. *Instructions last updated 2025-09-01.*
 
-<span style="color:blue; font-weight:bold">Michael is still figuring out issues with the CRCD and loading custom environments in JupyterHub. Please hold off for now on this assignment until those are resolved.</span> This assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities.
+This assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities. Please follow the instructions exactly as listed. I'm interested in seeing if students can successfully load JupyterHub with the custom class conda environment; please don't submit screenshots using `pip` to install packages in the base environment.
 
 ## Instructions
 
