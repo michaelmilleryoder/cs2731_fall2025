@@ -62,7 +62,7 @@ Fall 2025
         <tr>
             <td>3</td>
             <td>09-03 W</td>
-            <td>Machine learning intro, NLP tasks and applications</td>
+            <td><a href="slides/session2_cs2731_fall2025.pdf">Machine learning intro, NLP tasks and applications</a></td>
             <td></td>
             <!--<td><a href="https://forms.office.com/r/eZ1djDScD0">Project idea form</a> out</td>-->
             <td>Project idea form out 09-04;<br/><strong><a href="hw0">HW0 due 09-05</a></strong></td>
