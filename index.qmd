@@ -65,7 +65,7 @@ Fall 2025
             <td>Machine learning intro, NLP tasks and applications</td>
             <td></td>
             <!--<td><a href="https://forms.office.com/r/eZ1djDScD0">Project idea form</a> out</td>-->
-            <td><strong><a href="hw0">HW0 due</a></strong>;<br/>Project idea form out 09-04</td>
+            <td><!--<strong><a href="hw0">HW0 due</a></strong>;<br/>-->Project idea form out 09-04</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 2: N-grams and statistical NLP</td>
