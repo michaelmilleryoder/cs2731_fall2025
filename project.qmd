@@ -30,7 +30,7 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 6. Classify tweets as sexist or not, or predict the "intent" of sexist tweets as *direct*, *reported* or *judgemental*. See [EXIST 2024 Task 1 or Task 2](https://nlp.uned.es/exist2024/)
 7. Predict if similar words are redundant or not with the [Semantic Pleonasm corpus](https://pleonasm.cs.pitt.edu/#) developed right here at Pitt.
 1. From a set of descriptions of characters, develop a classifier to predict which ones will generate the most fanfiction. This could be a lens into online community and media norms.
-* Predict "speech acts", intentions behind utterances, based on emojis with a dataset assembled by former students in the class.
+1. Predict "speech acts", intentions behind utterances, based on emojis with a dataset assembled by former students in the class.
 
 #### 2. Machine translation
 1. Train translation models for literary text and evaluate on a dataset of Korean-English webnovels.
@@ -52,24 +52,24 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 1. Hate speech is culturally specific, yet the majority of NLP work focuses on English in North American and European contexts. A quantitative analysis of different features of datasets annotated for hate speech in multiple languages and from multiple cultural contexts would illuminate global similarities and culturally specific contexts.
 1. Fanfiction, online writing by fans of media works, is known for celebrating queer identity but still may center the experiences of white authors and characters. Use FanfictionNLP to compare representations of characters of color to white characters in fanfiction at scale.
 1. Quantitative analysis of hateful, white supremacist narratives usually centers on contemporary online discourse. Yet many white supremacist language and narratives has its roots before online discourse. Compare narratives, topics and themes presented in historic and contemporary white supremacist discourse with data provided by the instructor.
-* Explore similarities and differences between language in podcasts and Reddit communities based on those podcasts using a [dataset](https://github.com/FishOfPitt116/CS2731Project/tree/main) assembled by former students in the class.
-* Computational analysis of Nakba narratives. See [workshop](https://sina.birzeit.edu/nakba-nlp/) and [datasets](https://t.ly/00Ul6).
-* Examine the framing of different entities in police Facebook posts from the [Plain View Project](https://www.plainviewproject.org/).
+1. Explore similarities and differences between language in podcasts and Reddit communities based on those podcasts using a [dataset](https://github.com/FishOfPitt116/CS2731Project/tree/main) assembled by former students in the class.
+1. Computational analysis of Nakba narratives. See [workshop](https://sina.birzeit.edu/nakba-nlp/) and [datasets](https://t.ly/00Ul6).
+1. Examine the framing of different entities in police Facebook posts from the [Plain View Project](https://www.plainviewproject.org/).
 1. Analyze how different newspapers cover topics differently in English-language editorials from Sri Lankan newspapers. Data is provided by the instructor and a collaborator at Carnegie Mellon University.
 
 
 #### 6. Survey papers
-*    Survey how NLP is used and applied in other fields before and after LLMs. What has been our most useful contributions to scholars in the social sciences, physical sciences, or humanities? This survey would assemble papers across disciplines for mentions of NLP and summarize what is most useful, what is lacking, and what approaches from NLP could be helpful to others.
-*    Computational social science using NLP generally relies on data from online communities. But this is missing non-online interactions and the practices of those who are not active online. Survey datasets and approaches that use quantitative and computational techniques on recordings of offline linguistic interaction.
-*    A growing area of research in computational social science aims to capture the framing and portrayal of entities across large text corpora (such as in news media). Survey existing approaches and challenges.
+1.    Survey how NLP is used and applied in other fields before and after LLMs. What has been our most useful contributions to scholars in the social sciences, physical sciences, or humanities? This survey would assemble papers across disciplines for mentions of NLP and summarize what is most useful, what is lacking, and what approaches from NLP could be helpful to others.
+1.    Computational social science using NLP generally relies on data from online communities. But this is missing non-online interactions and the practices of those who are not active online. Survey datasets and approaches that use quantitative and computational techniques on recordings of offline linguistic interaction.
+1.    A growing area of research in computational social science aims to capture the framing and portrayal of entities across large text corpora (such as in news media). Survey existing approaches and challenges.
 
 #### 7. Other
-* Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof. Diane Litman.
-* Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof. Diane Litman.
+1. Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof. Diane Litman.
+1. Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof. Diane Litman.
 1. New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms.
-* Build networks of characters and predict relations among characters in fiction using this [dataset](https://github.com/dbamman/characterRelations).
-* Stancetaking, a concept from sociolinguistics, is when speakers take an evaluative position toward the concept (which are often nuanced, e.g. "No, I actually don't like Taylor Swift's music that much, but she's great as a person"). Develop automated methods for identifying the "stance object", who the speaker is evaluating, likely from Reddit data.
-* Automatically summarize movies based on their subtitles from this [dataset](https://github.com/VeerabadraLokesh/moviesubsummarize) developed by former students in the class.
+1. Build networks of characters and predict relations among characters in fiction using this [dataset](https://github.com/dbamman/characterRelations).
+1. Stancetaking, a concept from sociolinguistics, is when speakers take an evaluative position toward the concept (which are often nuanced, e.g. "No, I actually don't like Taylor Swift's music that much, but she's great as a person"). Develop automated methods for identifying the "stance object", who the speaker is evaluating, likely from Reddit data.
+1. Automatically summarize movies based on their subtitles from this [dataset](https://github.com/VeerabadraLokesh/moviesubsummarize) developed by former students in the class.
 
 ## Project group match day
 *In class 09-17*.  
