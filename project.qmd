@@ -33,7 +33,7 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 1. Predict "speech acts", intentions behind utterances, based on emojis with a dataset assembled by former students in the class.
 
 #### 2. Machine translation
-1. Train translation models for literary text and evaluate on a dataset of Korean-English webnovels.
+1. Train translation models for literary text and evaluate on a dataset of Korean-English webnovels developed by a former student in this class.
 1. Translate customer service chats in between languages. See the [WMT 2024 Chat Shared Task](https://wmt-chat-task.github.io/2024/)
 2. Translate code-mixed Hinglish to English. See the [WMT 2022 Code-mixed Machine Translation Task](https://www.statmt.org/wmt22/code-mixed-translation-task.html)
 3. Create a system to automatically correct (post-edit) machine translations. See the [WMT 2022 Automatic Post-Editing Shared Task](https://www.statmt.org/wmt22/ape-task.html)
@@ -42,10 +42,12 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 1. Given a query, retrieve the most relevant passages from regulatory documents: <https://www.codabench.org/competitions/3527/>
 2. Extract important entities from scientific articles with the [SCIRex dataset](https://github.com/allenai/SciREX?tab=readme-ov-file)
 
+<!--
 #### 4. Question answering
 1. Train a system to predict abstract terms related to a passage and answer multiple choice questions. See [SemEval 2021 Task 4](https://competitions.codalab.org/competitions/26153).
+-->
 
-#### 5. Analysis and annotation of datasets
+#### 4. Analysis and annotation of datasets
 1. Improve part-of-speech tagging and other linguistic annotation for spontaneous speech in the [Archive of Pittsburgh Language and Speech (APLS)](https://apls.pitt.edu/) with collaborator Prof. Dan Villarreal in the Linguistics Department. An evaluation dataset for parts of speech has already been manually annotated and so this project is ready to go to evaluate different systems! This work would help linguistics researchers study specific linguistic phenomena by speakers here in Pittsburgh.
 1. Visualize similarities in US state legislature bill texts and predict bill passage using data from LegiScan (example repo [here](https://github.com/MaanyaShanker/Omnibus-Dissection/tree/main/data)).
 1. Develop an annotation guide and start annotating a new dataset of online gaming voice chat for hate speech, abusive, and offensive language.
@@ -53,17 +55,17 @@ Some of these projects are drawn from "shared tasks" where NLP researchers compe
 1. Fanfiction, online writing by fans of media works, is known for celebrating queer identity but still may center the experiences of white authors and characters. Use FanfictionNLP to compare representations of characters of color to white characters in fanfiction at scale.
 1. Quantitative analysis of hateful, white supremacist narratives usually centers on contemporary online discourse. Yet many white supremacist language and narratives has its roots before online discourse. Compare narratives, topics and themes presented in historic and contemporary white supremacist discourse with data provided by the instructor.
 1. Explore similarities and differences between language in podcasts and Reddit communities based on those podcasts using a [dataset](https://github.com/FishOfPitt116/CS2731Project/tree/main) assembled by former students in the class.
-1. Computational analysis of Nakba narratives. See [workshop](https://sina.birzeit.edu/nakba-nlp/) and [datasets](https://t.ly/00Ul6).
+1. Computational analysis of Palestinian Nakba narratives. See [workshop](https://sina.birzeit.edu/nakba-nlp/) and [datasets](https://t.ly/00Ul6).
 1. Examine the framing of different entities in police Facebook posts from the [Plain View Project](https://www.plainviewproject.org/).
 1. Analyze how different newspapers cover topics differently in English-language editorials from Sri Lankan newspapers. Data is provided by the instructor and a collaborator at Carnegie Mellon University.
 
 
-#### 6. Survey papers
+#### 5. Survey papers
 1.    Survey how NLP is used and applied in other fields before and after LLMs. What has been our most useful contributions to scholars in the social sciences, physical sciences, or humanities? This survey would assemble papers across disciplines for mentions of NLP and summarize what is most useful, what is lacking, and what approaches from NLP could be helpful to others.
 1.    Computational social science using NLP generally relies on data from online communities. But this is missing non-online interactions and the practices of those who are not active online. Survey datasets and approaches that use quantitative and computational techniques on recordings of offline linguistic interaction.
 1.    A growing area of research in computational social science aims to capture the framing and portrayal of entities across large text corpora (such as in news media). Survey existing approaches and challenges.
 
-#### 7. Other
+#### 6. Other
 1. Evaluate LLMs for their factuality in summarization of class reflections using a dataset provided by the instructor and Prof. Diane Litman.
 1. Evaluate the fairness of quality scores automatically assigned to sutdent reflections using a dataset provided by the instructor and Prof. Diane Litman.
 1. New identity terms are commonly developed in online communities, some of them hateful. Develop methods to find in-group hate jargon and identity terms.
