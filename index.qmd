@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-08-30. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-09-01. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -138,7 +138,7 @@ Fall 2025
             <td></td>
         </tr>
         <tr>
-            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: LLMs</td>
+            <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 4: Large language models (LLMs)</td>
         </tr>
         <tr>
             <td>13</td>
@@ -177,15 +177,15 @@ Fall 2025
         <tr>
             <td>18</td>
             <td>10-27 M</td>
-            <td>Prompting and post-training LLMs</td>
-            <td>J+M 12-12.5, 12.8</td>
+            <td>Guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
             <td>19</td>
             <td>10-29 W</td>
-            <td>Guest lecture, <a href="https://lorraine333.github.io/">Lorraine Li</a></td>
-            <td></td>
+            <td>Prompting and post-training LLMs</td>
+            <td>J+M 12-12.5, 12.8</td>
             <td></td>
         </tr>
         <tr>
