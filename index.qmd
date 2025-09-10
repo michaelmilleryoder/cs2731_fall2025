@@ -81,7 +81,7 @@ Fall 2025
             <td>09-10 W</td>
             <td><a href="slides/session5_cs2731_fall2025.pdf">N-gram language models</a></td>
             <td>J+M 3-3.6, 3.8</td>
-            <td>In-class quiz;<br/>HW1 out;<br/><strong><a href="https://forms.cloud.microsoft/r/5kXGyMSFpF">Project idea form</a> due 09-11</strong></td>
+            <td>In-class quiz;<br/><a href="hw1">HW1</a> out;<br/><strong><a href="https://forms.cloud.microsoft/r/5kXGyMSFpF">Project idea form</a> due 09-11</strong></td>
         </tr>
         <tr>
             <td>6</td>
@@ -109,7 +109,7 @@ Fall 2025
             <td>09-24 W</td>
             <td>Logistic regression part 2</td>
             <td>J+M 5.4-5.6, 5.9, 5.11</td>
-            <td>In-class quiz;<br/><strong>HW1 due 09-24</strong><br/>HW2 out 09-25</td>
+            <td>In-class quiz;<br/><strong><a href="hw1">HW1</a> due 09-24</strong><br/>HW2 out 09-25</td>
         </tr>
         <tr>
             <td colspan=5 style="text-align:center; background-color:#000057; color:white">Module 3: Neural networks and word2vec</td>
@@ -268,8 +268,8 @@ Fall 2025
 Description | Points | Percentage of final grade
 ---|---:|---:
 **Homework assignments total** | **430** | **43**
-&ensp;Homework 0 | 6 | 0.6
-&ensp;Homework 1 | 106 | 10.6
+&ensp;[Homework 0](hw0) | 6 | 0.6
+&ensp;[Homework 1](hw1) | 106 | 10.6
 &ensp;Homework 2 | 106 | 10.6
 &ensp;Homework 3 | 106 | 10.6
 &ensp;Homework 4 | 106 | 10.6

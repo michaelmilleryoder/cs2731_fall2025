@@ -13,6 +13,8 @@ website:
         text: Project
       - href: hw0.qmd
         text: HW0
+      - href: hw1.qmd
+        text: HW1
 
 format:
   html:
