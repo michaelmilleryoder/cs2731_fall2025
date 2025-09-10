@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Homework 1: Character-level language modeling – CS 2731 Introduction to Natural Language Processing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8c791bc5d13144c9e62643e4213363db.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">CS 2731 Introduction to Natural Language Processing</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./project.html"> 
+<span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./hw0.html"> 
+<span class="menu-text">HW0</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning objectives</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#part-1-train-character-level-n-gram-language-models" id="toc-part-1-train-character-level-n-gram-language-models" class="nav-link" data-scroll-target="#part-1-train-character-level-n-gram-language-models">Part 1: Train character-level n-gram language models</a>
+  <ul class="collapse">
+  <li><a href="#extract-character-n-grams" id="toc-extract-character-n-grams" class="nav-link" data-scroll-target="#extract-character-n-grams">1.1 Extract character n-grams</a></li>
+  <li><a href="#build-n-gram-language-models" id="toc-build-n-gram-language-models" class="nav-link" data-scroll-target="#build-n-gram-language-models">1.2 Build n-gram language models</a></li>
+  <li><a href="#generating-shakespeare-with-character-level-n-gram-language-models" id="toc-generating-shakespeare-with-character-level-n-gram-language-models" class="nav-link" data-scroll-target="#generating-shakespeare-with-character-level-n-gram-language-models">1.3 Generating Shakespeare with character-level n-gram language models</a></li>
+  <li><a href="#calculate-perplexity-of-test-documents" id="toc-calculate-perplexity-of-test-documents" class="nav-link" data-scroll-target="#calculate-perplexity-of-test-documents">1.4 Calculate perplexity of test documents</a></li>
+  <li><a href="#deliverables" id="toc-deliverables" class="nav-link" data-scroll-target="#deliverables">Deliverables</a></li>
+  </ul></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a>
+  <ul class="collapse">
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 1: Character-level language modeling</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Due 2025-09-24, 11:59pm</strong>. <em>Instructions last updated 2025-09-10.</em></p>
+<p>Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next <em>character</em> in a sequence given the previous characters. You will build character-level n-gram language models. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data. The homework is designed to implement on your own computer or a server of your choosing, but you can also use class CRCD resources if you like. Just note that you’ll have to submit a Python script, not a Jupyter notebook.</p>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
+<p>After completing this assignment, students will be able to:</p>
+<ul>
+<li>Understand how to compute n-gram language model probabilities using maximum likelihood estimation.</li>
+<li>Use n-gram language models to probabilistically generate texts and implement generation using n-gram probabilities.</li>
+<li>Gain intuition on how perplexity will estimate language model performance on unseen texts.</li>
+</ul>
+</section>
+<section id="data" class="level1">
+<h1>Data</h1>
+<p>Download the following datasets for this assignment:</p>
+<ul>
+<li><a href="hw3/shakespeare_input.txt" download="">Shakespeare training data</a></li>
+<li><a href="hw3/test_data.zip">Test data</a> of <em>New York Times</em> articles and several of Shakespeare’s sonnets. Note that this text data is encoded in <code>Latin1</code> instead of <code>utf8</code>.</li>
+</ul>
+</section>
+<section id="part-1-train-character-level-n-gram-language-models" class="level1">
+<h1>Part 1: Train character-level n-gram language models</h1>
+<p>In this section, you will fill in the following skeleton Python script:</p>
+<ul>
+<li><a href="hw3/ngram_skeleton.py">N-gram skeleton script</a></li>
+</ul>
+<section id="extract-character-n-grams" class="level2">
+<h2 class="anchored" data-anchor-id="extract-character-n-grams">1.1 Extract character n-grams</h2>
+<p>First, fill out the <code>ngrams(c, text)</code> function that produces a list of all n-grams of that use <code>c</code> elements of context from the input text. Each n-gram should consist of a 2-element tuple <code>(context, char)</code>, where the context is itself a <code>c</code>-length string comprised of the <code>c</code> characters preceding the current character. If <code>c == 1</code>, then produce bigrams, if <code>c == 2</code>, trigrams. The sentence should be padded with <code>c</code> <code>~</code> characters at the beginning (we’ve provided you with <code>start_pad(c)</code> for this purpose). If <code>c == 0</code>, all contexts should be empty strings. You may assume that <code>c ≥ 0</code>. You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. Here is some example output from such a function:</p>
+<pre><code>&gt;&gt;&gt; ngrams(1, 'abc')
+[('~', 'a'), ('a', 'b'), ('b', 'c')]
+
+&gt;&gt;&gt; ngrams(2, 'abc')
+[('~~', 'a'), ('~a', 'b'), ('ab', 'c')]</code></pre>
+<p>We’ve also given you the function <code>create_ngram_model(model_class, path, c, k)</code> that will create and return an n-gram model trained on the entire file path provided.</p>
+</section>
+<section id="build-n-gram-language-models" class="level2">
+<h2 class="anchored" data-anchor-id="build-n-gram-language-models">1.2 Build n-gram language models</h2>
+<p>In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document.</p>
+<p>In the <code>NgramModel class</code>, write an initialization method <code>__init__(self, c, k)</code> which stores the context length <code>c</code> of the model and initializes any necessary internal variables. Then write a method <code>get_vocab(self)</code> that returns the vocab (this is the set of all characters used by this model).</p>
+<p>Write a method <code>update(self, text)</code> which computes the n-grams for the input sentence and updates the internal counts. Also, write a method <code>prob(self, context, char)</code> which accepts a <code>c</code>-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be <span class="math inline">\(1/V\)</span> where <span class="math inline">\(V\)</span> is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.</p>
+<pre><code> &gt;&gt;&gt; m = NgramModel(1, 0)
+ &gt;&gt;&gt; m.update('abab')
+ &gt;&gt;&gt; m.get_vocab()
+ {'a', 'b'}
+ &gt;&gt;&gt; m.update('abcd')
+ &gt;&gt;&gt; m.get_vocab()
+ {'a', 'b', 'c', 'd'}
+ &gt;&gt;&gt; m.prob('a', 'b')
+ 1.0
+ &gt;&gt;&gt; m.prob('~', 'c')
+ 0.0
+ &gt;&gt;&gt; m.prob('b', 'c')
+ 0.5</code></pre>
+<p>Write a method <code>random_char(self, context)</code> which returns a random character according to the probability distribution determined by the given context. Just like the <code>prob</code> function, in a novel context assign a probability of any given character <span class="math inline">\(1/V\)</span>, where <span class="math inline">\(V\)</span> is the size of the vocabulary.</p>
+<!--Specifically, let
+ be the vocab, sorted according to Python’s natural lexicographic ordering, and let  be a random number between 0 and 1. Your method should return the character vi
+
+ such that
+
+You should use a single call to the random.random() function to generate
+
+    .
+
+.-->
+<p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
+<pre><code>     &gt;&gt;&gt; m = NgramModel(0, 0)
+     &gt;&gt;&gt; m.update('abab')
+     &gt;&gt;&gt; m.update('abcd')
+     &gt;&gt;&gt; random.seed(1)
+     &gt;&gt;&gt; [m.random_char('') for i in range(10)]
+     ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']</code></pre>
+<p>In the NgramModel class, write a method <code>random_text(self, length)</code> which returns a string of characters chosen at random using the <code>random_char(self, context)</code> method. Your starting context should always be <code>c</code> <code>~</code> characters, and the context should be updated as characters are generated. If <code>c == 0</code>, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.</p>
+<p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
+<pre><code>     &gt;&gt;&gt; m = NgramModel(1, 0)
+     &gt;&gt;&gt; m.update('abab')
+     &gt;&gt;&gt; m.update('abcd')
+     &gt;&gt;&gt; random.seed(1)
+     &gt;&gt;&gt; m.random_text(10)
+     abcdbabcda</code></pre>
+</section>
+<section id="generating-shakespeare-with-character-level-n-gram-language-models" class="level2">
+<h2 class="anchored" data-anchor-id="generating-shakespeare-with-character-level-n-gram-language-models">1.3 Generating Shakespeare with character-level n-gram language models</h2>
+<p>Now you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. Do this for at least trigrams, 4-grams and 7-grams, but feel free to explore other values of <em>n</em> as well. The following commands should produce text using different values of <em>n</em>:</p>
+<pre><code>&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)
+&gt;&gt;&gt; m.random_text(250)
+
+&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 3)
+&gt;&gt;&gt; m.random_text(250)
+
+&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 4)
+&gt;&gt;&gt; m.random_text(250)
+
+&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)
+&gt;&gt;&gt; m.random_text(250)</code></pre>
+<p>You may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data.</p>
+</section>
+<section id="calculate-perplexity-of-test-documents" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-perplexity-of-test-documents">1.4 Calculate perplexity of test documents</h2>
+<p>Using the <code>perplexity</code> method, calculate the perplexity of each test document. For each file in the test data (<code>nytimes_article.txt</code> and <code>shakespeare_sonnets.txt</code>), calculate the perplexity for each <strong>non-blank</strong> line and the average across all lines in the document. Do this for trigram, 4-gram and 7-gram character-level language models trained on Shakespeare plays (<code>shakespeare_input.txt</code>).</p>
+<!--
+## 1.4 Laplace smoothing
+
+Laplace smoothing adds one to each count (hence its alternate name add-one smoothing). Since there are $V$ characters in the vocabulary and each one was incremented, we also need to adjust the denominator of $N$ tokens to take into account the extra $V$ observations.
+
+$$ P_{Laplace}(w) = \frac{count_w + 1}{N + |V|}$$
+
+Implement Laplace add-1 smoothing in the `NgramModel` class. 
+
+```
+# Examples to run your code
+>>> m = NgramModel(1, 1)
+>>> m.update('abab')
+>>> m.update('abcd')
+>>> m.prob('a', 'a')
+0.14285714285714285
+>>> m.prob('a', 'b')
+0.5714285714285714
+>>> m.prob('c', 'd')
+0.4
+>>> m.prob('d', 'a')
+0.25
+```
+-->
+</section>
+<section id="deliverables" class="level2">
+<h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
+<p>In your report, include:</p>
+<ol type="1">
+<li>A description of how you wrote your program, including all assumptions and design decisions</li>
+<li>Report some of your generated text for trigrams, 4-grams and 7-grams and discuss. What do you notice about the short passages you’ve generated from n-gram models with different <em>n</em>? Are they as good as <a href="https://www.youtube.com/watch?v=no_elVGGgW8">1000 monkeys working at 1000 typewriters</a>? Are there patterns in what models generate first?</li>
+<li>Perplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (<em>New York Times</em> article and Shakespeare sonnets).</li>
+<li>What does your perplexity indicate across different test documents? What does a comparison of different <em>n</em> in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?</li>
+</ol>
+</section>
+</section>
+<section id="submission" class="level1">
+<h1>Submission</h1>
+<p>Please submit the following items on Canvas:</p>
+<ul>
+<li>Your report with results and answers to questions, named <code>report_{your pitt email id}_hw3.pdf</code>. No need to include <span class="citation" data-cites="pitt.edu">@pitt.edu</span>, just use the email ID before that part. For example: <code>report_mmyoder_hw3.pdf</code>.</li>
+<li>The code of your program</li>
+<li>A <code>README.txt</code> file explaining
+<ul>
+<li>the computing environment you used; what programming language and version you used; what packages did you use in case we replicate your experiments (a <code>requirements.txt</code> file for setting up the environment may be useful if there are many packages).</li>
+<li>any additional resources, references, or web pages you’ve consulted</li>
+<li>any person with whom you’ve discussed the assignment and describe the nature of your discussions</li>
+<li>any generative AI tool used, and how it was used</li>
+<li>any unresolved issues or problems</li>
+</ul></li>
+</ul>
+</section>
+<section id="grading" class="level1">
+<h1>Grading</h1>
+<p>This homework assignment is worth 106 points. The grading rubric will be posted on Canvas.</p>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
+<p>This assignment is based on a homework assignment by Prof.&nbsp;Diane Litman and Prof.&nbsp;Mark Yatskar. <a href="https://cs.stanford.edu/people/karpathy/char-rnn/shakespeare_input.txt">Shakespeare data</a> is from Andrej Karpathy.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
