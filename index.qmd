@@ -86,7 +86,7 @@ Fall 2025
         <tr>
             <td>6</td>
             <td>09-15 M</td>
-            <td>N-gram language models part 2, text classification</td>
+            <td><a href="slides/session6_cs2731_fall2025.pdf">N-gram language models part 2, text classification</a></td>
             <td>J+M 4 (intro), 4.9-4.10, 4.12</td>
             <td></td>
         </tr>
