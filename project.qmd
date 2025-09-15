@@ -14,7 +14,7 @@ Projects will be done in groups of 2-4 students. Groups will be formed during an
 Fill out project ideas you might be interested in working on in this form. You can fill out ideas from the example projects listed below or one of your own ideas.
 For your own ideas, consider what what research you're interested in, what system you'd like to build that processes language in some form, interesting text datasets you'd like to work on, really anything! It is best if your idea has a dataset in mind, but this is not required. 
 
-You can fill out as many ideas as you'd like with this form. Ideas do not have to be fully sketched out. Submitting an idea does mean you will necessarily work on it. These ideas will be presented to all students **anonymously**. Each student must submit at least one idea for credit on this assignment, even if it's just chosen from the example projects.
+You can fill out as many ideas as you'd like with this form. Ideas do not have to be fully sketched out. Submitting an idea does not mean you will necessarily work on it. These ideas will be presented to all students **anonymously**. Each student must submit at least one idea for credit on this assignment, even if it's just chosen from the example projects.
 
 ### Example projects
 Some of these projects are drawn from "shared tasks" where NLP researchers compete for the best performance on certain datasets. Others are based on ideas and projects from prior students and from the instructor.
@@ -96,6 +96,7 @@ Note that this list of project ideas is much greater than the final number of gr
 1. Extracting claims from social media posts for the intent of claim fact-checking.
 1. Build a Pokémon chatbot or classifier for Pokémon based on text descriptions from [Bulbapedia](https://bulbapedia.bulbagarden.net/wiki/Krookodile_(Pok%C3%A9mon)) and entries from [Pokédex](https://pokeapi.co/).
 1. Build a speech-to-speech translation system between Indian languages with data from [Project Vaani](https://vaani.iisc.ac.in/#Data).
+1. Train an LLM to play a Text Adventure Game (https://writtenrealms.com/). Reinforcement learning or an LLM agent with a few examples (few-shot prompting) are some example approaches to play the game.
 
 
 ## Project peer group feedback
