@@ -44,7 +44,7 @@ Here is some example output from such a function:
 We’ve also given you the function `create_ngram_model(model_class, path, c, k)` that will create and return an n-gram model trained on the entire file path provided.
 
 ## 2. Build n-gram language models
-In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. 
+In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. This model does not need any smoothing.
 
 In the `NgramModel class`, write an initialization method `__init__(self, c, k)` which stores the context length `c` of the model and initializes any necessary internal variables. Then write a method `get_vocab(self)` that returns the vocab (this is the set of all characters used by this model).
 
