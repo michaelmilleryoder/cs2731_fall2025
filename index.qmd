@@ -93,7 +93,7 @@ Fall 2025
         <tr>
             <td>7</td>
             <td>09-17 W</td>
-            <td>Project match day, CRCD tutorial</td>
+            <td><a href="slides/session7_cs2731_fall2025.pdf">Project match day, CRCD tutorial</a></td>
             <td></td>
             <td></td>
         </tr>
