@@ -100,7 +100,7 @@ Fall 2025
         <tr>
             <td>8</td>
             <td>09-22 M</td>
-            <td>Logistic regression part 1</td>
+            <td><a href="slides/session8_cs2731_fall2025.pdf">Logistic regression part 1</a></td>
             <td>J+M 4.1-4.4</td>
             <td></td>
         </tr>
