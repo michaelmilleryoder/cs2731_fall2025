@@ -158,7 +158,7 @@ Implement Laplace add-1 smoothing in the `NgramModel` class.
 In your report, include:
 
 1. A description of how you wrote your program, including all assumptions and design decisions
-2. Report your generated text after *t h* for trigrams, 4-grams and 7-grams, as well as any other generated text with other contexts or no contexts. Discuss these results. What do you notice about the short passages you've generated from n-gram models with different *n*? Are they as good as [1000 monkeys working at 1000 typewriters](https://www.youtube.com/watch?v=no_elVGGgW8)? Are there patterns in what models generate first?
+2. Report examples of generated text for trigrams, 4-grams and 7-grams. Discuss these results. What do you notice about the short passages you've generated from n-gram models with different *n*? Are they as good as [1000 monkeys working at 1000 typewriters](https://www.youtube.com/watch?v=no_elVGGgW8)? Are there patterns in what models generate first?
 2. Perplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (*New York Times* article and Shakespeare sonnets). 
 3. What does your perplexity indicate across different test documents? What does a comparison of different *n* in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?
 
