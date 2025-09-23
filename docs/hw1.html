@@ -268,7 +268,7 @@ You should use a single call to the random.random() function to generate
 </section>
 <section id="generating-shakespeare-with-character-level-n-gram-language-models" class="level2">
 <h2 class="anchored" data-anchor-id="generating-shakespeare-with-character-level-n-gram-language-models">3. Generating Shakespeare with character-level n-gram language models</h2>
-<p>Now you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. Provide the 2-character context <em>t h</em> and record what is generated. Do this for at least trigrams, 4-grams and 7-grams, but feel free to explore other values of <em>n</em> and other prior contexts (or no prior context) as well. The following commands should produce text using different values of <em>n</em>:</p>
+<p>Now you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. Do this for at least trigrams, 4-grams and 7-grams, but feel free to explore other values of <em>n</em> as well. The following commands should produce text using different values of <em>n</em>:</p>
 <pre><code>&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)
 &gt;&gt;&gt; m.random_text(250)
 
@@ -315,7 +315,7 @@ Implement Laplace add-1 smoothing in the `NgramModel` class.
 <p>In your report, include:</p>
 <ol type="1">
 <li>A description of how you wrote your program, including all assumptions and design decisions</li>
-<li>Report examples of generated text for trigrams, 4-grams and 7-grams. Discuss these results. What do you notice about the short passages you’ve generated from n-gram models with different <em>n</em>? Are they as good as <a href="https://www.youtube.com/watch?v=no_elVGGgW8">1000 monkeys working at 1000 typewriters</a>? Are there patterns in what models generate first?</li>
+<li>Report examples of generated text for trigram, 4-gram and 7-gram models. Discuss these results. What do you notice about the short passages you’ve generated from n-gram models with different <em>n</em>? Are they as good as <a href="https://www.youtube.com/watch?v=no_elVGGgW8">1000 monkeys working at 1000 typewriters</a>? Are there patterns in what models generate first?</li>
 <li>Perplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (<em>New York Times</em> article and Shakespeare sonnets).</li>
 <li>What does your perplexity indicate across different test documents? What does a comparison of different <em>n</em> in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?</li>
 </ol>
