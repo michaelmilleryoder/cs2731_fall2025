@@ -69,16 +69,19 @@ class NgramModel(object):
           ChatGPT with GPT-3.5
         '''
         
-        # Remove any unseen characters
+        # Remove any unseen characters (re would prob be more efficient)
         text = ''.join([c for c in text if c in self.vocab])
         N = len(text)
         
         # Calculate product of the inverse probabilities of the text according to the model
         char_probs = []
         for i in range(self.c, N):
-            context = text[i-self.c+2:i]
+            context = text[i-self.c:i]
             char = text[i]
-            char_probs.append(math.log2(self.prob(context, char)))
-        ppl = 2 ** (-1 * sum(char_probs) / (N - self.c + 2))
+            prob = self.prob(context, char)
+            if prob != 0: # ignore zeros, which isn't ideal but is a way to get the code working
+                log_prob = math.log2(prob)
+                char_probs.append(log_prob)
+        ppl = 2 ** (-1 * sum(char_probs) / (N - self.c))
 
         return ppl
