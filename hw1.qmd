@@ -2,7 +2,7 @@
 title: "Homework 1: Character-level language modeling"
 ---
 
-**Due 2025-09-24, 11:59pm**. *Instructions last updated 2025-09-10.*
+**Due 2025-09-25, 11:59pm**. *Instructions last updated 2025-09-23.*
 
 Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next *character* in a sequence given the previous characters.
 You will build character-level n-gram language models.
@@ -41,17 +41,17 @@ Here is some example output from such a function:
 [('~~', 'a'), ('~a', 'b'), ('ab', 'c')]
 ```
 
-We’ve also given you the function `create_ngram_model(model_class, path, c, k)` that will create and return an n-gram model trained on the entire file path provided.
+We’ve also given you the function `create_ngram_model(model_class, path, c)` that will create and return an n-gram model trained on the entire file path provided.
 
 ## 2. Build n-gram language models
 In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. This model does not need any smoothing.
 
-In the `NgramModel class`, write an initialization method `__init__(self, c, k)` which stores the context length `c` of the model and initializes any necessary internal variables. Then write a method `get_vocab(self)` that returns the vocab (this is the set of all characters used by this model).
+In the `NgramModel class`, write an initialization method `__init__(self, c)` which stores the context length `c` of the model and initializes any necessary internal variables. Then write a method `get_vocab(self)` that returns the vocab (this is the set of all characters used by this model).
 
 Write a method `update(self, text)` which computes the n-grams for the input sentence and updates the internal counts (storing counts is recommended instead of storing probabilities). Also, write a method `prob(self, context, char)` which accepts a `c`-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be $1/V$ where $V$ is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.
 
 ```
- >>> m = NgramModel(1, 0)
+ >>> m = NgramModel(1)
  >>> m.update('abab')
  >>> m.get_vocab()
  {'a', 'b'}
@@ -82,7 +82,7 @@ You should use a single call to the random.random() function to generate
 Here is some example output. Even with setting the random seed, **your output does not need to perfectly match the example output** as there are multiple functions that can perform this task.
 
 ```
-     >>> m = NgramModel(0, 0)
+     >>> m = NgramModel(0)
      >>> m.update('abab')
      >>> m.update('abcd')
      >>> random.seed(1)
@@ -94,7 +94,7 @@ In the NgramModel class, write a method `random_text(self, length)` which return
 
 Here is some example output. Even with setting the random seed, **your output does not need to perfectly match the example output** as there are multiple functions that can perform this task.
 ```
-     >>> m = NgramModel(1, 0)
+     >>> m = NgramModel(1)
      >>> m.update('abab')
      >>> m.update('abcd')
      >>> random.seed(1)

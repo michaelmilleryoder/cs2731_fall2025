@@ -186,7 +186,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>Due 2025-09-24, 11:59pm</strong>. <em>Instructions last updated 2025-09-10.</em></p>
+<p><strong>Due 2025-09-25, 11:59pm</strong>. <em>Instructions last updated 2025-09-23.</em></p>
 <p>Language modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next <em>character</em> in a sequence given the previous characters. You will build character-level n-gram language models. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data. The homework is designed to implement on your own computer or a server of your choosing, but you can also use class CRCD resources if you like. Just note that you’ll have to submit a Python script, not a Jupyter notebook.</p>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
@@ -219,14 +219,14 @@ window.Quarto = {
 
 &gt;&gt;&gt; ngrams(2, 'abc')
 [('~~', 'a'), ('~a', 'b'), ('ab', 'c')]</code></pre>
-<p>We’ve also given you the function <code>create_ngram_model(model_class, path, c, k)</code> that will create and return an n-gram model trained on the entire file path provided.</p>
+<p>We’ve also given you the function <code>create_ngram_model(model_class, path, c)</code> that will create and return an n-gram model trained on the entire file path provided.</p>
 </section>
 <section id="build-n-gram-language-models" class="level2">
 <h2 class="anchored" data-anchor-id="build-n-gram-language-models">2. Build n-gram language models</h2>
 <p>In this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. This model does not need any smoothing.</p>
-<p>In the <code>NgramModel class</code>, write an initialization method <code>__init__(self, c, k)</code> which stores the context length <code>c</code> of the model and initializes any necessary internal variables. Then write a method <code>get_vocab(self)</code> that returns the vocab (this is the set of all characters used by this model).</p>
+<p>In the <code>NgramModel class</code>, write an initialization method <code>__init__(self, c)</code> which stores the context length <code>c</code> of the model and initializes any necessary internal variables. Then write a method <code>get_vocab(self)</code> that returns the vocab (this is the set of all characters used by this model).</p>
 <p>Write a method <code>update(self, text)</code> which computes the n-grams for the input sentence and updates the internal counts (storing counts is recommended instead of storing probabilities). Also, write a method <code>prob(self, context, char)</code> which accepts a <code>c</code>-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be <span class="math inline">\(1/V\)</span> where <span class="math inline">\(V\)</span> is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.</p>
-<pre><code> &gt;&gt;&gt; m = NgramModel(1, 0)
+<pre><code> &gt;&gt;&gt; m = NgramModel(1)
  &gt;&gt;&gt; m.update('abab')
  &gt;&gt;&gt; m.get_vocab()
  {'a', 'b'}
@@ -251,7 +251,7 @@ You should use a single call to the random.random() function to generate
 
 .-->
 <p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
-<pre><code>     &gt;&gt;&gt; m = NgramModel(0, 0)
+<pre><code>     &gt;&gt;&gt; m = NgramModel(0)
      &gt;&gt;&gt; m.update('abab')
      &gt;&gt;&gt; m.update('abcd')
      &gt;&gt;&gt; random.seed(1)
@@ -259,7 +259,7 @@ You should use a single call to the random.random() function to generate
      ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']</code></pre>
 <p>In the NgramModel class, write a method <code>random_text(self, length)</code> which returns a string of characters chosen at random using the <code>random_char(self, context)</code> method. Your starting context should always be <code>c</code> <code>~</code> characters, and the context should be updated as characters are generated. If <code>c == 0</code>, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.</p>
 <p>Here is some example output. Even with setting the random seed, <strong>your output does not need to perfectly match the example output</strong> as there are multiple functions that can perform this task.</p>
-<pre><code>     &gt;&gt;&gt; m = NgramModel(1, 0)
+<pre><code>     &gt;&gt;&gt; m = NgramModel(1)
      &gt;&gt;&gt; m.update('abab')
      &gt;&gt;&gt; m.update('abcd')
      &gt;&gt;&gt; random.seed(1)
