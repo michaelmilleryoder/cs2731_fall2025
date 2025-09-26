@@ -70,6 +70,83 @@
     "text": "How your project will be graded\nTo get an A, your group’s project should make progress toward an achievable, concrete contribution specified in your project proposal. The project does not necessarily need to be successful in the sense that it outperforms baselines or contributes to our knowledge of a phenomenon. Sometimes ideas don’t work, and that’s okay. But you need to provide evidence of progress toward that contribution. If you are building a dataset, for example, the dataset needs to be built in some form, even if it is as not as large or as useful as you may have hoped. If you are evaluating a new method for a task, you must have an implementation that tests that method against other baselines, even if it doesn’t perform as well as you would have hoped or you didn’t get to evaluate it against all the baselines you wanted to. If you are doing a survey, you must distill a sufficient number of papers into themes that comprehensively describe a research area, even if you don’t end up finding groundbreaking gaps in knowledge that must be addressed. Feel free to take on more risky ideas, but only if you know you’ll have something to show for it at the end. Teaching staff will guide you toward scoping projects that should fulfill this goal in the planning phase through the proposal."
   },
   {
+    "objectID": "hw2.html",
+    "href": "hw2.html",
+    "title": "Homework 2: Text classification",
+    "section": "",
+    "text": "Due 2025-10-09, 11:59pm. Instructions last updated 2025-09-26."
+  },
+  {
+    "objectID": "hw2.html#learning-objectives",
+    "href": "hw2.html#learning-objectives",
+    "title": "Homework 2: Text classification",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nAfter completing this assignment, students will be able to:\n\nImplement a text classification system using logistic regression and feature-based approaches\nEvaluate a text classification system\nIdentify informative features in a feature-based text classification system\nAnalyze errors in an NLP system"
+  },
+  {
+    "objectID": "hw2.html#implement-a-deception-classifier",
+    "href": "hw2.html#implement-a-deception-classifier",
+    "title": "Homework 2: Text classification",
+    "section": "Implement a deception classifier",
+    "text": "Implement a deception classifier\nYou will design and implement a program to classify if a comment from a player of the Diplomacy game is truthful or not.\nYour script should be able to take the filename of a dataset as a single keyword argument. You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in a requirements.txt file. The version of Python used should also be specified in your README.txt file. If you will be using a language other than Python, please let us know before submitting."
+  },
+  {
+    "objectID": "hw2.html#dataset",
+    "href": "hw2.html#dataset",
+    "title": "Homework 2: Text classification",
+    "section": "Dataset",
+    "text": "Dataset\nHere is the dataset that you should download for this assignment:\n\ndiplomacy_train.csv. This dataset has a variety of fields, but the most important are:\n\ntext: the text of the comment\nintent: 0 for truth, 1 for lie\n\ndiplomacy_dev.csv. This is the development set to be used for evaluation and error analysis.\ndiplomacy_kaggle.csv. This data has the same fields as the training data, but does not have the “correct” intent filled in. This file is to be used as a test set for the challenge competition hosted on Kaggle.\n\nThe data is from a recording of online players of Diplomacy, as presented in Peskov et al. 2020. Negotiation and back-stabbing are key elements of the Diplomacy game."
+  },
+  {
+    "objectID": "hw2.html#part-1-feature-based-logistic-regression-models",
+    "href": "hw2.html#part-1-feature-based-logistic-regression-models",
+    "title": "Homework 2: Text classification",
+    "section": "Part 1: Feature-based logistic regression models",
+    "text": "Part 1: Feature-based logistic regression models\nIn this section, you will build a logistic regression model based on bag-of-word features and/or features of your own design, trained on diplomacy_train.csv. You can do whatever preprocessing you see fit. You will report performance on the diplomacy_dev.csv dataset.\nImplement and try the following feature and model combinations:\n\nLogistic regression with bag-of-words (unigram) features. Build a logistic regression classifier that uses bag-of-words (unigram) features.\nLogistic regression with your own features/change in preprocessing. Design and test at least two modifications (custom features or preprocessing changes) to unweighted unigram features. Note that these features can be used in conjunction with bag-of-words features or by themselves. Possible features/changes to add and test include:\n\nTf-idf transformed bag-of-words features. See J+M section 11.1.1 for a description of tf-idf\nHigher order n-gram features (bigrams, trigrams, or combinations of them) beyond the unigrams used for the bag-of-words features\nDifferent preprocessing (stemming, different tokenizations, stopword removal)\nChanging count bag-of-words features to binary 0 or 1 for the presence of unigrams\nIncorporating features from columns in the dataset other than text\nReducing noisy features with feature selection\nCounts or added weight from custom word lists\nAny other custom-designed feature (such as length of input, number of capitalized words, neural embeddings of text, etc)\n\n\nYou will thus have 3 total logistic regression models: one using bag-of-word features and 2 with your own selected features or preprocessing changes.\n\nInclude in the report\n\n1. Performance table\nReport a table of performance scores for models trained on each set of features, evaluated on diplomacy_dev.csv. Include accuracy as well as precision, recall, and f1-score for the positive (lying) class.\n\n\n2. Feature descriptions\nFor each feature or change in input text processing: 1. Describe your motivation for including the feature 1. Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features.)\n\n\n3. Informative features and error analysis\nFor a feature-based model of your choice:\n\nExtract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. Please normalize feature values to some sort of standard scale for interpretation. Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor, use another source online, or write your own. Give specific informative features, such as particular words (e.g. “actually”) for bag-of-words features, instead of sets of features like “bigram features”.\nDo an error analysis. On the dev set, provide a confusion matrix. Sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)"
+  },
+  {
+    "objectID": "hw2.html#part-2-submit-your-classifier-in-the-class-challenge",
+    "href": "hw2.html#part-2-submit-your-classifier-in-the-class-challenge",
+    "title": "Homework 2: Text classification",
+    "section": "Part 2: Submit your classifier in the class challenge",
+    "text": "Part 2: Submit your classifier in the class challenge\nPlease submit your classifier to run on a hidden held-out test set as part of a class competition. It is necessary to submit one of your classifiers, but you will not be graded on your performance. Instead, bonus points will be awarded for top systems. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.\n\n6 bonus points for the best-performing logistic regression classifier\n4 bonus points for the 2nd best-performing logistic regression classifier\n2 bonus points for the 3rd best-performing logistic regression classifier\n\n\nHow to submit your classifier\nThis optional competition is conducted on Kaggle. The Kaggle link will be forthcoming. \nYou will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. Please provide your Kaggle username used in the competition in your report. Note that this username will be visible in a leaderboard to other challenge competition participants."
+  },
+  {
+    "objectID": "hw2.html#notes",
+    "href": "hw2.html#notes",
+    "title": "Homework 2: Text classification",
+    "section": "Notes",
+    "text": "Notes\n\nDon’t feel like you need to write things from scratch; use as many packages as you want. Class Jupyter notebooks, Google, Stack Overflow, and NLP/ML software documentation are your friend! Adapting and consulting other approaches is fine and should be noted in comments in the code and/or in the README.txt. Just don’t use complete, fully-formed implementations, including from generative AI tools. Use all resources as aids, not as a final product.\nOptionally, you may incorporate any form of regularization that you like."
+  },
+  {
+    "objectID": "hw2.html#deliverables",
+    "href": "hw2.html#deliverables",
+    "title": "Homework 2: Text classification",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nYour report with results and answers to questions in Part 1, named hw2_{your pitt email id}.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw2.pdf.\nYour code used to train models and estimate performance for Part 1 in a file named hw2_{your pitt email id}_train.py.\nYour code used for the Kaggle submission in Par 2 in a file named hw2_{your pitt email id}_kaggle.py.\nA README.txt file explaining\n\nThe Kaggle username you used to submit your predictions\nhow to run the code you used to train your models and calculate dev set performance\nthe version of Python used\nany additional files needed to run the code\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems\n\nA requirements.txt file with:\n\nall Python packages and package versions in the computing environment you used in case we replicate your experiments\n\n\nPlease submit all of this material on Canvas. We will grade your report and look over your code."
+  },
+  {
+    "objectID": "hw2.html#acknowledgments",
+    "href": "hw2.html#acknowledgments",
+    "title": "Homework 2: Text classification",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis assignment is inspired from a homework assignment by Prof. Diane Litman. Data is from Peskov et al. 2020."
+  },
+  {
+    "objectID": "hw0.html",
+    "href": "hw0.html",
+    "title": "Homework 0: CRCD JupyterHub setup",
+    "section": "",
+    "text": "Due 2025-09-05, 11:59pm. Instructions last updated 2025-09-01.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities. Please follow the instructions exactly as listed. I’m interested in seeing if students can successfully load JupyterHub with the custom class conda environment; please don’t submit screenshots using pip to install packages in the base environment."
+  },
+  {
+    "objectID": "hw0.html#instructions",
+    "href": "hw0.html#instructions",
+    "title": "Homework 0: CRCD JupyterHub setup",
+    "section": "Instructions",
+    "text": "Instructions\n\nLog in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. Reach out to Michael if you are not able to log in.\nSelect the following JupyterHub Session Configuration options:\n\nSelect Partition: TEACH - 6 CPUs - 45GB\nSelect Virtual Environment: Provide custom path\nCustom Environment Path: /ix/cs2731_2025f/class_env. Note that this is different from what we did in class.\nAccount: you can leave this blank If you can’t spawn a server at this point, try setting Account to cs2731_2025f. Also make sure you have enough space in your CRCD home directory. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota.\n\nClick the following nbgitpuller link. This should load the latest version of session2_preprocessing.ipynb, which starts with a section header of Import necessary packages and should look like this. If it starts with Install nltk or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.\nDouble-click session2_preprocessing.ipynb on the left-hand side panel to open the Jupyter notebook.\nRun the cells under the Import necessary packages section. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import pandas and nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
+  },
+  {
     "objectID": "hw1.html",
     "href": "hw1.html",
     "title": "Homework 1: Character-level language modeling",
@@ -124,20 +201,6 @@
     "title": "Homework 1: Character-level language modeling",
     "section": "Acknowledgments",
     "text": "Acknowledgments\nThis assignment is based on a homework assignment by Prof. Diane Litman and Prof. Mark Yatskar. Shakespeare data is from Andrej Karpathy."
-  },
-  {
-    "objectID": "hw0.html",
-    "href": "hw0.html",
-    "title": "Homework 0: CRCD JupyterHub setup",
-    "section": "",
-    "text": "Due 2025-09-05, 11:59pm. Instructions last updated 2025-09-01.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities. Please follow the instructions exactly as listed. I’m interested in seeing if students can successfully load JupyterHub with the custom class conda environment; please don’t submit screenshots using pip to install packages in the base environment."
-  },
-  {
-    "objectID": "hw0.html#instructions",
-    "href": "hw0.html#instructions",
-    "title": "Homework 0: CRCD JupyterHub setup",
-    "section": "Instructions",
-    "text": "Instructions\n\nLog in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. Reach out to Michael if you are not able to log in.\nSelect the following JupyterHub Session Configuration options:\n\nSelect Partition: TEACH - 6 CPUs - 45GB\nSelect Virtual Environment: Provide custom path\nCustom Environment Path: /ix/cs2731_2025f/class_env. Note that this is different from what we did in class.\nAccount: you can leave this blank If you can’t spawn a server at this point, try setting Account to cs2731_2025f. Also make sure you have enough space in your CRCD home directory. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota.\n\nClick the following nbgitpuller link. This should load the latest version of session2_preprocessing.ipynb, which starts with a section header of Import necessary packages and should look like this. If it starts with Install nltk or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.\nDouble-click session2_preprocessing.ipynb on the left-hand side panel to open the Jupyter notebook.\nRun the cells under the Import necessary packages section. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import pandas and nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
   },
   {
     "objectID": "index.html",

@@ -1,0 +1,112 @@
+---
+title: "Homework 2: Text classification"
+---
+
+**Due 2025-10-09, 11:59pm**. *Instructions last updated 2025-09-26.*
+
+## Learning objectives
+After completing this assignment, students will be able to:
+
+* Implement a text classification system using logistic regression and feature-based approaches
+* Evaluate a text classification system
+* Identify informative features in a feature-based text classification system
+* Analyze errors in an NLP system
+
+
+## Implement a deception classifier
+You will design and implement a program to classify if a comment from a player of the [Diplomacy](https://en.wikipedia.org/wiki/Diplomacy_(game)) game is truthful or not. 
+
+Your script should be able to take the filename of a dataset as a single keyword argument.
+You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in a `requirements.txt` file. The version of Python used should also be specified in your `README.txt` file. If you will be using a language other than Python, please let us know before submitting. 
+
+## Dataset
+Here is the dataset that you should download for this assignment:
+
+* [`diplomacy_train.csv`](hw2/diplomacy_train.csv). This dataset has a variety of fields, but the most important are:
+	* `text`: the text of the comment
+	* `intent`: 0 for truth, 1 for lie
+* [`diplomacy_dev.csv`](hw2/diplomacy_dev.csv). This is the development set to be used for evaluation and error analysis.
+* [`diplomacy_kaggle.csv`](hw2/diplomacy_kaggle.csv). This data has the same fields as the training data, but does not have the "correct" intent filled in. This file is to be used as a test set for the challenge competition hosted on Kaggle.
+
+The data is from a recording of online players of Diplomacy, as presented in [Peskov et al. 2020](https://aclanthology.org/2020.acl-main.353/). Negotiation and back-stabbing are key elements of the Diplomacy game.
+
+## Part 1: Feature-based logistic regression models
+In this section, you will build a logistic regression model based on bag-of-word features and/or features of your own design, trained on `diplomacy_train.csv`. You can do whatever preprocessing you see fit. You will report performance on the `diplomacy_dev.csv` dataset.
+
+Implement and try the following feature and model combinations:
+
+* *Logistic regression with bag-of-words (unigram) features*. Build a logistic regression classifier that uses bag-of-words (unigram) features.
+* *Logistic regression with your own features/change in preprocessing*. Design and test at least two modifications (custom features or preprocessing changes) to unweighted unigram features. Note that these features can be used in conjunction with bag-of-words features or by themselves. Possible features/changes to add and test include:
+	* Tf-idf transformed bag-of-words features. See J+M section 11.1.1 for a description of tf-idf
+	* Higher order n-gram features (bigrams, trigrams, or combinations of them) beyond the unigrams used for the bag-of-words features
+	* Different preprocessing (stemming, different tokenizations, stopword removal)
+	* Changing count bag-of-words features to binary 0 or 1 for the presence of unigrams
+	* Incorporating features from columns in the dataset other than `text`
+	* Reducing noisy features with feature selection
+	* Counts or added weight from custom word lists
+	* Any other custom-designed feature (such as length of input, number of capitalized words, neural embeddings of text, etc)
+
+You will thus have 3 total logistic regression models: one using bag-of-word features and 2 with your own selected features or preprocessing changes.
+
+### Include in the report
+
+#### 1. Performance table
+Report a table of performance scores for models trained on each set of features, evaluated on `diplomacy_dev.csv`. Include accuracy as well as precision, recall, and f1-score for the positive (lying) class. 
+
+#### 2. Feature descriptions
+For each feature or change in input text processing:
+1. Describe your motivation for including the feature
+1. Discussion of results: Did it improve performance or not? (Either result is fine. It is not necessary to beat logistic regression with unigram features.)
+
+#### 3. Informative features and error analysis
+For a feature-based model of your choice:
+
+1. Extract and discuss the most informative features that are mostly strongly positively and negatively associated with deception. **Please normalize feature values to some sort of standard scale for interpretation.** Report the 5 features with the highest weights and 5 features with the lowest (negative) weights. Discuss how these may or may not make sense for this task. You may adapt code provided by the instructor, use another source online, or write your own. Give specific informative features, such as particular words (e.g. "actually") for bag-of-words features, instead of sets of features like "bigram features".
+1. Do an error analysis. On the dev set, provide a confusion matrix. Sample examples from both false negatives and false positives and present a few of them in the report. Do you see any patterns in these errors? How might these errors be addressed with different features or if the system could understand something else? (You don’t have to implement these, just speculate.)
+
+
+## Part 2: Submit your classifier in the class challenge
+Please submit your classifier to run on a hidden held-out test set as part of a class competition. It is necessary to submit one of your classifiers, but you will not be graded on your performance. Instead, bonus points will be awarded for top systems. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.
+
+* 6 bonus points for the best-performing logistic regression classifier
+* 4 bonus points for the 2nd best-performing logistic regression classifier
+* 2 bonus points for the 3rd best-performing logistic regression classifier
+
+### How to submit your classifier
+This optional competition is conducted on Kaggle. **The Kaggle link will be forthcoming.** 
+<!--See this page for instructions on how to submit: <https://www.kaggle.com/t/86f51f2238334c41b13bdb6c4f1b6fa6>-->
+
+You will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. **Please provide your Kaggle username used in the competition in your report.** Note that this username will be visible in a leaderboard to other challenge competition participants.
+
+## Notes
+
+* Don't feel like you need to write things from scratch; use as many packages as you want. Class Jupyter notebooks, Google, Stack Overflow, and NLP/ML software documentation are your friend! Adapting and consulting other approaches is fine and should be noted in comments in the code and/or in the `README.txt`. Just don't use complete, fully-formed implementations, including from generative AI tools. Use all resources as aids, not as a final product.
+* Optionally, you may incorporate any form of regularization that you like.
+
+
+## Deliverables
+
+* Your report with results and answers to questions in Part 1, named `hw2_{your pitt email id}.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw2.pdf`.
+* Your code used to train models and estimate performance for Part 1 in a file named `hw2_{your pitt email id}_train.py`.
+* Your code used for the Kaggle submission in Par 2 in a file named `hw2_{your pitt email id}_kaggle.py`. 
+* A `README.txt` file explaining
+	* The Kaggle username you used to submit your predictions
+	* how to run the code you used to train your models and calculate dev set performance
+	* the version of Python used
+	* any additional files needed to run the code
+	* any additional resources, references, or web pages you've consulted
+	* any person with whom you've discussed the assignment and describe the nature of your discussions
+	* any generative AI tool used, and how it was used
+	* any unresolved issues or problems
+* A `requirements.txt` file with:
+	* all Python packages and package versions in the computing environment you used in case we replicate your experiments
+
+Please submit all of this material on Canvas. We will grade your report and look over your code.
+
+<!--
+## Grading
+See rubric on Canvas.
+-->
+
+## Acknowledgments
+This assignment is inspired from a homework assignment by Prof. Diane Litman. Data is from [Peskov et al. 2020](https://aclanthology.org/2020.acl-main.353/).
