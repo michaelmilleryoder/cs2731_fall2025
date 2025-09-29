@@ -118,14 +118,14 @@ Fall 2025
             <td>10</td>
             <td>09-29 M</td>
             <td>Vector semantics, word2vec</td>
-            <td>J+M 6-6.2, 6.8-6.11, 6.13</td>
+            <td>J+M 5-5.2, 5.5-5.8, 5.10</td>
             <td></td>
         </tr>
         <tr>
             <td>11</td>
             <td>10-01 W</td>
             <td>Neural networks part 1</td>
-            <td>J+M 7-7.1, 7.3</td>
+            <td>J+M 6-6.1, 6.3</td>
             <td>In-class quiz</td>
         </tr>
         <tr>
