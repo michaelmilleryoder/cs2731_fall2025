@@ -117,7 +117,7 @@ Fall 2025
         <tr>
             <td>10</td>
             <td>09-29 M</td>
-            <td>Vector semantics, word2vec</td>
+            <td><a href="slides/session10_cs2731_fall2025.pdf">Vector semantics, word2vec</a></td>
             <td>J+M 5-5.2, 5.5-5.8, 5.10</td>
             <td></td>
         </tr>
