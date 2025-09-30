@@ -125,14 +125,14 @@ Fall 2025
             <td>11</td>
             <td>10-01 W</td>
             <td>Neural networks part 1</td>
-            <td>J+M 6-6.1, 6.3</td>
+            <td>J+M 6-6.1, 6.3-6.5</td>
             <td>In-class quiz</td>
         </tr>
         <tr>
             <td>12</td>
             <td>10-06 M</td>
             <td>Neural networks part 2</td>
-            <td>J+M 7.4-7.5, 7.8, 8-8.2</td>
+            <td>J+M 6.8, 13-13.2</td>
             <td></td>
         </tr>
         <tr>
