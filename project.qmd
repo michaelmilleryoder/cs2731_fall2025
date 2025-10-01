@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2025-08-20.*
+*Last revised 2025-10-01.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -105,18 +105,17 @@ In class before the proposal is due, you will be matched with another group who 
 
 ## Project proposal
 *Due 10-16*.  
-Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will contain answers to a series of questions TBD. It will include a peer review where you will rate your own performance and the performance of other group members through the form [here](https://forms.office.com/r/T81fQeLfay).
+Please submit one per group on Canvas. There is no required length or format for this report, but it is recommended to use the ACL format that the final report will be formatted in. This proposal will contain answers to a series of questions. It will include a peer review where you will rate your own performance and the performance of other group members through the form [here](https://forms.office.com/r/T81fQeLfay).
 
-<!--
-1. What is the problem or task you are focusing on?
-1. What is the format of the input and output of this task? For example, each input could be a sentence of text and the output could be a label from a discrete set of possible labels. Provide at least one example of input and output from your data.
-1. What data are you using? Please explain where these datasets are from and how they were constructed. Provide links to any URLs if the data is hosted online or links to papers if the dataset is published somewhere. If the data has labels or "gold" text that you are predicting or generating, where do those labels come from?
-1. What approach are you taking to building a NLP system to handle this task? What software packages are you planning to use to build this system? Except in some cases, the approach should draw on statistical approaches we've covered in class so far, such as n-gram representations of text. Talk to the instructor if you are not sure about this.
-1. How are you evaluating your approach? What performance metrics are you going to use?
-1. What kinds of ethical issues may be raised by your model or data?
-1. What are the proposed steps needed for completion of (your proposed part) of the project? This should be in some detail, for example, loading and potentially cleaning the data, training models, trying different parameters, evaluating models, etc.
-1. What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.
--->
+1. **Task**: What is the problem or task you are focusing on?
+1. **Input and output**: What is the format of the input and output of this task? For example, each input could be a sentence of text and the output could be a label from a discrete set of possible labels. Provide at least one example of input and output from your data (ideally actual input and output, but it's fine if they are made up).
+1. **Literature review**: How does your contribution build on or extend prior work? This literature review will be of at least 3 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
+1. **Data**: What data are you using? Please explain where these datasets are from and how they were constructed. Has any other research been published using these datasets? Provide links to any URLs if the data is hosted online or cite papers if the dataset is published somewhere. Does the dataset have annotated labels or "gold" text that you are predicting or generating provided? If so, where do those labels come from?
+1. **Methods**: What approaches are you planning on taking to address the task? What models and if appropriate, what methods of extracting features from text will be used? Prompting strategies for decoder-only LLMs are good, but there should be some comparison with another strategy, such as fine-tuning an encoder-only LLM such as BERT or comparing with classical statistical and n-gram approaches. Talk to the instructor if you have more questions about this, as there is flexibility depending on your specific project.
+1. **Evaluation**: How are you evaluating your approach? What performance metrics are you going to use?
+1. **Ethics**: What kinds of ethical issues may be raised by your model or data?
+1. **Steps**: What are the proposed steps needed for completion of (your proposed part) of the project? This should be in some detail, for example, loading and potentially cleaning the data, training models, trying different parameters, evaluating models, etc.
+1. **Roles**: What are roles and tasks of each person in the group? Though group members will contribute in various capacities, it is best if each person is responsible for at least one aspect of the project.
 
 ## Project proposal presentation 
 *In class 10-20*.  
