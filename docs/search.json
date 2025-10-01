@@ -74,7 +74,7 @@
     "href": "hw2.html",
     "title": "Homework 2: Text classification",
     "section": "",
-    "text": "Due 2025-10-09, 11:59pm. Instructions last updated 2025-09-26."
+    "text": "Due 2025-10-09, 11:59pm. Instructions last updated 2025-10-01."
   },
   {
     "objectID": "hw2.html#learning-objectives",
@@ -109,7 +109,7 @@
     "href": "hw2.html#part-2-submit-your-classifier-in-the-class-challenge",
     "title": "Homework 2: Text classification",
     "section": "Part 2: Submit your classifier in the class challenge",
-    "text": "Part 2: Submit your classifier in the class challenge\nPlease submit your classifier to run on a hidden held-out test set as part of a class competition. It is necessary to submit one of your classifiers, but you will not be graded on your performance. Instead, bonus points will be awarded for top systems. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.\n\n6 bonus points for the best-performing logistic regression classifier\n4 bonus points for the 2nd best-performing logistic regression classifier\n2 bonus points for the 3rd best-performing logistic regression classifier\n\n\nHow to submit your classifier\nThis optional competition is conducted on Kaggle. The Kaggle link will be forthcoming. \nYou will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. Please provide your Kaggle username used in the competition in your report. Note that this username will be visible in a leaderboard to other challenge competition participants."
+    "text": "Part 2: Submit your classifier in the class challenge\nPlease submit your classifier to run on a hidden held-out test set as part of a class competition. It is necessary to submit one of your classifiers, but you will not be graded on your performance. Instead, bonus points will be awarded for top systems. Bonus points will be awarded in the competition as follows, as measured by accuracy on our held-out test set.\n\n6 bonus points for the best-performing logistic regression classifier\n4 bonus points for the 2nd best-performing logistic regression classifier\n2 bonus points for the 3rd best-performing logistic regression classifier\n\n\nHow to submit your classifier\nThis optional competition is conducted on Kaggle. See this page for instructions on how to submit: https://www.kaggle.com/t/77844262480c47fe86f75dc4c3a13848\nYou will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. Please provide your Kaggle username used in the competition in your report. Note that this username will be visible in a leaderboard to other challenge competition participants."
   },
   {
     "objectID": "hw2.html#notes",

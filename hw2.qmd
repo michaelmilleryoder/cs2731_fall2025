@@ -2,7 +2,7 @@
 title: "Homework 2: Text classification"
 ---
 
-**Due 2025-10-09, 11:59pm**. *Instructions last updated 2025-09-26.*
+**Due 2025-10-09, 11:59pm**. *Instructions last updated 2025-10-01.*
 
 ## Learning objectives
 After completing this assignment, students will be able to:
@@ -73,8 +73,8 @@ Please submit your classifier to run on a hidden held-out test set as part of a 
 * 2 bonus points for the 3rd best-performing logistic regression classifier
 
 ### How to submit your classifier
-This optional competition is conducted on Kaggle. **The Kaggle link will be forthcoming.** 
-<!--See this page for instructions on how to submit: <https://www.kaggle.com/t/86f51f2238334c41b13bdb6c4f1b6fa6>-->
+This optional competition is conducted on Kaggle.
+See this page for instructions on how to submit: <https://www.kaggle.com/t/77844262480c47fe86f75dc4c3a13848>
 
 You will need to create a Kaggle account to submit. Let the instructor know if this is a barrier and we will work something out. **Please provide your Kaggle username used in the competition in your report.** Note that this username will be visible in a leaderboard to other challenge competition participants.
 
