@@ -124,7 +124,7 @@ Fall 2025
         <tr>
             <td>11</td>
             <td>10-01 W</td>
-            <td>Neural networks part 1</td>
+            <td><a href="slides/session11_cs2731_fall2025.pdf">Neural networks part 1</a></td>
             <td>J+M 6-6.1, 6.3-6.5</td>
             <td>In-class quiz</td>
         </tr>
