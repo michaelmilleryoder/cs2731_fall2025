@@ -126,6 +126,13 @@
     "text": "Deliverables\n\nYour report with results and answers to questions in Part 1, named hw2_{your pitt email id}.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw2.pdf.\nYour code used to train models and estimate performance for Part 1 in a file named hw2_{your pitt email id}_train.py.\nYour code used for the Kaggle submission in Par 2 in a file named hw2_{your pitt email id}_kaggle.py.\nA README.txt file explaining\n\nThe Kaggle username you used to submit your predictions\nhow to run the code you used to train your models and calculate dev set performance\nthe version of Python used\nany additional files needed to run the code\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems\n\nA requirements.txt file with:\n\nall Python packages and package versions in the computing environment you used in case we replicate your experiments\n\n\nPlease submit all of this material on Canvas. We will grade your report and look over your code."
   },
   {
+    "objectID": "hw2.html#grading",
+    "href": "hw2.html#grading",
+    "title": "Homework 2: Text classification",
+    "section": "Grading",
+    "text": "Grading\nSee rubric on Canvas."
+  },
+  {
     "objectID": "hw2.html#acknowledgments",
     "href": "hw2.html#acknowledgments",
     "title": "Homework 2: Text classification",
