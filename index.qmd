@@ -131,7 +131,7 @@ Fall 2025
         <tr>
             <td>12</td>
             <td>10-06 M</td>
-            <td>Neural networks part 2</td>
+            <td><a href="slides/session12_cs2731_fall2025.pdf">Neural networks part 2</a></td>
             <td>J+M 6.6, 13-13.2</td>
             <td></td>
         </tr>
