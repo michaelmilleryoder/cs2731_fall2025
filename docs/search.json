@@ -74,7 +74,7 @@
     "href": "hw2.html",
     "title": "Homework 2: Text classification",
     "section": "",
-    "text": "Due 2025-10-09, 11:59pm. Instructions last updated 2025-10-01."
+    "text": "Due 2025-10-09, 11:59pm. Instructions last updated 2025-10-07."
   },
   {
     "objectID": "hw2.html#learning-objectives",
@@ -88,7 +88,7 @@
     "href": "hw2.html#implement-a-deception-classifier",
     "title": "Homework 2: Text classification",
     "section": "Implement a deception classifier",
-    "text": "Implement a deception classifier\nYou will design and implement a program to classify if a comment from a player of the Diplomacy game is truthful or not.\nYour script should be able to take the filename of a dataset as a single keyword argument. You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in a requirements.txt file. The version of Python used should also be specified in your README.txt file. If you will be using a language other than Python, please let us know before submitting."
+    "text": "Implement a deception classifier\nYou will design and implement a program to classify if a comment from a player of the Diplomacy game is truthful or not.\nYou can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in a requirements.txt file. The version of Python used should also be specified in your README.txt file. If you will be using a language other than Python, please let us know before submitting."
   },
   {
     "objectID": "hw2.html#dataset",

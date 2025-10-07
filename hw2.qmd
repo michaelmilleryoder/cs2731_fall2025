@@ -2,7 +2,7 @@
 title: "Homework 2: Text classification"
 ---
 
-**Due 2025-10-09, 11:59pm**. *Instructions last updated 2025-10-01.*
+**Due 2025-10-09, 11:59pm**. *Instructions last updated 2025-10-07.*
 
 ## Learning objectives
 After completing this assignment, students will be able to:
@@ -16,7 +16,6 @@ After completing this assignment, students will be able to:
 ## Implement a deception classifier
 You will design and implement a program to classify if a comment from a player of the [Diplomacy](https://en.wikipedia.org/wiki/Diplomacy_(game)) game is truthful or not. 
 
-Your script should be able to take the filename of a dataset as a single keyword argument.
 You can use any packages you want for this (scikit-learn, spaCy, NLTK, Gensim, etc., as well as code from in-class example notebooks). Any packages used, along with version numbers, should be specified in a `requirements.txt` file. The version of Python used should also be specified in your `README.txt` file. If you will be using a language other than Python, please let us know before submitting. 
 
 ## Dataset
