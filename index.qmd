@@ -141,7 +141,7 @@ Fall 2025
         <tr>
             <td>13</td>
             <td>10-08 W</td>
-            <td>Transformers part 1</td>
+            <td><a href="slides/session13_cs2731_fall2025.pdf">Transformers part 1</a></td>
             <td>J+M 8-8.2</td>
             <td>In-class quiz;<br/><strong><a href="hw2">HW2</a> due 10-09</strong></td>
         </tr>
