@@ -148,7 +148,7 @@ Fall 2025
         <tr>
             <td>14</td>
             <td>10-13 M</td>
-            <td>Transformers part 2, introduction to LLMs</td>
+            <td><a href="slides/session14_cs2731_fall2025.pdf">Transformers part 2, introduction to LLMs</a></td>
             <td>J+M 8.4-8.7, 8.10, 7-7.5, 7.7</td>
             <td></td>
         <tr>
