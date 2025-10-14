@@ -161,7 +161,7 @@ Fall 2025
         <tr>
             <td>16</td>
             <td>10-20 M</td>
-            <td><strong>Project proposal presentations</strong></td>
+            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EeSVao32w-1Bojt-WrIHUWMBEUhN-heXGHVXeBXUlsWD_w?e=MNfQMQ">Project proposal presentations</a></strong></td>
             <td></td>
             <td></td>
         </tr>

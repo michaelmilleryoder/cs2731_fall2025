@@ -109,7 +109,7 @@ Please submit one per group on Canvas. There is no required length or format for
 
 1. **Task**: What is the problem or task you are focusing on?
 1. **Input and output**: What is the format of the input and output of this task? For example, each input could be a sentence of text and the output could be a label from a discrete set of possible labels. Provide at least one example of input and output from your data (ideally actual input and output, but it's fine if they are made up).
-1. **Literature review**: How does your contribution build on or extend prior work? This literature review will be of at least 3 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
+1. **Literature review**: How does your contribution build on or extend prior work? How have others approached your task or similar tasks? What are other NLP papers that use the same dataset or domain as your project? This literature review will be of at least 3 papers relevant to your project area. It will group and summarize relevant papers into types of tasks, datasets, and/or approaches. Good places to look for NLP papers include the [ACL Anthology](https://aclanthology.org/), [Semantic Scholar](https://www.semanticscholar.org/), and [Google Scholar](https://scholar.google.com/?inst=3203679203499159833).
 1. **Data**: What data are you using? Please explain where these datasets are from and how they were constructed. Has any other research been published using these datasets? Provide links to any URLs if the data is hosted online or cite papers if the dataset is published somewhere. Does the dataset have annotated labels or "gold" text that you are predicting or generating provided? If so, where do those labels come from?
 1. **Methods**: What approaches are you planning on taking to address the task? What models and if appropriate, what methods of extracting features from text will be used? Prompting strategies for decoder-only LLMs are good, but there should be some comparison with another strategy, such as fine-tuning an encoder-only LLM such as BERT or comparing with classical statistical and n-gram approaches. Talk to the instructor if you have more questions about this, as there is flexibility depending on your specific project.
 1. **Evaluation**: How are you evaluating your approach? What performance metrics are you going to use?
@@ -119,12 +119,12 @@ Please submit one per group on Canvas. There is no required length or format for
 
 ## Project proposal presentation 
 *In class 10-20*.  
-Groups will make a brief presentation to the class outlining their proposed project, with Q&A and opportunities for feedback from other students. Please plan for maximum **5-minute** presentations not including Q&A, which will be held right afterward for each group. 
-Slides will be added to a shared PowerPoint presentation.
+Groups will make a brief presentation to the class outlining their proposed project, with Q&A and opportunities for feedback from other students. Please plan for maximum **7-minute** presentations not including Q&A, which will be held right afterward for each group. 
+Slides will be added to [this shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EeSVao32w-1Bojt-WrIHUWMBEUhN-heXGHVXeBXUlsWD_w?e=fOb2xC).
 Presentations are not graded. Cover at least these key points:
 
 1. Project motivation
-1. Briefly, what 1-2 other related papers have done
+1. Briefly, what 1-2 other related papers have done (1 slide max)
 1. What data you are planning to use
 1. What approach/methods you plan to take
 1. How you will evaluate your approach
