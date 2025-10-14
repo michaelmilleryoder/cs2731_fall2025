@@ -154,7 +154,7 @@ Fall 2025
         <tr>
             <td>15</td>
             <td>10-15 W</td>
-            <td>Project peer group feedback</td>
+            <td><a href="slides/session15_cs2731_fall2025.pdf">LLMs, project peer group feedback</a></td>
             <td></td>
             <td><strong><a href="project.html#project-proposal">Project proposal</a> due 10-16</strong></td>
         </tr>
