@@ -156,12 +156,12 @@ Fall 2025
             <td>10-15 W</td>
             <td><a href="slides/session15_cs2731_fall2025.pdf">LLMs, project peer group feedback</a></td>
             <td></td>
-            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 10-16</strong></td>
+            <td><strong><a href="project.html#project-proposal">Project proposal</a> due 10-17</strong></td>
         </tr>
         <tr>
             <td>16</td>
             <td>10-20 M</td>
-            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EeSVao32w-1Bojt-WrIHUWMBEUhN-heXGHVXeBXUlsWD_w?e=MNfQMQ">Project proposal presentations</a></strong></td>
+            <td><strong>Project proposal presentations</strong></td>
             <td></td>
             <td></td>
         </tr>
@@ -236,7 +236,7 @@ Fall 2025
         </tr>
         </tr>
         <tr style="background-color:#cccccc">
-            <td colspan=5 style="text-align:center; font-style:italic">Thanksgiving Break 11-24 to 11-27</td>
+            <td colspan=5 style="text-align:center; font-style:italic">Thanksgiving Break 11-24 to 11-28</td>
         </tr>
         <tr>
             <td>26</td>
