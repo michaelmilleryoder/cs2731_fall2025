@@ -1,3 +1,5 @@
 conda_env/
 *.swp
 /.quarto/
+
+**/*.quarto_ipynb

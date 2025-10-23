@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-10-22. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-10-23. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -170,7 +170,7 @@ Fall 2025
             <td>10-22 W</td>
             <td>Reinforcement learning: guest lecture, Emma Jordan</td>
             <td></td>
-            <td>HW3 out</td>
+            <td>HW3 out 10-26</td>
         </tr>
         <tr>
             <td>18</td>
