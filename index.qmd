@@ -168,7 +168,7 @@ Fall 2025
         <tr>
             <td>17</td>
             <td>10-22 W</td>
-            <td>Reinforcement learning: guest lecture, Emma Jordan</td>
+            <td><a href="slides/session17_cs2731_fall2025.pdf">Reinforcement learning guest lecture</a>, <a href="https://emmaajordan.github.io/">Emma Jordan</a></td>
             <td></td>
             <td><a href="hw3">HW3</a> out 10-26</td>
         </tr>
