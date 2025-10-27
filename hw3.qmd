@@ -1,0 +1,51 @@
+---
+title: "Homework 3: Large language model (LLM) prompting and instruction tuning"
+---
+
+**Due 2025-11-07, 11:59pm**. *Instructions last updated 2025-10-26.*
+
+## Learning objectives
+After completing this assignment, students will be able to:
+
+* Prompt LLMs programmatically with templates (parameterized)
+* Prompt LLMs with zero-shot and few-shot prompting
+* Engineer and test different prompts
+* Implement instruction tuning of LLMs using Hugging Face tools
+* Evaluate instruction-tuned LLMs against base models
+
+
+## Overview
+In this assignment, you will explore different prompting techniques LLMs (Part 1). You will also instruction-tune an LLM (Part 1). Both of these parts will involve filling in template Jupyter notebooks. Part 1 will be run locally, while it is recommended to run part 2's notebook on the Pitt CRCD's GPUs through the class JupyterHub.
+
+To get started, click on the [class nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&urlpath=lab%2Ftree%2Fcs2731_jupyterhub%2F&branch=main).
+
+## Part 1: LLM prompting
+Because Pitt SCI LLMs can't currently be accessed by the CRCD, you'll need to complete Part 1 on your own local machine. Please download the template notebook, `hw3_template_part1.ipynb`, from the class  CRCD JupyterHub to your own machine.
+Note that you will need to connect to the Pitt VPN via the GlobalProtect app to send API requests to the Pitt SCI LLMs.
+You will need to install the `openai` Python package, as well as Hugging Face's `datasets` Python package. Feel free to refer to the class environment's versions of those on the CRCD at `/ix/cs2731_2025f/cs2731_2025f_environment.yml`.
+
+## Part 2: Instruction tuning LLMs
+Part 2 will involve instruction tuning LLMs, which takes some GPU resources. It is recommended to complete this part of the assignment on the CRCD itself. Fill out `hw3_template_part2.ipynb` from the class CRCD JupyterHub to do so. You can use the Nvidia L4 GPU on the CRCD JupyterHub (teach cluster) like we use in class, or can use CRCD's Open OnDemand Jupyter service.
+
+
+## Deliverables
+
+1. Your code: the Jupyter notebooks you modified from the templates for parts 1 and 2. Submit:
+	*  your .ipynb files for parts 1 and 2
+	* a **.html export of your notebooks** from parts 1 and 2. To get a .html version, click File > Save and Export Notebook As... > HTML from within JupyterLab.
+2. A PDF report with answers to questions provided in the template notebooks. Please name your report `hw3_{your pitt email id}.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw3.pdf`. **Please make only one PDF report, containing answers to part 1 and part 2**. Make sure to include the following information:
+	* answers to all the numbered questions in the templates
+	* any additional resources, references, or web pages you've consulted
+	* any person with whom you've discussed the assignment and describe the nature of your discussions
+	* any generative AI tool used, and how it was used
+	* any unresolved issues or problems
+
+Please submit all of this material on Canvas. We will grade your report and may look over your code.
+
+<!--
+## Grading
+See rubric on Canvas.
+-->
+
+## Acknowledgments
+Part 1 of this assignment is based on a homework assignment designed by Mark Yatskar and provided by Lorraine Li.

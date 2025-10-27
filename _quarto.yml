@@ -17,6 +17,8 @@ website:
         text: HW1
       - href: hw2.qmd
         text: HW2
+      - href: hw3.qmd
+        text: HW3
 
 format:
   html:
