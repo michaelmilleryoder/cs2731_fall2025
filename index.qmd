@@ -182,7 +182,7 @@ Fall 2025
         <tr>
             <td>19</td>
             <td>10-29 W</td>
-            <td>Prompting and post-training LLMs</td>
+            <td><a href="slides/session19_cs2731_fall2025.pdf">Prompting and post-training LLMs</a></td>
             <td>J+M 9</td>
             <td>In-class quiz</td>
         </tr>
