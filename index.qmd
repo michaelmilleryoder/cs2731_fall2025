@@ -190,7 +190,7 @@ Fall 2025
             <td>20</td>
             <td>11-03 M</td>
             <td>BERT</td>
-            <td>J+M 10-10.2, 10.4-10.6</td>
+            <td>J+M 10-10.2, 10.4-10.6<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023 *(optional)*</a></td>
             <td></td>
         </tr>
         <tr>
