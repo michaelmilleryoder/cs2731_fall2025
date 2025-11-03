@@ -2,7 +2,7 @@
 title: "Homework 3: Large language model (LLM) prompting and instruction tuning"
 ---
 
-**Due 2025-11-07, 11:59pm**. *Instructions last updated 2025-10-26.*
+**Due 2025-11-07, 11:59pm**. *Instructions last updated 2025-11-03.*
 
 ## Learning objectives
 After completing this assignment, students will be able to:
@@ -15,17 +15,15 @@ After completing this assignment, students will be able to:
 
 
 ## Overview
-In this assignment, you will explore different prompting techniques LLMs (Part 1). You will also instruction-tune an LLM (Part 1). Both of these parts will involve filling in template Jupyter notebooks. Part 1 will be run locally, while it is recommended to run part 2's notebook on the Pitt CRCD's GPUs through the class JupyterHub.
+In this assignment, you will explore different prompting techniques LLMs (Part 1). You will also instruction-tune an LLM (Part 2). Both of these parts will involve filling in template Jupyter notebooks onPitt's CRCD through the class JupyterHub. You will need GPU resources for Part 2. You can use the Nvidia L4 GPU on the CRCD JupyterHub (teach cluster) like we use in class, or CRCD's Open OnDemand Jupyter service.
 
 To get started, click on the [class nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&urlpath=lab%2Ftree%2Fcs2731_jupyterhub%2F&branch=main).
 
 ## Part 1: LLM prompting
-Because Pitt SCI LLMs can't currently be accessed by the CRCD, you'll need to complete Part 1 on your own local machine. Please download the template notebook, `hw3_template_part1.ipynb`, from the class  CRCD JupyterHub to your own machine.
-Note that you will need to connect to the Pitt VPN via the GlobalProtect app to send API requests to the Pitt SCI LLMs.
-You will need to install the `openai` Python package, as well as Hugging Face's `datasets` Python package. Feel free to refer to the class environment's versions of those on the CRCD at `/ix/cs2731_2025f/cs2731_2025f_environment.yml`.
+Please fill out the template notebook, `hw3_template_part1.ipynb`, from the class CRCD JupyterHub.
 
 ## Part 2: Instruction tuning LLMs
-Part 2 will involve instruction tuning LLMs, which takes some GPU resources. It is recommended to complete this part of the assignment on the CRCD itself. Fill out `hw3_template_part2.ipynb` from the class CRCD JupyterHub to do so. You can use the Nvidia L4 GPU on the CRCD JupyterHub (teach cluster) like we use in class, or can use CRCD's Open OnDemand Jupyter service.
+Fill out `hw3_template_part2.ipynb` from the class CRCD JupyterHub.
 
 
 ## Deliverables
