@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-10-31. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-11-04. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -190,7 +190,7 @@ Fall 2025
             <td>20</td>
             <td>11-03 M</td>
             <td><a href="slides/session20_cs2731_fall2025.pdf">BERT</a></td>
-            <td>J+M 10-10.2, 10.4-10.6<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023 *(optional)*</a></td>
+            <td>J+M 10-10.2, 10.4, 10.6<br/><a href="https://journals.sagepub.com/doi/full/10.1177/17456916231201401">Yiu et al. 2023 *(optional)*</a></td>
             <td></td>
         </tr>
         <tr>
@@ -200,8 +200,8 @@ Fall 2025
             <td>21</td>
             <td>11-05 W</td>
             <td>Sequence labeling</td>
-            <td>J+M 17-17.3, 11.5</td>
-            <td>In-class quiz;<br/><strong><a href="hw3">HW3</a> due 11-07</strong>;<br/>HW4 out</td>
+            <td>J+M 17-17.3, 10.5</td>
+            <td>In-class quiz;<br/><strong><a href="hw3">HW3</a> due 11-07</strong>;<br/>HW4 out 11-07</td>
         </tr>
         <tr>
             <td>22</td>
