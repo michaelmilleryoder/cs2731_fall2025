@@ -134,7 +134,7 @@ Presentations are not graded. Cover at least these key points:
 
 A brief progress report of a basic working system. This report should be in the ACL format that the final report will be in.
 
-### Part 1: Data basic statistics and exploratory analysis
+### Part 1: Task and dataset
 In this part, please provide the following information about your dataset. It's fine to be working with multiple datasets; just complete this for each one or for a final dataset you will be using if you are combining datasets.
 
 1. What is the problem/task you are working on? What is the input and output? Just a brief refresher is fine.
