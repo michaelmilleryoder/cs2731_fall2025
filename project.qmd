@@ -2,7 +2,7 @@
 title: "Project"
 ---
 
-*Last revised 2025-10-01.*
+*Last revised 2025-11-04.*
 
 A major component of this course is a hands-on final project guided by students' own interests. In this project, students will demonstrate an ability to summarize current approaches and challenges in a subfield of NLP and implement some sort of contribution (however small) to this NLP area of research or practice.
 
@@ -137,16 +137,19 @@ A brief progress report of a basic working system. This report should be in the 
 ### Part 1: Data basic statistics and exploratory analysis
 In this part, please provide the following information about your dataset. It's fine to be working with multiple datasets; just complete this for each one or for a final dataset you will be using if you are combining datasets.
 
+1. What is the problem/task you are working on? What is the input and output? Just a brief refresher is fine.
+1. How will the dataset you have (or that you will build) be used to implement a system to address this task?
 1. The number of rows (datapoints) in the dataset and what each datapoint corresponds to. If you are splitting the dataset into a training, test, and possible dev sets, how many rows are in each?
 1. The number of columns in the dataset you will be using and what each corresponds to.
 1. If applicable, the distribution of the target labels you are predicting. So for a binary sentiment classification task, how many rows in each set (except the test set) are marked negative or positive sentiment? This can be in a table or graph format.
-1. Optionally, any other distribution or data visualization that you think is helpful for understanding your dataset or task.
+1. Please explain any decisions made in selecting or preprocessing data.
+1. Optionally, any other distribution or data visualization that you think is helpful for understanding your dataset or task. An example table with a small part of the data can be helpful.
 
 ### Part 2: Some kind of result
-Please provide one (hopefully quantitative) result from your work so far. A good example would be a performance metric result from your baseline approach on a dev or test set, but it could also be some sort of other finding you have so far. But if you're not that far yet, you can also provide an example of working input and output from your system or part of a system, some sort of plot or other output. You can be up front about challenges you are facing for which you might need help; to get a good grade, I'll just be looking for some sort of output from a working system or part of a system. If you are confused what this means for your project, contact the instructor.
+Please provide one (hopefully quantitative) result from your work so far. A good example would be a performance metric result from your baseline approach on a dev or test set, but it could also be some sort of other finding you have so far. But if you're not that far yet, you can also provide an example of working input and output from your system or part of a system, some sort of plot or other output. You can be up front about challenges you are facing for which you might need help. To get a good grade, I'll just be looking for some sort of output from a working system or part of a system. If you are confused what this means for your project, contact the instructor.
 
 ### Part 3: Open questions and challenges
-Please describe any open questions or challenges your group has at this point. Will you need any resources other than the ones provided in class (OpenAI API access, CRCD access) or have any other questions? Also describe if the roles for each of your team members have changed since the proposal and if so, what the new roles are.
+Please describe any open questions or challenges your group has at this point. Will you need any resources other than the ones provided in class (LLM APIs, CRCD access) or have any other questions? Also describe if the roles for each of your team members have changed since the proposal and if so, what the new roles are.
 
 ## Final presentation
 *In class 12-08*.  
