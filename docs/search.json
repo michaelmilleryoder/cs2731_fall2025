@@ -70,123 +70,32 @@
     "text": "How your project will be graded\nTo get an A, your group’s project should make progress toward an achievable, concrete contribution specified in your project proposal. The project does not necessarily need to be successful in the sense that it outperforms baselines or contributes to our knowledge of a phenomenon. Sometimes ideas don’t work, and that’s okay. But you need to provide evidence of progress toward that contribution. If you are building a dataset, for example, the dataset needs to be built in some form, even if it is as not as large or as useful as you may have hoped. If you are evaluating a new method for a task, you must have an implementation that tests that method against other baselines, even if it doesn’t perform as well as you would have hoped or you didn’t get to evaluate it against all the baselines you wanted to. If you are doing a survey, you must distill a sufficient number of papers into themes that comprehensively describe a research area, even if you don’t end up finding groundbreaking gaps in knowledge that must be addressed. Feel free to take on more risky ideas, but only if you know you’ll have something to show for it at the end. Teaching staff will guide you toward scoping projects that should fulfill this goal in the planning phase through the proposal."
   },
   {
-    "objectID": "hw3.html",
-    "href": "hw3.html",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "objectID": "hw4.html",
+    "href": "hw4.html",
+    "title": "Homework 4: Sequence labeling",
     "section": "",
-    "text": "Due 2025-11-07, 11:59pm. Instructions last updated 2025-11-03."
+    "text": "Due 2025-11-20, 11:59pm. Instructions last updated 2025-11-06."
   },
   {
-    "objectID": "hw3.html#learning-objectives",
-    "href": "hw3.html#learning-objectives",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nAfter completing this assignment, students will be able to:\n\nPrompt LLMs programmatically with templates (parameterized)\nPrompt LLMs with zero-shot and few-shot prompting\nEngineer and test different prompts\nImplement instruction tuning of LLMs using Hugging Face tools\nEvaluate instruction-tuned LLMs against base models"
-  },
-  {
-    "objectID": "hw3.html#overview",
-    "href": "hw3.html#overview",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
-    "section": "Overview",
-    "text": "Overview\nIn this assignment, you will explore different prompting techniques LLMs (Part 1). You will also instruction-tune an LLM (Part 2). Both of these parts will involve filling in template Jupyter notebooks onPitt’s CRCD through the class JupyterHub. You will need GPU resources for Part 2. You can use the Nvidia L4 GPU on the CRCD JupyterHub (teach cluster) like we use in class, or CRCD’s Open OnDemand Jupyter service.\nTo get started, click on the class nbgitpuller link."
-  },
-  {
-    "objectID": "hw3.html#part-1-llm-prompting",
-    "href": "hw3.html#part-1-llm-prompting",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
-    "section": "Part 1: LLM prompting",
-    "text": "Part 1: LLM prompting\nPlease fill out the template notebook, hw3_template_part1.ipynb, from the class CRCD JupyterHub."
-  },
-  {
-    "objectID": "hw3.html#part-2-instruction-tuning-llms",
-    "href": "hw3.html#part-2-instruction-tuning-llms",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
-    "section": "Part 2: Instruction tuning LLMs",
-    "text": "Part 2: Instruction tuning LLMs\nFill out hw3_template_part2.ipynb from the class CRCD JupyterHub."
-  },
-  {
-    "objectID": "hw3.html#deliverables",
-    "href": "hw3.html#deliverables",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "objectID": "hw4.html#deliverables",
+    "href": "hw4.html#deliverables",
+    "title": "Homework 4: Sequence labeling",
     "section": "Deliverables",
-    "text": "Deliverables\n\nYour code: the Jupyter notebooks you modified from the templates for parts 1 and 2. Submit:\n\nyour .ipynb files for parts 1 and 2\na .html export of your notebooks from parts 1 and 2. To get a .html version, click File &gt; Save and Export Notebook As… &gt; HTML from within JupyterLab.\n\nA PDF report with answers to questions provided in the template notebooks. Please name your report hw3_{your pitt email id}.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw3.pdf. Please make only one PDF report, containing answers to part 1 and part 2. Make sure to include the following information:\n\nanswers to all the numbered questions in the templates\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems\n\n\nPlease submit all of this material on Canvas. We will grade your report and may look over your code."
+    "text": "Deliverables\nIn your report, include: 1. The 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each 1. For each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data 1. The names of the pretrained BERT-based models you chose for both English and Norwegian 1. A brief discussion of any choices you made about hyperparameters in training 1. (Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 2 point of extra credit (total) will be given if any changes result in an improved accuracy on the dev set. 1. Accuracy of the fine-tuned models on the test set for both English and Norwegian 1. POS tags predicted for the words of a sentence of your choice in both English and Norwegian 4. A link to your copied and filled out Colab notebook. Please set the Colab document sharing to public viewing so that teaching staff can see it for grading."
   },
   {
-    "objectID": "hw3.html#acknowledgments",
-    "href": "hw3.html#acknowledgments",
-    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "objectID": "hw4.html#submission",
+    "href": "hw4.html#submission",
+    "title": "Homework 4: Sequence labeling",
+    "section": "Submission",
+    "text": "Submission\nPlease submit the following items on Canvas:\n\nYour code: the Jupyter notebook you modified from the template. Submit:\n\nyour .ipynb files for parts 1 and 2\na .html export of your notebooks from parts 1 and 2. To get a .html version, click File &gt; Save and Export Notebook As… &gt; HTML from within JupyterLab.\n\nYour report with deliverables named report_{your pitt email id}_hw4.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw4.pdf.\nA README.txt file explaining\n\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems"
+  },
+  {
+    "objectID": "hw4.html#acknowledgments",
+    "href": "hw4.html#acknowledgments",
+    "title": "Homework 4: Sequence labeling",
     "section": "Acknowledgments",
-    "text": "Acknowledgments\nPart 1 of this assignment is based on a homework assignment designed by Mark Yatskar and provided by Lorraine Li."
-  },
-  {
-    "objectID": "hw1.html",
-    "href": "hw1.html",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "",
-    "text": "Due 2025-09-26, 11:59pm. Instructions last updated 2025-09-23.\nLanguage modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next character in a sequence given the previous characters. You will build character-level n-gram language models. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data. The homework is designed to implement on your own computer or a server of your choosing, but you can also use class CRCD resources if you like. Just note that you’ll have to submit a Python script, not a Jupyter notebook."
-  },
-  {
-    "objectID": "hw1.html#learning-objectives",
-    "href": "hw1.html#learning-objectives",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "Learning objectives",
-    "text": "Learning objectives\nAfter completing this assignment, students will be able to:\n\nUnderstand how to compute n-gram language model probabilities using maximum likelihood estimation.\nUse n-gram language models to probabilistically generate texts and implement generation using n-gram probabilities.\nGain intuition on how perplexity will estimate language model performance on unseen texts."
-  },
-  {
-    "objectID": "hw1.html#extract-character-n-grams",
-    "href": "hw1.html#extract-character-n-grams",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "1. Extract character n-grams",
-    "text": "1. Extract character n-grams\nFirst, fill out the ngrams(c, text) function that produces a list of all n-grams of that use c elements of context from the input text. Each n-gram should consist of a 2-element tuple (context, char), where the context is itself a c-length string comprised of the c characters preceding the current character. If c == 1, then produce bigrams, if c == 2, trigrams. The sentence should be padded with c ~ characters at the beginning (we’ve provided you with start_pad(c) for this purpose). If c == 0, all contexts should be empty strings. You may assume that c ≥ 0. You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. Here is some example output from such a function:\n&gt;&gt;&gt; ngrams(1, 'abc')\n[('~', 'a'), ('a', 'b'), ('b', 'c')]\n\n&gt;&gt;&gt; ngrams(2, 'abc')\n[('~~', 'a'), ('~a', 'b'), ('ab', 'c')]\nWe’ve also given you the function create_ngram_model(model_class, path, c) that will create and return an n-gram model trained on the entire file path provided."
-  },
-  {
-    "objectID": "hw1.html#build-n-gram-language-models",
-    "href": "hw1.html#build-n-gram-language-models",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "2. Build n-gram language models",
-    "text": "2. Build n-gram language models\nIn this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. This model does not need any smoothing.\nIn the NgramModel class, write an initialization method __init__(self, c) which stores the context length c of the model and initializes any necessary internal variables. Then write a method get_vocab(self) that returns the vocab (this is the set of all characters used by this model).\nWrite a method update(self, text) which computes the n-grams for the input sentence and updates the internal counts (storing counts is recommended instead of storing probabilities). Also, write a method prob(self, context, char) which accepts a c-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be \\(1/V\\) where \\(V\\) is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.\n &gt;&gt;&gt; m = NgramModel(1)\n &gt;&gt;&gt; m.update('abab')\n &gt;&gt;&gt; m.get_vocab()\n {'a', 'b'}\n &gt;&gt;&gt; m.update('abcd')\n &gt;&gt;&gt; m.get_vocab()\n {'a', 'b', 'c', 'd'}\n &gt;&gt;&gt; m.prob('a', 'b')\n 1.0\n &gt;&gt;&gt; m.prob('~', 'c')\n 0.0\n &gt;&gt;&gt; m.prob('b', 'c')\n 0.5\nWrite a method random_char(self, context) which returns a random character according to the probability distribution determined by the given context. Just like the prob function, in a novel context assign a probability of any given character \\(1/V\\), where \\(V\\) is the size of the vocabulary.\n\nHere is some example output. Even with setting the random seed, your output does not need to perfectly match the example output as there are multiple functions that can perform this task.\n     &gt;&gt;&gt; m = NgramModel(0)\n     &gt;&gt;&gt; m.update('abab')\n     &gt;&gt;&gt; m.update('abcd')\n     &gt;&gt;&gt; random.seed(1)\n     &gt;&gt;&gt; [m.random_char('') for i in range(10)]\n     ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']\nIn the NgramModel class, write a method random_text(self, length) which returns a string of characters chosen at random using the random_char(self, context) method. Your starting context should always be c ~ characters, and the context should be updated as characters are generated. If c == 0, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.\nHere is some example output. Even with setting the random seed, your output does not need to perfectly match the example output as there are multiple functions that can perform this task.\n     &gt;&gt;&gt; m = NgramModel(1)\n     &gt;&gt;&gt; m.update('abab')\n     &gt;&gt;&gt; m.update('abcd')\n     &gt;&gt;&gt; random.seed(1)\n     &gt;&gt;&gt; m.random_text(10)\n     abcdbabcda"
-  },
-  {
-    "objectID": "hw1.html#generating-shakespeare-with-character-level-n-gram-language-models",
-    "href": "hw1.html#generating-shakespeare-with-character-level-n-gram-language-models",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "3. Generating Shakespeare with character-level n-gram language models",
-    "text": "3. Generating Shakespeare with character-level n-gram language models\nNow you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. Do this for at least trigrams, 4-grams and 7-grams, but feel free to explore other values of n as well. The following commands should produce text using different values of n:\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 3)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 4)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)\n&gt;&gt;&gt; m.random_text(250)\nYou may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data."
-  },
-  {
-    "objectID": "hw1.html#calculate-perplexity-of-test-documents",
-    "href": "hw1.html#calculate-perplexity-of-test-documents",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "4. Calculate perplexity of test documents",
-    "text": "4. Calculate perplexity of test documents\nUsing the perplexity method, calculate the perplexity of each test document. For each file in the test data (nytimes_article.txt and shakespeare_sonnets.txt), calculate the perplexity for each non-blank line and the average across all lines in the document. Do this for trigram, 4-gram and 7-gram character-level language models trained on Shakespeare plays (shakespeare_input.txt)."
-  },
-  {
-    "objectID": "hw1.html#deliverables",
-    "href": "hw1.html#deliverables",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "Deliverables",
-    "text": "Deliverables\nIn your report, include:\n\nA description of how you wrote your program, including all assumptions and design decisions\nReport examples of generated text for trigram, 4-gram and 7-gram models. Discuss these results. What do you notice about the short passages you’ve generated from n-gram models with different n? Are they as good as 1000 monkeys working at 1000 typewriters? Are there patterns in what models generate first?\nPerplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (New York Times article and Shakespeare sonnets).\nWhat does your perplexity indicate across different test documents? What does a comparison of different n in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?"
-  },
-  {
-    "objectID": "hw1.html#acknowledgments",
-    "href": "hw1.html#acknowledgments",
-    "title": "Homework 1: Character-level language modeling",
-    "section": "Acknowledgments",
-    "text": "Acknowledgments\nThis assignment is based on a homework assignment by Prof. Diane Litman and Prof. Mark Yatskar. Shakespeare data is from Andrej Karpathy."
-  },
-  {
-    "objectID": "hw0.html",
-    "href": "hw0.html",
-    "title": "Homework 0: CRCD JupyterHub setup",
-    "section": "",
-    "text": "Due 2025-09-05, 11:59pm. Instructions last updated 2025-09-01.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities. Please follow the instructions exactly as listed. I’m interested in seeing if students can successfully load JupyterHub with the custom class conda environment; please don’t submit screenshots using pip to install packages in the base environment."
-  },
-  {
-    "objectID": "hw0.html#instructions",
-    "href": "hw0.html#instructions",
-    "title": "Homework 0: CRCD JupyterHub setup",
-    "section": "Instructions",
-    "text": "Instructions\n\nLog in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. Reach out to Michael if you are not able to log in.\nSelect the following JupyterHub Session Configuration options:\n\nSelect Partition: TEACH - 6 CPUs - 45GB\nSelect Virtual Environment: Provide custom path\nCustom Environment Path: /ix/cs2731_2025f/class_env. Note that this is different from what we did in class.\nAccount: you can leave this blank If you can’t spawn a server at this point, try setting Account to cs2731_2025f. Also make sure you have enough space in your CRCD home directory. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota.\n\nClick the following nbgitpuller link. This should load the latest version of session2_preprocessing.ipynb, which starts with a section header of Import necessary packages and should look like this. If it starts with Install nltk or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.\nDouble-click session2_preprocessing.ipynb on the left-hand side panel to open the Jupyter notebook.\nRun the cells under the Import necessary packages section. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import pandas and nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
+    "text": "Acknowledgments\nThis assignment is adapted from Jacob Eisenstein and Prof. Yulia Tsvetkov."
   },
   {
     "objectID": "hw2.html",
@@ -257,6 +166,125 @@
     "title": "Homework 2: Text classification",
     "section": "Acknowledgments",
     "text": "Acknowledgments\nThis assignment is inspired from a homework assignment by Prof. Diane Litman. Data is from Peskov et al. 2020."
+  },
+  {
+    "objectID": "hw0.html",
+    "href": "hw0.html",
+    "title": "Homework 0: CRCD JupyterHub setup",
+    "section": "",
+    "text": "Due 2025-09-05, 11:59pm. Instructions last updated 2025-09-01.\nThis assignment is simply for you to get set up with the running Jupyter notebooks on the CRCD JupyterHub. We will use JupyterHub for in-class coding activities. Please follow the instructions exactly as listed. I’m interested in seeing if students can successfully load JupyterHub with the custom class conda environment; please don’t submit screenshots using pip to install packages in the base environment."
+  },
+  {
+    "objectID": "hw0.html#instructions",
+    "href": "hw0.html#instructions",
+    "title": "Homework 0: CRCD JupyterHub setup",
+    "section": "Instructions",
+    "text": "Instructions\n\nLog in to the CRCD JupyterHub at jupyter.crc.pitt.edu with your Pitt credentials. Type your username in lowercase and make sure that you are on the WIRELESS-PITTNET wifi network. If you are off-campus or not on WIRELESS-PITTNET, you will need to log in to the Pitt VPN through the GlobalProtect app. Instructions for setting that up are here. Reach out to Michael if you are not able to log in.\nSelect the following JupyterHub Session Configuration options:\n\nSelect Partition: TEACH - 6 CPUs - 45GB\nSelect Virtual Environment: Provide custom path\nCustom Environment Path: /ix/cs2731_2025f/class_env. Note that this is different from what we did in class.\nAccount: you can leave this blank If you can’t spawn a server at this point, try setting Account to cs2731_2025f. Also make sure you have enough space in your CRCD home directory. Check your usage by using ssh to log in to h2p.crc.pitt.edu and running crc-quota.\n\nClick the following nbgitpuller link. This should load the latest version of session2_preprocessing.ipynb, which starts with a section header of Import necessary packages and should look like this. If it starts with Install nltk or anything else, close the notebook and right-click the notebook filename on the side panel to delete it. Click the nbgitpuller link again to load the latest version.\nDouble-click session2_preprocessing.ipynb on the left-hand side panel to open the Jupyter notebook.\nRun the cells under the Import necessary packages section. That is all you have to do. You do not have to run the rest of the notebook.\nTake a screenshot of the notebook (only the output of the first section is necessary) and submit it on Canvas. Ideally you are able to import pandas and nltk, but even if there are errors, that’s okay! You will still get credit for the assignment, and I will message you on Canvas to try to figure any issues out."
+  },
+  {
+    "objectID": "hw1.html",
+    "href": "hw1.html",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "",
+    "text": "Due 2025-09-26, 11:59pm. Instructions last updated 2025-09-23.\nLanguage modeling is the task of predicting the next word in a sequence given the previous words. In this assignment, we will focus on the related problem of predicting the next character in a sequence given the previous characters. You will build character-level n-gram language models. You will generate text from models you create, as well as use perplexity to measure the fit of various language models on test data related and unrelated to the training data. The homework is designed to implement on your own computer or a server of your choosing, but you can also use class CRCD resources if you like. Just note that you’ll have to submit a Python script, not a Jupyter notebook."
+  },
+  {
+    "objectID": "hw1.html#learning-objectives",
+    "href": "hw1.html#learning-objectives",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nAfter completing this assignment, students will be able to:\n\nUnderstand how to compute n-gram language model probabilities using maximum likelihood estimation.\nUse n-gram language models to probabilistically generate texts and implement generation using n-gram probabilities.\nGain intuition on how perplexity will estimate language model performance on unseen texts."
+  },
+  {
+    "objectID": "hw1.html#extract-character-n-grams",
+    "href": "hw1.html#extract-character-n-grams",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "1. Extract character n-grams",
+    "text": "1. Extract character n-grams\nFirst, fill out the ngrams(c, text) function that produces a list of all n-grams of that use c elements of context from the input text. Each n-gram should consist of a 2-element tuple (context, char), where the context is itself a c-length string comprised of the c characters preceding the current character. If c == 1, then produce bigrams, if c == 2, trigrams. The sentence should be padded with c ~ characters at the beginning (we’ve provided you with start_pad(c) for this purpose). If c == 0, all contexts should be empty strings. You may assume that c ≥ 0. You are allowed to use any resources or packages to extract the character ngrams from text, such as scikit-learn or NLTK. Here is some example output from such a function:\n&gt;&gt;&gt; ngrams(1, 'abc')\n[('~', 'a'), ('a', 'b'), ('b', 'c')]\n\n&gt;&gt;&gt; ngrams(2, 'abc')\n[('~~', 'a'), ('~a', 'b'), ('ab', 'c')]\nWe’ve also given you the function create_ngram_model(model_class, path, c) that will create and return an n-gram model trained on the entire file path provided."
+  },
+  {
+    "objectID": "hw1.html#build-n-gram-language-models",
+    "href": "hw1.html#build-n-gram-language-models",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "2. Build n-gram language models",
+    "text": "2. Build n-gram language models\nIn this section, you will build a simple n-gram language model that can be used to generate random text resembling a source document. This model does not need any smoothing.\nIn the NgramModel class, write an initialization method __init__(self, c) which stores the context length c of the model and initializes any necessary internal variables. Then write a method get_vocab(self) that returns the vocab (this is the set of all characters used by this model).\nWrite a method update(self, text) which computes the n-grams for the input sentence and updates the internal counts (storing counts is recommended instead of storing probabilities). Also, write a method prob(self, context, char) which accepts a c-length string representing a context and a character, and returns the probability of that character occurring, given the preceding context. Characters that have never been seen before in a certain context would be assigned a 0 probability. If you encounter a novel context (one that has never been seen before in training data), the probability of any given character should be \\(1/V\\) where \\(V\\) is the size of the vocabulary. See Chapter 3 of the Jurafsky and Martin textbook and Equation 3.12 for calculating probabilities based on observed counts. You may not use any package to directly train/compute language model probabilities; that portion of the program should be from scratch.\n &gt;&gt;&gt; m = NgramModel(1)\n &gt;&gt;&gt; m.update('abab')\n &gt;&gt;&gt; m.get_vocab()\n {'a', 'b'}\n &gt;&gt;&gt; m.update('abcd')\n &gt;&gt;&gt; m.get_vocab()\n {'a', 'b', 'c', 'd'}\n &gt;&gt;&gt; m.prob('a', 'b')\n 1.0\n &gt;&gt;&gt; m.prob('~', 'c')\n 0.0\n &gt;&gt;&gt; m.prob('b', 'c')\n 0.5\nWrite a method random_char(self, context) which returns a random character according to the probability distribution determined by the given context. Just like the prob function, in a novel context assign a probability of any given character \\(1/V\\), where \\(V\\) is the size of the vocabulary.\n\nHere is some example output. Even with setting the random seed, your output does not need to perfectly match the example output as there are multiple functions that can perform this task.\n     &gt;&gt;&gt; m = NgramModel(0)\n     &gt;&gt;&gt; m.update('abab')\n     &gt;&gt;&gt; m.update('abcd')\n     &gt;&gt;&gt; random.seed(1)\n     &gt;&gt;&gt; [m.random_char('') for i in range(10)]\n     ['a', 'c', 'c', 'a', 'b', 'b', 'b', 'c', 'a', 'a']\nIn the NgramModel class, write a method random_text(self, length) which returns a string of characters chosen at random using the random_char(self, context) method. Your starting context should always be c ~ characters, and the context should be updated as characters are generated. If c == 0, your context should always be the empty string. You should continue generating characters until you’ve produced the specified number of random characters, then return the full string.\nHere is some example output. Even with setting the random seed, your output does not need to perfectly match the example output as there are multiple functions that can perform this task.\n     &gt;&gt;&gt; m = NgramModel(1)\n     &gt;&gt;&gt; m.update('abab')\n     &gt;&gt;&gt; m.update('abcd')\n     &gt;&gt;&gt; random.seed(1)\n     &gt;&gt;&gt; m.random_text(10)\n     abcdbabcda"
+  },
+  {
+    "objectID": "hw1.html#generating-shakespeare-with-character-level-n-gram-language-models",
+    "href": "hw1.html#generating-shakespeare-with-character-level-n-gram-language-models",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "3. Generating Shakespeare with character-level n-gram language models",
+    "text": "3. Generating Shakespeare with character-level n-gram language models\nNow you can train a language model using the training corpus of Shakespeare. Afterward, try generating some Shakespeare with different order character n-gram models. Do this for at least trigrams, 4-grams and 7-grams, but feel free to explore other values of n as well. The following commands should produce text using different values of n:\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 2)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 3)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 4)\n&gt;&gt;&gt; m.random_text(250)\n\n&gt;&gt;&gt; m = create_ngram_model(NgramModel, 'shakespeare_input.txt', 7)\n&gt;&gt;&gt; m.random_text(250)\nYou may make any additional assumptions and design decisions, but state them in your report (see below). For example, some design choices that could be made are how you want to handle uppercase and lowercase letters or how you want to handle digits. The choice made is up to you, we only require that you detail these decisions in your report and consider any implications of them in your results. There is no wrong choice here, and these decisions are typically made by NLP researchers when pre-processing data."
+  },
+  {
+    "objectID": "hw1.html#calculate-perplexity-of-test-documents",
+    "href": "hw1.html#calculate-perplexity-of-test-documents",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "4. Calculate perplexity of test documents",
+    "text": "4. Calculate perplexity of test documents\nUsing the perplexity method, calculate the perplexity of each test document. For each file in the test data (nytimes_article.txt and shakespeare_sonnets.txt), calculate the perplexity for each non-blank line and the average across all lines in the document. Do this for trigram, 4-gram and 7-gram character-level language models trained on Shakespeare plays (shakespeare_input.txt)."
+  },
+  {
+    "objectID": "hw1.html#deliverables",
+    "href": "hw1.html#deliverables",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "Deliverables",
+    "text": "Deliverables\nIn your report, include:\n\nA description of how you wrote your program, including all assumptions and design decisions\nReport examples of generated text for trigram, 4-gram and 7-gram models. Discuss these results. What do you notice about the short passages you’ve generated from n-gram models with different n? Are they as good as 1000 monkeys working at 1000 typewriters? Are there patterns in what models generate first?\nPerplexity values for trigram, 4-gram, and 7-gram character-level language models on each test file (New York Times article and Shakespeare sonnets).\nWhat does your perplexity indicate across different test documents? What does a comparison of different n in the n-grams in terms of perplexity tell you? Which performs best? Why do you think your models performed the way they did?"
+  },
+  {
+    "objectID": "hw1.html#acknowledgments",
+    "href": "hw1.html#acknowledgments",
+    "title": "Homework 1: Character-level language modeling",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nThis assignment is based on a homework assignment by Prof. Diane Litman and Prof. Mark Yatskar. Shakespeare data is from Andrej Karpathy."
+  },
+  {
+    "objectID": "hw3.html",
+    "href": "hw3.html",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "",
+    "text": "Due 2025-11-07, 11:59pm. Instructions last updated 2025-11-03."
+  },
+  {
+    "objectID": "hw3.html#learning-objectives",
+    "href": "hw3.html#learning-objectives",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nAfter completing this assignment, students will be able to:\n\nPrompt LLMs programmatically with templates (parameterized)\nPrompt LLMs with zero-shot and few-shot prompting\nEngineer and test different prompts\nImplement instruction tuning of LLMs using Hugging Face tools\nEvaluate instruction-tuned LLMs against base models"
+  },
+  {
+    "objectID": "hw3.html#overview",
+    "href": "hw3.html#overview",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Overview",
+    "text": "Overview\nIn this assignment, you will explore different prompting techniques LLMs (Part 1). You will also instruction-tune an LLM (Part 2). Both of these parts will involve filling in template Jupyter notebooks onPitt’s CRCD through the class JupyterHub. You will need GPU resources for Part 2. You can use the Nvidia L4 GPU on the CRCD JupyterHub (teach cluster) like we use in class, or CRCD’s Open OnDemand Jupyter service.\nTo get started, click on the class nbgitpuller link."
+  },
+  {
+    "objectID": "hw3.html#part-1-llm-prompting",
+    "href": "hw3.html#part-1-llm-prompting",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Part 1: LLM prompting",
+    "text": "Part 1: LLM prompting\nPlease fill out the template notebook, hw3_template_part1.ipynb, from the class CRCD JupyterHub."
+  },
+  {
+    "objectID": "hw3.html#part-2-instruction-tuning-llms",
+    "href": "hw3.html#part-2-instruction-tuning-llms",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Part 2: Instruction tuning LLMs",
+    "text": "Part 2: Instruction tuning LLMs\nFill out hw3_template_part2.ipynb from the class CRCD JupyterHub."
+  },
+  {
+    "objectID": "hw3.html#deliverables",
+    "href": "hw3.html#deliverables",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Deliverables",
+    "text": "Deliverables\n\nYour code: the Jupyter notebooks you modified from the templates for parts 1 and 2. Submit:\n\nyour .ipynb files for parts 1 and 2\na .html export of your notebooks from parts 1 and 2. To get a .html version, click File &gt; Save and Export Notebook As… &gt; HTML from within JupyterLab.\n\nA PDF report with answers to questions provided in the template notebooks. Please name your report hw3_{your pitt email id}.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw3.pdf. Please make only one PDF report, containing answers to part 1 and part 2. Make sure to include the following information:\n\nanswers to all the numbered questions in the templates\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems\n\n\nPlease submit all of this material on Canvas. We will grade your report and may look over your code."
+  },
+  {
+    "objectID": "hw3.html#acknowledgments",
+    "href": "hw3.html#acknowledgments",
+    "title": "Homework 3: Large language model (LLM) prompting and instruction tuning",
+    "section": "Acknowledgments",
+    "text": "Acknowledgments\nPart 1 of this assignment is based on a homework assignment designed by Mark Yatskar and provided by Lorraine Li."
   },
   {
     "objectID": "index.html",

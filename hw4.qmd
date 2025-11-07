@@ -1,0 +1,52 @@
+---
+title: "Homework 4: Sequence labeling"
+---
+
+**Due 2025-11-20, 11:59pm**. *Instructions last updated 2025-11-06.*
+
+
+# Learning objectives
+The learning goals of this assignment are to:
+* Fine-tune a transformer-based model on sequence labeling
+* Find and use pretrained models from Hugging Face
+
+# Overview
+In this assignment, you will fine-tune BERT-based models for part-of-speech (POS) tagging for English and Norwegian.
+
+Start by filling in the places specified in `hw4_template.ipynb` on the CRCD. You will want to use a GPU such as the Nvidia L4 GPU.
+
+To get started, click on the [class nbgitpuller link](https://jupyter.crc.pitt.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fmichaelmilleryoder%2Fcs2731_jupyterhub&urlpath=lab%2Ftree%2Fcs2731_jupyterhub%2F&branch=main) and make a copy of `hw4_template.ipynb`.
+
+
+## Deliverables
+In your report, include:
+1. The 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each
+1. For each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data
+1. The names of the pretrained BERT-based models you chose for both English and Norwegian
+1. A brief discussion of any choices you made about hyperparameters in training
+1. *(Optionally, for extra credit)* A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 2 point of extra credit (total) will be given if any changes result in an improved accuracy on the dev set.
+1. Accuracy of the fine-tuned models on the test set for both English and Norwegian
+1. POS tags predicted for the words of a sentence of your choice in both English and Norwegian
+4. A link to your copied and filled out Colab notebook. **Please set the Colab document sharing to public viewing so that teaching staff can see it for grading.**
+
+## Submission
+Please submit the following items on Canvas:
+
+* Your code: the Jupyter notebook you modified from the template. Submit:
+	*  your .ipynb files for parts 1 and 2
+	* a **.html export of your notebooks** from parts 1 and 2. To get a .html version, click File > Save and Export Notebook As... > HTML from within JupyterLab.
+* Your report with deliverables named `report_{your pitt email id}_hw4.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw4.pdf`.
+* A `README.txt` file explaining
+	* any additional resources, references, or web pages you've consulted
+	* any person with whom you've discussed the assignment and describe the nature of your discussions
+	* any generative AI tool used, and how it was used
+	* any unresolved issues or problems
+
+<!--
+## Grading
+See rubric on Canvas.
+-->
+
+
+## Acknowledgments
+This assignment is adapted from Jacob Eisenstein and Prof. Yulia Tsvetkov.

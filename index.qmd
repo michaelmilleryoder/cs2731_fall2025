@@ -201,7 +201,7 @@ Fall 2025
             <td>11-05 W</td>
             <td><a href="slides/session21_cs2731_fall2025.pdf">Sequence labeling</a></td>
             <td>J+M 17-17.3, 10.5</td>
-            <td>In-class quiz;<br/><strong><a href="hw3">HW3</a> due 11-07</strong>;<br/>HW4 out 11-07</td>
+            <td>In-class quiz;<br/><strong><a href="hw3">HW3</a> due 11-07</strong>;<br/><a href="hw4">HW4</a> out 11-07</td>
         </tr>
         <tr>
             <td>22</td>
@@ -218,7 +218,7 @@ Fall 2025
             <td>11-12 W</td>
             <td>Machine translation</td>
             <td>J+M 13-13.3, 13.6-13.8</td>
-            <td><strong>Project progress report due 11-13</strong></td>
+            <td><strong><a href="project.html#progress-report">Project progress report</a> due 11-13</strong></td>
         </tr>
         <tr>
             <td>24</td>
@@ -232,7 +232,7 @@ Fall 2025
             <td>11-19 W</td>
             <td>Dialogue systems, chatbots</td>
             <td>J+M 15</td>
-            <td><strong>HW4 due 11-20</strong></td>
+            <td><strong><a href="hw4">HW4</a> due 11-20</strong></td>
         </tr>
         </tr>
         <tr style="background-color:#cccccc">
@@ -272,11 +272,11 @@ Description | Points | Percentage of final grade
 &ensp;[Homework 1](hw1) | 106 | 10.6
 &ensp;[Homework 2](hw2) | 106 | 10.6
 &ensp;[Homework 3](hw3) | 106 | 10.6
-&ensp;Homework 4 | 106 | 10.6
+&ensp;[Homework 4](hw4) | 106 | 10.6
 **Project total** | **410** | **41**
 &ensp;Project idea form | 5 | 0.5
 &ensp;[Project proposal](project.html#project-proposal) | 85 | 8.5
-&ensp;Project progress report | 85 | 8.5
+&ensp;[Project progress report](project.html#progress-report) | 85 | 8.5
 &ensp;Project report | 235 | 23.5
 **Quizzes total** | **60** | **6**
 &ensp;Each quiz of 6 total, lowest score dropped | 12 | 1.2
