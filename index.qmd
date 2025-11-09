@@ -206,7 +206,7 @@ Fall 2025
         <tr>
             <td>22</td>
             <td>11-10 M</td>
-            <td>Dependency parsing</td>
+            <td><a href="slides/session22_cs2731_fall2025.pdf">Dependency parsing</a></td>
             <td>J+M 19-19.2, 19.4-19.5</td>
             <td></td>
         </tr>
