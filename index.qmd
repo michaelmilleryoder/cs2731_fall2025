@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-11-04. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-11-11. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -217,7 +217,7 @@ Fall 2025
             <td>23</td>
             <td>11-12 W</td>
             <td>Machine translation</td>
-            <td>J+M 13-13.3, 13.6-13.8</td>
+            <td>J+M 12-12.3, 12.6-12.8</td>
             <td><strong><a href="project.html#progress-report">Project progress report</a> due 11-13</strong></td>
         </tr>
         <tr>
