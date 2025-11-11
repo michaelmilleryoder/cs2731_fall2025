@@ -216,7 +216,7 @@ Fall 2025
         <tr>
             <td>23</td>
             <td>11-12 W</td>
-            <td>Machine translation</td>
+            <td><a href="slides/session23_cs2731_fall2025.pdf">Machine translation</a></td>
             <td>J+M 12-12.3, 12.6-12.8</td>
             <td><strong><a href="project.html#progress-report">Project progress report</a> due 11-13</strong></td>
         </tr>
