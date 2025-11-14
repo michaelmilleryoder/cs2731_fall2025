@@ -22,7 +22,7 @@ Fall 2025
 
 
 # Schedule
-*Subject to change. Last revised 2025-11-11. All due dates are at 11:59pm ET except when indicated.*
+*Subject to change. Last revised 2025-11-14. All due dates are at 11:59pm ET except when indicated.*
 
 <table class="schedule">
     <thead>
@@ -224,7 +224,7 @@ Fall 2025
             <td>24</td>
             <td>11-17 M</td>
             <td>Information retrieval, RAG</td>
-            <td>J+M 14-14.3.1, 14.5</td>
+            <td>J+M 11-11.3, 11.5-11.6</td>
             <td></td>
         </tr>
         <tr>
