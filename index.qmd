@@ -223,7 +223,7 @@ Fall 2025
         <tr>
             <td>24</td>
             <td>11-17 M</td>
-            <td>Information retrieval, RAG</td>
+            <td><a href="slides/session24_cs2731_fall2025.pdf">Information retrieval, RAG</a></td>
             <td>J+M 11-11.3, 11.5-11.6</td>
             <td></td>
         </tr>
