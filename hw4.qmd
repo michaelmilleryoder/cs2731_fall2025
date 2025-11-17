@@ -2,11 +2,12 @@
 title: "Homework 4: Sequence labeling"
 ---
 
-**Due 2025-11-20, 11:59pm**. *Instructions last updated 2025-11-06.*
+**Due 2025-11-20, 11:59pm**. *Instructions last updated 2025-11-17.*
 
 
 # Learning objectives
 The learning goals of this assignment are to:
+
 * Fine-tune a transformer-based model on sequence labeling
 * Find and use pretrained models from Hugging Face
 
@@ -28,7 +29,6 @@ In your report, include:
 1. *(Optionally, for extra credit)* A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 2 point of extra credit (total) will be given if any changes result in an improved accuracy on the dev set.
 1. Accuracy of the fine-tuned models on the test set for both English and Norwegian
 1. POS tags predicted for the words of a sentence of your choice in both English and Norwegian
-4. A link to your copied and filled out Colab notebook. **Please set the Colab document sharing to public viewing so that teaching staff can see it for grading.**
 
 ## Submission
 Please submit the following items on Canvas:

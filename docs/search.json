@@ -74,14 +74,14 @@
     "href": "hw4.html",
     "title": "Homework 4: Sequence labeling",
     "section": "",
-    "text": "Due 2025-11-20, 11:59pm. Instructions last updated 2025-11-06."
+    "text": "Due 2025-11-20, 11:59pm. Instructions last updated 2025-11-17."
   },
   {
     "objectID": "hw4.html#deliverables",
     "href": "hw4.html#deliverables",
     "title": "Homework 4: Sequence labeling",
     "section": "Deliverables",
-    "text": "Deliverables\nIn your report, include:\n\nThe 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each\nFor each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data\nThe names of the pretrained BERT-based models you chose for both English and Norwegian\nA brief discussion of any choices you made about hyperparameters in training\n(Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 2 point of extra credit (total) will be given if any changes result in an improved accuracy on the dev set.\nAccuracy of the fine-tuned models on the test set for both English and Norwegian\nPOS tags predicted for the words of a sentence of your choice in both English and Norwegian\nA link to your copied and filled out Colab notebook. Please set the Colab document sharing to public viewing so that teaching staff can see it for grading."
+    "text": "Deliverables\nIn your report, include:\n\nThe 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each\nFor each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data\nThe names of the pretrained BERT-based models you chose for both English and Norwegian\nA brief discussion of any choices you made about hyperparameters in training\n(Optionally, for extra credit) A description of changes you made or different pretrained models you tried and what accuracy you obtained on the dev set. 2 point of extra credit (total) will be given if any changes result in an improved accuracy on the dev set.\nAccuracy of the fine-tuned models on the test set for both English and Norwegian\nPOS tags predicted for the words of a sentence of your choice in both English and Norwegian"
   },
   {
     "objectID": "hw4.html#submission",
