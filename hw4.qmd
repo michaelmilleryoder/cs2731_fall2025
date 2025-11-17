@@ -20,6 +20,7 @@ Use the class conda environment to load all necessary packages.
 
 ## Deliverables
 In your report, include:
+
 1. The 5 most frequent POS tags for English and Norwegian datasets (specified in the notebook) and how many tokens are tagged with each
 1. For each of the 5 most frequent POS tags for English and Norwegian datasets, provide the 5 most frequent word types annotated with that tag in the training data
 1. The names of the pretrained BERT-based models you chose for both English and Norwegian
