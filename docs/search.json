@@ -88,7 +88,7 @@
     "href": "hw4.html#submission",
     "title": "Homework 4: Sequence labeling",
     "section": "Submission",
-    "text": "Submission\nPlease submit the following items on Canvas:\n\nYour code: the Jupyter notebook you modified from the template. Submit:\n\nyour .ipynb files for parts 1 and 2\na .html export of your notebooks from parts 1 and 2. To get a .html version, click File &gt; Save and Export Notebook As… &gt; HTML from within JupyterLab.\n\nYour report with deliverables named report_{your pitt email id}_hw4.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw4.pdf.\nA README.txt file explaining\n\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems"
+    "text": "Submission\nPlease submit the following items on Canvas:\n\nYour code: the Jupyter notebook you modified from the template. Submit:\n\nyour .ipynb file\na .html export of your notebook. To get a .html version, click File &gt; Save and Export Notebook As… &gt; HTML from within JupyterLab.\n\nYour report with deliverables named report_{your pitt email id}_hw4.pdf. No need to include @pitt.edu, just use the email ID before that part. For example: report_mmyoder_hw4.pdf.\nA README.txt file explaining\n\nany additional resources, references, or web pages you’ve consulted\nany person with whom you’ve discussed the assignment and describe the nature of your discussions\nany generative AI tool used, and how it was used\nany unresolved issues or problems"
   },
   {
     "objectID": "hw4.html#acknowledgments",

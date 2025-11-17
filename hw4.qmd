@@ -33,8 +33,8 @@ In your report, include:
 Please submit the following items on Canvas:
 
 * Your code: the Jupyter notebook you modified from the template. Submit:
-	*  your .ipynb files for parts 1 and 2
-	* a **.html export of your notebooks** from parts 1 and 2. To get a .html version, click File > Save and Export Notebook As... > HTML from within JupyterLab.
+	*  your .ipynb file
+	* a **.html export of your notebook**. To get a .html version, click File > Save and Export Notebook As... > HTML from within JupyterLab.
 * Your report with deliverables named `report_{your pitt email id}_hw4.pdf`. No need to include @pitt.edu, just use the email ID before that part. For example: `report_mmyoder_hw4.pdf`.
 * A `README.txt` file explaining
 	* any additional resources, references, or web pages you've consulted
