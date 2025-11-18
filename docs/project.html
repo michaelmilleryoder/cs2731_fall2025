@@ -344,7 +344,7 @@ Groups will make a brief presentation to the class outlining their proposed proj
 <section id="final-presentation" class="level2">
 <h2 class="anchored" data-anchor-id="final-presentation">Final presentation</h2>
 <p><em>In class 12-08</em>.<br>
-Groups will present their finished work to the group, with Q&amp;A and feedback opportunities from students. Please prepare a maximum 7-minute presentation. <!--Add your slides to this [shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EdWBs5h0nvRDrqPWUMMPCzgB4c3HkyySL47wUw1DY0y2bw?e=T0kmWQ).--> Cover at least these key points:</p>
+Groups will present their finished work to the group, with Q&amp;A and feedback opportunities from students. Please prepare a maximum 7-minute presentation. Add your slides to this <a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EW3ss59Mo7NDpckArKoECM0Bz2hGtJmpjsUc_Jwfk2yoDA?e=3fzNs6">shared PowerPoint presentation</a>. Cover at least these key points:</p>
 <ol type="1">
 <li>Project motivation (briefly)</li>
 <li>Task description, including example input and output</li>
@@ -356,47 +356,110 @@ Groups will present their finished work to the group, with Q&amp;A and feedback 
 <section id="final-report" class="level2">
 <h2 class="anchored" data-anchor-id="final-report">Final report</h2>
 <p><em>Due 12-09</em>.<br>
-At the end of the course, groups will provide a written report of their project. This project includes a quantitative comparison between at least two NLP systems on a clearly specified task or tasks. One of these is generally a more traditional NLP approach and the other involves LLMs, though your group’s project may vary if you have discussed this with the instructor.</p>
-<p>At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found <a href="https://github.com/acl-org/acl-style-files">here</a> (Overleaf template <a href="https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj">here</a>). The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices. Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. There is flexibility in section names, but please provide information about the following aspects of the project:</p>
+At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found <a href="https://github.com/acl-org/acl-style-files">here</a> (Overleaf template <a href="https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj">here</a>). The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices. Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. It is fine to copy information from the project proposal if it hasn’t changed. There is flexibility in section names, but please provide information about the following aspects of the project:</p>
 <ol type="1">
-<li>Project motivation</li>
-<li>Literature review. Please provide full citations in a references sections for works cited throughout the paper (not just URLs).</li>
-<li>Data</li>
-<li>Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine).</li>
-<li>Results</li>
-<li>Discussion</li>
-<li>Future work. This is a good place to describe things you thought about but never had time to complete!</li>
-<li>Limitations (doesn’t count toward page limit)</li>
-<li>Ethical issues (doesn’t count toward page limit)</li>
-<li>Group member task breakdown (doesn’t count toward page limit). This section details the high-level tasks that each group member completed.</li>
-<li>References (doesn’t count toward page limit)</li>
-<li>Appendices (optional, doesn’t count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading.</li>
+<li><strong>Project motivation</strong>. Please provide examples of input and output in the task that you tackle.</li>
+<li><strong>Literature review</strong>. Please provide full citations in a references sections for works cited throughout the paper (not just URLs).</li>
+<li><strong>Data</strong>. Please provide the size of the dataset, explanation of what each datapoint (input passed to the system) is.</li>
+<li><strong>Methods</strong>. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). If LLM prompting techniques were used, please provide exact LLM names and versions and full prompts or prompt templates (in an appendix if necessary for space). If few-shot prompting was used, specify how examples were selected.</li>
+<li><strong>Results</strong>. Along with quantitative results, an error analysis is helpful to include.</li>
+<li><strong>Discussion</strong></li>
+<li><strong>Future work</strong>. This is a good place to describe things you thought about but never had time to complete!</li>
+<li><strong>Limitations</strong> (doesn’t count toward page limit)</li>
+<li><strong>Ethical issues</strong> (doesn’t count toward page limit) 10.<strong>Group member task breakdown</strong> (doesn’t count toward page limit). This section details the high-level tasks that each group member completed. 11.<strong>References</strong> (doesn’t count toward page limit) 12.<strong>Appendices</strong> (optional, doesn’t count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading.</li>
+<li><strong>Sharing permission</strong>. Are you okay with the instructor sharing your report after the course ends? Sometimes project reports are helpful for students and faculty working on similar problems. It’s fine to say no or that the instructor needs to ask permission before sharing!</li>
 </ol>
-<!--
-Here is the rubric that will be used in grading:
-
-|Rubric category | Points|
-|-------------------|-:|
-|Clear motivation for the work is provided | 4|
-|Task definition and format of the input and output is clear | 9|
-|Applicable dataset/s are chosen and preprocessed | 10|
-|Baseline system is properly designed and implemented | 15|
-|LLM-based system is properly designed and implemented | 15|
-|Results from a comparison between systems are provided | 20|
-|Discussion is provided of the results and implications | 10|
-|Potential future work is discussed | 4|
-|Limitations of your approach or dataset are sufficiently discussed | 4|
-|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 4|
-|Group member task breakdown is provided | 4|
-|***Project content total*** | ***95***|
-|Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown | 7|
-|Writing is clear | 8|
-|***Writing total*** | ***15***|
-|Group member had a sufficient amount of workload in the project | 15|
-|Task and roles assigned to this group member were completed sufficiently | 15|
-|***Individual contribution total*** | ***30***|
-|***Grand total*** | ***140***|
--->
+<p>Here is the rubric that will be used in grading:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 90%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Rubric category</th>
+<th style="text-align: right;">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Clear motivation for the work is provided</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td>Research questions and/or task definition is clear. Format of the input and output is provided.</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td>Sufficient grounding in relevent related literature</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td>Applicable dataset/s are chosen and preprocessed</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="odd">
+<td>Methods are relevant and evaluation appropriate. For approach-based projects, multiple methods are compared. For dataset-based projects, selection and annotation methodology is explained.</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="even">
+<td>Results are provided. For new approach contributions, results from multiple methods (at least one baseline) are presented. For dataset contributions, this may be a single set of results from a simple classifier, or other results if discussed with the instructor.</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td>Discussion is provided of the results and implications</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr class="even">
+<td>Potential future work is discussed</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td>Limitations of your approach or dataset are sufficiently discussed</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td>Ethical issues that may be raised by your system or dataset are sufficiently discussed</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td>Group member task breakdown is provided</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td><strong><em>Project content total</em></strong></td>
+<td style="text-align: right;"><strong><em>160</em></strong></td>
+</tr>
+<tr class="odd">
+<td>Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td>Writing is clear</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="odd">
+<td><strong><em>Writing total</em></strong></td>
+<td style="text-align: right;"><strong><em>25</em></strong></td>
+</tr>
+<tr class="even">
+<td>Group member had a sufficient amount of workload in the project</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="odd">
+<td>Task and roles assigned to this group member were completed sufficiently</td>
+<td style="text-align: right;">25</td>
+</tr>
+<tr class="even">
+<td><strong><em>Individual contribution total</em></strong></td>
+<td style="text-align: right;"><strong><em>50</em></strong></td>
+</tr>
+<tr class="odd">
+<td><strong><em>Grand total</em></strong></td>
+<td style="text-align: right;"><strong><em>235</em></strong></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="how-your-project-will-be-graded" class="level2">
 <h2 class="anchored" data-anchor-id="how-your-project-will-be-graded">How your project will be graded</h2>

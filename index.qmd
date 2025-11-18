@@ -255,7 +255,7 @@ Fall 2025
         <tr>
             <td>28</td>
             <td>12-08 M</td>
-            <td><strong>Project presentations</strong></td>
+            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EW3ss59Mo7NDpckArKoECM0Bz2hGtJmpjsUc_Jwfk2yoDA?e=3fzNs6">Project presentations</a></strong></td>
             <td></td>
             <td><strong>Project report due 12-09</strong></td>
         </tr>

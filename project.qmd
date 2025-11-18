@@ -154,7 +154,7 @@ Please describe any open questions or challenges your group has at this point. W
 ## Final presentation
 *In class 12-08*.  
 Groups will present their finished work to the group, with Q&A and feedback opportunities from students. Please prepare a maximum 7-minute presentation. 
-<!--Add your slides to this [shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EdWBs5h0nvRDrqPWUMMPCzgB4c3HkyySL47wUw1DY0y2bw?e=T0kmWQ).-->
+Add your slides to this [shared PowerPoint presentation](https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EW3ss59Mo7NDpckArKoECM0Bz2hGtJmpjsUc_Jwfk2yoDA?e=3fzNs6).
 Cover at least these key points:
 
 1. Project motivation (briefly)
@@ -165,48 +165,45 @@ Cover at least these key points:
 
 ## Final report 
 *Due 12-09*.  
-At the end of the course, groups will provide a written report of their project. This project includes a quantitative comparison between at least two NLP systems on a clearly specified task or tasks. One of these is generally a more traditional NLP approach and the other involves LLMs, though your group's project may vary if you have discussed this with the instructor.
+At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found [here](https://github.com/acl-org/acl-style-files) (Overleaf template [here](https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj)).  The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices.  Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. It is fine to copy information from the project proposal if it hasn't changed. There is flexibility in section names, but please provide information about the following aspects of the project:
 
-At the end of the course, groups will provide a written report of their project. This report will be in the ACL format found [here](https://github.com/acl-org/acl-style-files) (Overleaf template [here](https://www.overleaf.com/latex/templates/association-for-computational-linguistics-acl-conference/jvxskxpnznfj)).  The report should be a maximum of 8 pages, not including limitations, ethics, group member task breakdown, references sections or appendices.  Outstanding reports would be of a quality and structure that could be submitted to an NLP workshop or conference, but other types of projects can also achieve an A. There is flexibility in section names, but please provide information about the following aspects of the project:
+1. **Project motivation**. Please provide examples of input and output in the task that you tackle.
+2. **Literature review**. Please provide full citations in a references sections for works cited throughout the paper (not just URLs).
+3. **Data**. Please provide the size of the dataset, explanation of what each datapoint (input passed to the system) is.
+4. **Methods**. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine). If LLM prompting techniques were used, please provide exact LLM names and versions and full prompts or prompt templates (in an appendix if necessary for space). If few-shot prompting was used, specify how examples were selected.
+5. **Results**. Along with quantitative results, an error analysis is helpful to include.
+6. **Discussion**
+9. **Future work**. This is a good place to describe things you thought about but never had time to complete!
+7. **Limitations** (doesn't count toward page limit)
+8. **Ethical issues** (doesn't count toward page limit)
+10.**Group member task breakdown** (doesn't count toward page limit). This section details the high-level tasks that each group member completed.
+11.**References** (doesn't count toward page limit)
+12.**Appendices** (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
+13. **Sharing permission**. Are you okay with the instructor sharing your report after the course ends? Sometimes project reports are helpful for students and faculty working on similar problems. It's fine to say no or that the instructor needs to ask permission before sharing!
 
-1. Project motivation
-2. Literature review. Please provide full citations in a references sections for works cited throughout the paper (not just URLs).
-3. Data
-4. Methods. Please clearly specify which techniques are novel/your own versus methods directly or indirectly from prior work (which is also fine).
-5. Results
-6. Discussion
-9. Future work. This is a good place to describe things you thought about but never had time to complete!
-7. Limitations (doesn't count toward page limit)
-8. Ethical issues (doesn't count toward page limit)
-10. Group member task breakdown (doesn't count toward page limit). This section details the high-level tasks that each group member completed.
-11. References (doesn't count toward page limit)
-12. Appendices (optional, doesn't count toward page limit). Additional figures or explanation in one or more appendices is allowed, but they will not necessarily be considered in grading. 
-
-<!--
 Here is the rubric that will be used in grading:
 
 |Rubric category | Points|
 |-------------------|-:|
-|Clear motivation for the work is provided | 4|
-|Task definition and format of the input and output is clear | 9|
-|Applicable dataset/s are chosen and preprocessed | 10|
-|Baseline system is properly designed and implemented | 15|
-|LLM-based system is properly designed and implemented | 15|
-|Results from a comparison between systems are provided | 20|
-|Discussion is provided of the results and implications | 10|
-|Potential future work is discussed | 4|
-|Limitations of your approach or dataset are sufficiently discussed | 4|
-|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 4|
-|Group member task breakdown is provided | 4|
-|***Project content total*** | ***95***|
-|Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown | 7|
-|Writing is clear | 8|
-|***Writing total*** | ***15***|
-|Group member had a sufficient amount of workload in the project | 15|
-|Task and roles assigned to this group member were completed sufficiently | 15|
-|***Individual contribution total*** | ***30***|
-|***Grand total*** | ***140***|
--->
+|Clear motivation for the work is provided | 5|
+|Research questions and/or task definition is clear. Format of the input and output is provided. | 10|
+|Sufficient grounding in relevent related literature | 15|
+|Applicable dataset/s are chosen and preprocessed | 20|
+|Methods are relevant and evaluation appropriate. For approach-based projects, multiple methods are compared. For dataset-based projects, selection and annotation methodology is explained. | 45|
+|Results are provided. For new approach contributions, results from multiple methods (at least one baseline) are presented. For dataset contributions, this may be a single set of results from a simple classifier, or other results if discussed with the instructor. | 30|
+|Discussion is provided of the results and implications | 15|
+|Potential future work is discussed | 5|
+|Limitations of your approach or dataset are sufficiently discussed | 5|
+|Ethical issues that may be raised by your system or dataset are sufficiently discussed | 5|
+|Group member task breakdown is provided | 5|
+|***Project content total*** | ***160***|
+|Meets all formatting requirements. Is maximum 8 pages, not including limitations, ethics, references or group member task breakdown | 12|
+|Writing is clear | 13|
+|***Writing total*** | ***25***|
+|Group member had a sufficient amount of workload in the project | 25|
+|Task and roles assigned to this group member were completed sufficiently | 25|
+|***Individual contribution total*** | ***50***|
+|***Grand total*** | ***235***|
 
 
 ## How your project will be graded
