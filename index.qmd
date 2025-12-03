@@ -248,7 +248,7 @@ Fall 2025
         <tr>
             <td>27</td>
             <td>12-03 W</td>
-            <td>Project work time (in class)</td>
+            <td><a href="slides/session27_cs2731_fall2025.pdf">Project work time (in class)</a></td>
             <td></td>
             <td></td>
         </tr>
