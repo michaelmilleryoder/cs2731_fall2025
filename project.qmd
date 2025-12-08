@@ -187,7 +187,7 @@ Here is the rubric that will be used in grading:
 |-------------------|-:|
 |Clear motivation for the work is provided | 5|
 |Research questions and/or task definition is clear. Format of the input and output is provided. | 10|
-|Sufficient grounding in relevent related literature | 15|
+|Sufficient grounding in relevant related literature | 15|
 |Applicable dataset/s are chosen and preprocessed | 20|
 |Methods are relevant and evaluation appropriate. For approach-based projects, multiple methods are compared. For dataset-based projects, selection and annotation methodology is explained. | 45|
 |Results are provided. For new approach contributions, results from multiple methods (at least one baseline) are presented. For dataset contributions, this may be a single set of results from a simple classifier, or other results if discussed with the instructor. | 30|

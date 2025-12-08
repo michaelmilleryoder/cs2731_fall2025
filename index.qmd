@@ -255,7 +255,7 @@ Fall 2025
         <tr>
             <td>28</td>
             <td>12-08 M</td>
-            <td><strong><a href="https://pitt-my.sharepoint.com/:p:/g/personal/mmyoder_pitt_edu/EW3ss59Mo7NDpckArKoECM0Bz2hGtJmpjsUc_Jwfk2yoDA?e=3fzNs6">Project presentations</a></strong></td>
+            <td><strong><a href="slides/session28_cs2731_fall2025.pdf">Project presentations</a></strong></td>
             <td></td>
             <td><strong>Project report due 12-09</strong></td>
         </tr>
@@ -362,7 +362,7 @@ Group project work will be penalized 10% for each day late up to a maximum of 40
 If you are unsatisfied with your grade on an assignment and wish to resubmit work, talk with the instructor. 
 Resubmissions are handled case by case, but are generally accepted in cases where parts of the assignment are missing (sections of the rubric are 0).
 Updated or added text in resubmitted reports must be highlighted in yellow.
-Resubmissions are subject to an automatic 10% deduction and must be submitted by 11:59pm on the last day of class.
+Resubmissions are subject to an automatic 10% deduction and must be submitted by 11:59pm on the last day of class. They may not be graded until the end of the term.
 Only 1 resubmission per homework assignment will be accepted.
 
 ## Academic integrity policy
